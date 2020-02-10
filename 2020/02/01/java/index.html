@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Category: java | Hexo</title>
+  <title>java | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/categories/java/index.html">
+  <meta name="description" content="1)    Java API 文档 （JDK文档） 源文件（.java） -&gt; 字节码文件（.class）  称为编译标识符命名规则：1.标识符由字母，数字，下划线或者美元符号组成 2.首字母不能以数字开头 3.命名不能与关键字，布尔值和null相同 4.区分大小写，没有长度限制，见名知意（驼峰命名法）注释：&#x2F;&#x2F;  单行注释 &#x2F;* *多行注释 *&#x2F;文档注释（JDK提供的javadoc命令）&#x2F;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java">
+<meta property="og:url" content="http://yoursite.com/2020/02/01/java/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1)    Java API 文档 （JDK文档） 源文件（.java） -&gt; 字节码文件（.class）  称为编译标识符命名规则：1.标识符由字母，数字，下划线或者美元符号组成 2.首字母不能以数字开头 3.命名不能与关键字，布尔值和null相同 4.区分大小写，没有长度限制，见名知意（驼峰命名法）注释：&#x2F;&#x2F;  单行注释 &#x2F;* *多行注释 *&#x2F;文档注释（JDK提供的javadoc命令）&#x2F;">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-01-31T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-02-10T03:36:10.384Z">
 <meta property="article:author" content="CodesLong">
+<meta property="article:tag" content="javaknowledge">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -67,8 +72,6 @@
     			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">文章汇总</a>
     			
             
-    			
-    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
     			
             
     			
@@ -150,36 +153,111 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-java" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/06/java/" class="archive-article-date">
-  	<time datetime="2020-01-06T15:33:47.940Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-06</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/06/java/">java 知识点</a>
+    <h1 class="article-title" itemprop="name">
+      java
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        <!--显示阅读次数-->
+        
+          <br/>
+          <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
+          <span class="icon-sort"></span>
+          <span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
+                    阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+          </span>
+          </a>
+        
+        <!--显示阅读次数完毕-->
+        
+        <a href="/2020/02/01/java/" class="archive-article-date">
+  	<time datetime="2020-01-31T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1)    Java API 文档 （JDK文档）</p>
+<h3 id="源文件（-java）-gt-字节码文件（-class）-称为编译"><a href="#源文件（-java）-gt-字节码文件（-class）-称为编译" class="headerlink" title="源文件（.java） -&gt; 字节码文件（.class）  称为编译"></a>源文件（.java） -&gt; 字节码文件（.class）  称为编译</h3><h3 id="标识符命名规则："><a href="#标识符命名规则：" class="headerlink" title="标识符命名规则："></a>标识符命名规则：</h3><pre><code>1.标识符由字母，数字，下划线或者美元符号组成
+2.首字母不能以数字开头
+3.命名不能与关键字，布尔值和null相同
+4.区分大小写，没有长度限制，见名知意（驼峰命名法）</code></pre><h2 id="注释："><a href="#注释：" class="headerlink" title="注释："></a>注释：</h2><pre><code>//  单行注释
+/*
+*多行注释
+*/</code></pre><h2 id="文档注释（JDK提供的javadoc命令）"><a href="#文档注释（JDK提供的javadoc命令）" class="headerlink" title="文档注释（JDK提供的javadoc命令）"></a>文档注释（JDK提供的javadoc命令）</h2><pre><code>/**
+*文档注释
+*/
+
+
+^  异或运算符 两个操作相同，结果为true
+&amp;&amp; 短路与  ||  短路或  左边假，右短路
+条件 ？ 表达式1 ： 表达式2</code></pre><h2 id="数据类型："><a href="#数据类型：" class="headerlink" title="数据类型："></a>数据类型：</h2><pre><code>1.基本数据类型
+数值型（整
+数型（byte, short int long） 浮点型（float double））
+字符型（char）
+布尔型（boolean）
+
+2. 引用数据类型（类  接口，和数组等）
+变量： 
+[ 访问修饰符 ]  变量类型   变量名[ =初始值 ]；（int age = 24;）
+
+数据类型转换：
+Int –&gt; long -&gt; float -&gt; double 
+赋值运算（自动类型转换（低级向高级）   强制类型转换（高级向低级）  ）
+
+导入Scanner 类（import java.util.*）
+创建Scanner 对象（Scanner input = new Scanner(System.in);）
+Scanner方法（获得用户从键盘输入的数据其常用方法：</code></pre><h2 id="源文件-（-java"><a href="#源文件-（-java" class="headerlink" title="源文件 （.java)"></a>源文件 （.java)</h2><h2 id="字节码文件（-class"><a href="#字节码文件（-class" class="headerlink" title="字节码文件（.class)"></a>字节码文件（.class)</h2><pre><code>equels(a,b) 两个数组是否相等
+sort( ) 数组元素升序
+to String() 数组转化为字符串</code></pre><h2 id="其常用方法："><a href="#其常用方法：" class="headerlink" title="其常用方法："></a>其常用方法：</h2><pre><code>String next（）获得一个字符
+int nextInt() 获得一个整形数值
+double nextDouble()获得个双精度类型数值
+Boolean hasNext() 有输入数据返回true</code></pre>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/zfb.jpng">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/wx.jpng">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -191,53 +269,185 @@
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/java//" class="article-tag-list-link color5">java</a>
+        			<a href="/categories/后端，java//" class="article-tag-list-link color3">后端，java</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/02/01/java/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2020/02/01/es6_node/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          es6
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2020/01/06/%E6%96%B0%E5%BB%BA%E6%96%87%E6%9C%AC%E6%96%87%E6%A1%A3/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">新建文本文档</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#源文件（-java）-gt-字节码文件（-class）-称为编译"><span class="toc-number">1.</span> <span class="toc-text">源文件（.java） -&gt; 字节码文件（.class）  称为编译</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#标识符命名规则："><span class="toc-number">2.</span> <span class="toc-text">标识符命名规则：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#注释："><span class="toc-number"></span> <span class="toc-text">注释：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文档注释（JDK提供的javadoc命令）"><span class="toc-number"></span> <span class="toc-text">文档注释（JDK提供的javadoc命令）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据类型："><span class="toc-number"></span> <span class="toc-text">数据类型：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#源文件-（-java"><span class="toc-number"></span> <span class="toc-text">源文件 （.java)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#字节码文件（-class"><span class="toc-number"></span> <span class="toc-text">字节码文件（.class)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#其常用方法："><span class="toc-number"></span> <span class="toc-text">其常用方法：</span></a>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
         </div>
       </div>
       <footer id="footer">
-  <div class="outer">
-    <div id="footer-info">
-    	<div class="footer-left">
-    		&copy; 2020 CodesLong
-    	</div>
-      	<div class="footer-right">
-      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
-      	</div>
-    </div>
-  </div>
-</footer>
-
-<!-- # PV方式，单个用户连续点击 n 篇，记录 n 次记录值 -->
-<span id="busuanzi_container_site_pv">    本站总访问量 <span id="busuanzi_value_site_pv"></span> 次</span>
-
-<!-- # UV方式，单个用户连续点击 n 篇，记录 1 次记录值 -->
-<span id="busuanzi_container_site_uv">  本站访客数 <span id="busuanzi_value_site_uv"></span> 人次</span>
+	<div class="outer">
+	  <div id="footer-info">
+		  <div class="footer-left">
+			  &copy; 2020 CodesLong
+			  <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+			  <script>
+				  var now = new Date(); 
+				  function createtime() { 
+					  var grt= new Date("01/23/2020 20:00:00");//此处修改你的建站时间或者网站上线时间 
+					  now.setTime(now.getTime()+250); 
+					  days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+					  hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+					  if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+					  mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+					  seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+					  snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+					  document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "; 
+					  document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+				  } 
+				  setInterval("createtime()",250);
+			  </script>
+  
+		  </div>
+			<div class="footer-right">
+	  
+	  
+			  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+				<span id="busuanzi_container_site_pv">
+				  <!-- 本站总访问量：<span id="busuanzi_value_site_pv"></span>次                                                               这个访问量与阅读次数关联 暂时无法解决                                         -->
+			  </span>
+			  <span class="post-meta-divider">|</span>
+			  <span id="busuanzi_container_site_uv">
+				  <!-- 本站访客数：<span id="busuanzi_value_site_uv"></span>人 -->
+			  </span>
+	  
+	  
+			</div>
+	  </div>
+	</div>
+  </footer>
 
 
 <!--页面点击小红心-->
@@ -248,10 +458,10 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
-		isCategory: true,
+		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
 		root: "/",
@@ -278,8 +488,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
       
     
       
-      
-      
     
       
       
@@ -291,15 +499,13 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">文章汇总</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">文章汇总</a></li>
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
-      
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
       
         
     </ul>
@@ -320,11 +526,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+                <a href="javascript:void(0)" class="js-tag color4">javaknowledge</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">javaknowledge</a>
+                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
               </li>
             
             <div class="clearfix"></div>
@@ -370,38 +576,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     	</section>
     
 
-    
-    	<section class="tools-section tools-section-friends" q-show="friends">
-  		
-        <ul class="search-ul">
-          
-            <li class="search-li">
-              <a href="http://codeslong.github.io" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
-            </li>
-          
-        </ul>
-  		
-    	</section>
     
 
     
