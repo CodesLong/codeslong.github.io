@@ -6,14 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020/1 | Hexo</title>
+  <title>表单 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2020/01/index.html">
+  <meta name="description" content="4 html常用标签    html4标题 h1~h6 语义化 容器标签 可以包裹其他标签诸如p、span、a、img   &lt;img src&#x3D;&quot;路径&quot; title&#x3D;&quot;悬停文本&quot; alt&#x3D;&quot;图片资源加载失败 显示这里文字&quot;&#x2F;&gt;  相对 从自身出发                1 当资源文件和自身处于同一级目录下 路径直接写文">
+<meta property="og:type" content="article">
+<meta property="og:title" content="表单">
+<meta property="og:url" content="http://yoursite.com/2020/02/11/2.11/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="4 html常用标签    html4标题 h1~h6 语义化 容器标签 可以包裹其他标签诸如p、span、a、img   &lt;img src&#x3D;&quot;路径&quot; title&#x3D;&quot;悬停文本&quot; alt&#x3D;&quot;图片资源加载失败 显示这里文字&quot;&#x2F;&gt;  相对 从自身出发                1 当资源文件和自身处于同一级目录下 路径直接写文">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-02-11T01:54:42.607Z">
+<meta property="article:modified_time" content="2020-02-12T04:09:57.687Z">
 <meta property="article:author" content="CodesLong">
+<meta property="article:tag" content="html">
+<meta property="article:tag" content="上课笔记">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -148,174 +154,284 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-2.11" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      表单
+    </h1>
+  
+
+        <!--显示阅读次数-->
+        
+          <br/>
+          <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
+          <span class="icon-sort"></span>
+          <span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
+                    阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+          </span>
+          </a>
+        
+        <!--显示阅读次数完毕-->
+        
+        <a href="/2020/02/11/2.11/" class="archive-article-date">
+  	<time datetime="2020-02-11T01:54:42.607Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-11</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p> 4 html常用标签<br>    html4<br>标题 h1~h6 语义化 容器标签 可以包裹其他标签诸如p、span、a、img  </p>
+<pre><code>&lt;img src=&quot;路径&quot; title=&quot;悬停文本&quot; alt=&quot;图片资源加载失败 显示这里文字&quot;/&gt;
+
+相对 从自身出发
+               1 当资源文件和自身处于同一级目录下 路径直接写文件名(后缀名需要写完整)
+               2 当资源文件所在文件夹与自身处于同一级目录下 路径需要加上文件夹  
+               .当前目录  ..上一级目录  ../../
+绝对 一般是带盘符的或者具体url地址
+     段落 p
+     超链接 a
+         &lt;a href=&quot;http://www.baidu.com&quot; title=&quot;点我搜索&quot; target=&quot;_blank&quot;&gt;百度一下&lt;/a&gt;
+         href 表示链接跳转地址 可以是网址也可以是本地资源文件地址  必须要写的属性
+         title 表示悬停文本
+         target 表示以何种窗口打开 假如其值是_blank新窗口打开
+         a链接也可以做锚点</code></pre><a id="more"></a>
+
+<pre><code>列表  
+    无序列表
+            &lt;ul&gt;
+                &lt;li&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        ul的儿子只能是li ,li的父亲是ul,li可以放任何东西，li也是
+        容器级标签
+
+
+    有序列表 
+           &lt;ol&gt;
+                &lt;li&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;/li&gt;
+            &lt;/ol&gt;
+
+
+    自定义列表
+       &lt;dl&gt;
+            &lt;dt&gt;
+                刘德华
+            &lt;/dt&gt;
+            &lt;dd&gt;
+                歌曲: 《忘情水》
+            &lt;/dd&gt;
+            &lt;dd&gt;
+                电影: 《天下无贼》
+            &lt;/dd&gt;
+            &lt;dt&gt;
+                张学友
+            &lt;/dt&gt;
+            &lt;dd&gt;
+                歌曲: 《祝福》、《吻别》
+            &lt;/dd&gt;
+        &lt;/dl&gt;
+表格  
+    展示数据或制作表格    </code></pre><h1 id="表单收集用户信息"><a href="#表单收集用户信息" class="headerlink" title="表单收集用户信息"></a>表单收集用户信息</h1><h2 id="css学习有两部分"><a href="#css学习有两部分" class="headerlink" title="css学习有两部分"></a>css学习有两部分</h2><ol>
+<li>选择器 选中元素标签</li>
+<li>各种属性   </li>
+</ol>
+<p>选择器<br>    1 基本选择器<br>    标签选择器 </p>
+<pre><code>div {     
+
+}   
+h2 {
+
+}  </code></pre><p>类选择器 推荐经常用<br>id选择器</p>
+<pre><code>通配符 * 代表所有标签  </code></pre><h2 id="2-高级选择器"><a href="#2-高级选择器" class="headerlink" title="2  高级选择器"></a>2  高级选择器</h2><pre><code>后代选择器  div p 表示div中所有后代p  
+交集选择器  div.box { }    div.box li {}   p.p1#p1  
+(ie6不支持连续交集写法)
+并集选择器  div,p,h1,li {
+       color: red
+   }</code></pre><h2 id="css两性-继承性与层叠性"><a href="#css两性-继承性与层叠性" class="headerlink" title="css两性-继承性与层叠性"></a>css两性-继承性与层叠性</h2><p>继承性  css中有一部分属性可以被继承，比如文字和文本的属性color,font-size,font-family,font-<em>、text-</em>。即便标签本身不设置 也能被加载<br>层叠性  </p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/zfb.jpng">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/wx.jpng">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/30/java%E7%9F%A5%E8%AF%86%E7%82%B9/" class="archive-article-date">
-  	<time datetime="2020-01-29T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/30/java%E7%9F%A5%E8%AF%86%E7%82%B9/">java知识点</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java方法</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">html</a>
         		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/06/git%20/" class="archive-article-date">
-  	<time datetime="2020-01-06T15:33:47.950Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/06/git%20/">git 用法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
+      		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">-git 内容</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">上课笔记</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/02/11/2.11/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/04/hello-world/" class="archive-article-date">
-  	<time datetime="2020-01-04T15:33:40.349Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-04</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2020/02/12/2.12/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          表单
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/02/01/es6_node/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">es6</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/04/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">自动生成</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#表单收集用户信息"><span class="toc-number">1.</span> <span class="toc-text">表单收集用户信息</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#css学习有两部分"><span class="toc-number">1.1.</span> <span class="toc-text">css学习有两部分</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-高级选择器"><span class="toc-number">1.2.</span> <span class="toc-text">2  高级选择器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#css两性-继承性与层叠性"><span class="toc-number">1.3.</span> <span class="toc-text">css两性-继承性与层叠性</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/04/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2020-01-04T12:03:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-04</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/04/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/">我的第一篇文章“</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">markdown语法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -372,8 +488,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
