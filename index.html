@@ -191,39 +191,8 @@
 </ol>
 </li>
 <li>输出流：字节流就是字节数组</li>
-<li>字节流的本质上是不处理缓冲区的</li>
-<li>FileOutputstream 是没有重写flush： 就是没有实现flush的作用</li>
-<li>BufferedOutputStream: 本身的目的就是处理缓冲<ol>
-<li>Write 是没有真正写出去的，只是往数组里添加元素</li>
-<li>Flush 被调用的时候才真正写出去</li>
-<li>所谓清空缓冲，就是把数组中保存的元素，一次性复制出去</li>
-<li>他的父类FileOutputStream 的flush 啥也没干</li>
-</ol>
-</li>
-<li>DataOutputSteam:本身没有缓冲<ol>
-<li>Flush 啥也没干</li>
-<li>真正实现的就是他的write方法</li>
-</ol>
-</li>
-<li>PrintStream: 也是没有缓冲的<ol>
-<li>真正实现的就是它的printxxx 方法</li>
-<li>他的本质是操作BufferedWrite</li>
-</ol>
-</li>
-<li>OutputStreamWrite 的主要作用是编码，不处理缓冲</li>
-<li>BufferedWrite:<ol>
-<li>有缓冲</li>
-<li>Write 是没有真正写出去，只是往数组里添加元素</li>
-<li>Flush 被调用的时候才真正写出去</li>
-</ol>
-</li>
-<li>StringWrite:<ol>
-<li>本质是一个StringBuffer</li>
-<li>Flush 什么也没干</li>
-</ol>
-</li>
-</ol>
-
+<li>字节流的本质上是不处理缓冲区的
+        
       
 
       
@@ -1040,15 +1009,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">java 后端</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">课程笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">自动生成</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">markdown语法</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1061,14 +1038,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">-git 内容</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">自动生成</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">markdown语法</a>
               </li>
             
             <div class="clearfix"></div>
