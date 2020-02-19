@@ -16,7 +16,7 @@
 <meta property="og:description" content="4 html常用标签    html4标题 h1~h6 语义化 容器标签 可以包裹其他标签诸如p、span、a、img   &lt;img src&#x3D;&quot;路径&quot; title&#x3D;&quot;悬停文本&quot; alt&#x3D;&quot;图片资源加载失败 显示这里文字&quot;&#x2F;&gt;  相对 从自身出发                1 当资源文件和自身处于同一级目录下 路径直接写文">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-02-11T01:54:42.607Z">
-<meta property="article:modified_time" content="2020-02-12T04:09:57.687Z">
+<meta property="article:modified_time" content="2020-02-13T09:14:19.639Z">
 <meta property="article:author" content="CodesLong">
 <meta property="article:tag" content="html">
 <meta property="article:tag" content="上课笔记">
@@ -56,7 +56,7 @@
 		</hgroup>
 		
 		<!-- 显示文章总数 -->
-		总文章数 7
+		总文章数 8
 		<nav class="header-menu">
 			<ul>
 			
@@ -255,8 +255,22 @@ h2 {
 (ie6不支持连续交集写法)
 并集选择器  div,p,h1,li {
        color: red
-   }</code></pre><h2 id="css两性-继承性与层叠性"><a href="#css两性-继承性与层叠性" class="headerlink" title="css两性-继承性与层叠性"></a>css两性-继承性与层叠性</h2><p>继承性  css中有一部分属性可以被继承，比如文字和文本的属性color,font-size,font-family,font-<em>、text-</em>。即便标签本身不设置 也能被加载<br>层叠性  </p>
-
+   }</code></pre><h2 id="css两性-继承性与层叠性"><a href="#css两性-继承性与层叠性" class="headerlink" title="css两性-继承性与层叠性"></a>css两性-继承性与层叠性</h2><p>继承性  css中有一部分属性可以被继承，比如文字和文本的属性color,font-size,font-family,font-<em>、text-</em>。即便标签本身不设置 也能被加载 </p>
+<h1 id="层叠性"><a href="#层叠性" class="headerlink" title="层叠性"></a>层叠性</h1><pre><code>以下三种选择器都可以直接选择到p,此时比较权重
+         id选择器个数  class选择器个数  标签选择器个数
+    #box1 .box2 .box3 p{
+        color:red;
+    }
+    #box1 div.box2 div.box3 p{
+        color: green;
+    }
+    #box2 div p{
+        color: lawngreen;
+    }
+1.以上权重相同,谁写在最后听谁的  
+2.三种选择器都没有直接选择元素 通过继承让p拥有属性，此时看谁描述的近,
+一样近,此时再比较权重，权重是最高就听谁的,假如权重一样，
+以代码的顺序为准听后面的</code></pre>
       
 
       
@@ -374,6 +388,15 @@ h2 {
   
 <nav id="article-nav">
   
+    <a href="/2020/02/19/2.19/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          I/O流（源码阅读）
+        
+      </div>
+    </a>
+  
   
     <a href="/2020/02/01/es6_node/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">es6</div>
@@ -403,7 +426,7 @@ h2 {
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#表单收集用户信息"><span class="toc-number">1.</span> <span class="toc-text">表单收集用户信息</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#css学习有两部分"><span class="toc-number">1.1.</span> <span class="toc-text">css学习有两部分</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-高级选择器"><span class="toc-number">1.2.</span> <span class="toc-text">2  高级选择器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#css两性-继承性与层叠性"><span class="toc-number">1.3.</span> <span class="toc-text">css两性-继承性与层叠性</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#表单收集用户信息"><span class="toc-number">1.</span> <span class="toc-text">表单收集用户信息</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#css学习有两部分"><span class="toc-number">1.1.</span> <span class="toc-text">css学习有两部分</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-高级选择器"><span class="toc-number">1.2.</span> <span class="toc-text">2  高级选择器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#css两性-继承性与层叠性"><span class="toc-number">1.3.</span> <span class="toc-text">css两性-继承性与层叠性</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#层叠性"><span class="toc-number">2.</span> <span class="toc-text">层叠性</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -555,11 +578,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">-git 内容</a>
+                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+                <a href="javascript:void(0)" class="js-tag color3">java 后端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">课程笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">java方法</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -567,7 +598,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">java方法</a>
+                <a href="javascript:void(0)" class="js-tag color3">-git 内容</a>
               </li>
              
               <li class="article-tag-list-item">
