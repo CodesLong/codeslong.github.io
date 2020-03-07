@@ -150,14 +150,14 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-java知识点" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-java" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/01/30/java%E7%9F%A5%E8%AF%86%E7%82%B9/">测试</a>
+      <a class="article-title" href="/2020/02/01/java/">java 基础（1）</a>
     </h1>
   
 
@@ -165,18 +165,47 @@
         
         <!--显示阅读次数完毕-->
         
-        <a href="/2020/01/30/java%E7%9F%A5%E8%AF%86%E7%82%B9/" class="archive-article-date">
-  	<time datetime="2020-01-29T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-30</time>
+        <a href="/2020/02/01/java/" class="archive-article-date">
+  	<time datetime="2020-01-31T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-01</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="方法-hashmap"><a href="#方法-hashmap" class="headerlink" title="方法(hashmap)"></a>方法(hashmap)</h2><pre><code>键值对中存才（containKey(键) containValue(值) 存在则返回真)
-对于自定义类，equals 方法是引用
-复写方法/接口 在其前用@override</code></pre><h2 id="遍历-：-可以获取三种视图"><a href="#遍历-：-可以获取三种视图" class="headerlink" title="遍历 ： 可以获取三种视图"></a>遍历 ： 可以获取三种视图</h2><pre><code>1. 键值集 KeySet()
-2. 值集合 ValueSet()  </code></pre>
+        <p>1)    Java API 文档 （JDK文档）</p>
+<h3 id="源文件（-java）-gt-字节码文件（-class）-称为编译"><a href="#源文件（-java）-gt-字节码文件（-class）-称为编译" class="headerlink" title="源文件（.java） -&gt; 字节码文件（.class）  称为编译"></a>源文件（.java） -&gt; 字节码文件（.class）  称为编译</h3><h3 id="标识符命名规则："><a href="#标识符命名规则：" class="headerlink" title="标识符命名规则："></a>标识符命名规则：</h3><pre><code>1.标识符由字母，数字，下划线或者美元符号组成
+2.首字母不能以数字开头
+3.命名不能与关键字，布尔值和null相同
+4.区分大小写，没有长度限制，见名知意（驼峰命名法）</code></pre><h2 id="注释："><a href="#注释：" class="headerlink" title="注释："></a>注释：</h2><pre><code>//  单行注释
+/*
+*多行注释
+*/</code></pre><h2 id="文档注释（JDK提供的javadoc命令）"><a href="#文档注释（JDK提供的javadoc命令）" class="headerlink" title="文档注释（JDK提供的javadoc命令）"></a>文档注释（JDK提供的javadoc命令）</h2><pre><code>/**
+*文档注释
+*/
+
+
+^  异或运算符 两个操作相同，结果为true
+&amp;&amp; 短路与  ||  短路或  左边假，右短路
+条件 ？ 表达式1 ： 表达式2</code></pre><h2 id="数据类型："><a href="#数据类型：" class="headerlink" title="数据类型："></a>数据类型：</h2><pre><code>1.基本数据类型
+数值型（整数型（byte, short int long） 浮点型（float double））
+字符型（char）
+布尔型（boolean）  </code></pre><h2 id="浮点数到整数的转换是通过舍弃小数得到，而不是四舍五入"><a href="#浮点数到整数的转换是通过舍弃小数得到，而不是四舍五入" class="headerlink" title="浮点数到整数的转换是通过舍弃小数得到，而不是四舍五入"></a>浮点数到整数的转换是通过舍弃小数得到，而不是四舍五入</h2><pre><code>2. 引用数据类型（类  接口，和数组等）
+变量： 
+[ 访问修饰符 ]  变量类型   变量名[ =初始值 ]；（int age = 24;）
+
+数据类型转换：
+Int –&gt; long -&gt; float -&gt; double 
+赋值运算（自动类型转换（低级向高级）   强制类型转换（高级向低级）  ）
+
+导入Scanner 类（import java.util.*）
+创建Scanner 对象（Scanner input = new Scanner(System.in);）
+Scanner方法（获得用户从键盘输入的数据其常用方法：</code></pre><h2 id="源文件-（-java"><a href="#源文件-（-java" class="headerlink" title="源文件 （.java)"></a>源文件 （.java)</h2><h2 id="字节码文件（-class"><a href="#字节码文件（-class" class="headerlink" title="字节码文件（.class)"></a>字节码文件（.class)</h2><pre><code>equels(a,b) 两个数组是否相等
+sort( ) 数组元素升序
+to String() 数组转化为字符串</code></pre><h2 id="其常用方法："><a href="#其常用方法：" class="headerlink" title="其常用方法："></a>其常用方法：</h2><pre><code>String next（）获得一个字符
+int nextInt() 获得一个整形数值
+double nextDouble()获得个双精度类型数值
+Boolean hasNext() 有输入数据返回true</code></pre>
       
 
       
@@ -189,6 +218,10 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">自学</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
         		</li>
       		
@@ -196,10 +229,25 @@
 	</div>
 
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/java//" class="article-tag-list-link color5">java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/java/后端//" class="article-tag-list-link color3">后端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/01/30/java%E7%9F%A5%E8%AF%86%E7%82%B9/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/02/01/java/">展开全文 >></a>
         </p>
       
 
@@ -619,11 +667,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">自学</a>
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" class="js-tag color3">自学</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -635,15 +683,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">课程笔记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+                <a href="javascript:void(0)" class="js-tag color5">上课笔记</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -651,7 +691,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">上课笔记</a>
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">自动生成</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -660,10 +708,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">markdown</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">自动生成</a>
               </li>
             
             <div class="clearfix"></div>

@@ -16,7 +16,7 @@
 <meta property="og:description" content="第一个程序 程序入口：main方法不能错 大小写敏感：大小写，是不一样的东西 类名和文件名完全一致 类名首字母大写！！！！！！！！！！注释:不影响程序本身执行，是给程序员阅读代码提供帮助的 单行注释：&#x2F;&#x2F; 多行注释：&#x2F;**&#x2F; DOC注释：&#x2F;** *&#x2F;编码规范： 一行写一句 注意缩进 注意大小写 所有符号都是英文状态下的半角java的数据类型： 8种基本数据类型 变量的命名规则：字、下、美、人、数、">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-02-25T03:24:59.746Z">
-<meta property="article:modified_time" content="2020-02-25T09:43:34.530Z">
+<meta property="article:modified_time" content="2020-03-03T09:08:02.782Z">
 <meta property="article:author" content="CodesLong">
 <meta property="article:tag" content="Java">
 <meta property="article:tag" content="后端">
@@ -210,6 +210,15 @@
 <li>命名规则：所有字母大写，单词之间区分用下划线分割</li>
 <li>类型转换：<br>(1)    短的可以直接放到长的里面<br>(2)    长的不可以直接放到短的里，需要强制转换<br>(3)    低精度可以直接转为高精度<br>(4)    高精度不可以直接转为低精度，需要强制转换。</li>
 </ol>
+<hr>
+<h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符*****"></a>运算符*****</h2><ol>
+<li>赋值运算符：=<br>(1)    优先级最低  </li>
+<li>算数运算：<br>(1)    取整：当除数和被除数都是整数时，结果一定是忽略了精度的整型<br>(2)    除数不可为0，否则报错<br>(3)    希望得到浮点数结果：除数或者被除数，只要有一个是浮点数，结果就是浮点数<br>(4)    自增自减的运用  </li>
+<li>关系运算符<br>(1)    判断两端 必须是 基本数据类型<br>①    == 和 != 可以用于判断字符和布尔类型，以及数值（可以用于判断引用数据类型的地址是否相等）<br>②    不等式判断 ：只可以用于判断数值<br>③    结果一定是布尔类型<br>④    处理优先级的时候，如果逻辑不清，可以无脑使用括号，提高可读性  </li>
+<li>逻辑运算符<br>(1)    判断的是布尔类型，结果也是布尔类型<br>(2)    短路：当左面就已经能得到结果了，则右面不再执行（常用）<br>(3)    长路：无论左面是否有结果，右面一定会执行（基本不用）  </li>
+<li>三目运算符：条件是布尔类型，结果类型要统一  </li>
+<li>位运算符  </li>
+</ol>
 
       
 
@@ -332,18 +341,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/02/25/%E8%88%92%E5%B0%94%E7%89%B9/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/03/03/%E5%90%8E%E7%AB%AF2/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          舒尔特
+          java基础
         
       </div>
     </a>
   
   
     <a href="/2020/02/23/2.23/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">2.23</div>
+      <div class="article-nav-title">css属性</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -370,7 +379,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#第一个程序"><span class="toc-number">1.</span> <span class="toc-text">第一个程序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编码规范："><span class="toc-number">2.</span> <span class="toc-text">编码规范：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#java的数据类型："><span class="toc-number">3.</span> <span class="toc-text">java的数据类型：</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#第一个程序"><span class="toc-number">1.</span> <span class="toc-text">第一个程序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编码规范："><span class="toc-number">2.</span> <span class="toc-text">编码规范：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#java的数据类型："><span class="toc-number">3.</span> <span class="toc-text">java的数据类型：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#运算符"><span class="toc-number">4.</span> <span class="toc-text">运算符*****</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -514,11 +523,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">自学</a>
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" class="js-tag color3">自学</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -530,15 +539,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">课程笔记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+                <a href="javascript:void(0)" class="js-tag color5">上课笔记</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -546,7 +547,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">上课笔记</a>
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">自动生成</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -555,10 +564,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">markdown</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">自动生成</a>
               </li>
             
             <div class="clearfix"></div>

@@ -8,19 +8,19 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>表单 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="4 html常用标签    html4标题 h1~h6 语义化 容器标签 可以包裹其他标签诸如p、span、a、img   &lt;img src&#x3D;&quot;路径&quot; title&#x3D;&quot;悬停文本&quot; alt&#x3D;&quot;图片资源加载失败 显示这里文字&quot;&#x2F;&gt;  相对 从自身出发                1 当资源文件和自身处于同一级目录下 路径直接写文">
+  <meta name="description" content="4 html常用标签    html4标题 h1~h6 语义化 容器标签 可以包裹其他标签诸如p、span、a、img  画线 &lt;hr &#x2F;&gt; 段落标签 &lt;p&gt;.....&lt;&#x2F;p&gt; 换行标签  &lt;br &#x2F;&gt; div&#x2F;span 文本格式化标签 b strong i em s del u ins   &lt;img src&#x3D;&quot;路径&quot; t">
 <meta property="og:type" content="article">
 <meta property="og:title" content="表单">
 <meta property="og:url" content="http://yoursite.com/2020/02/11/2.11/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="4 html常用标签    html4标题 h1~h6 语义化 容器标签 可以包裹其他标签诸如p、span、a、img   &lt;img src&#x3D;&quot;路径&quot; title&#x3D;&quot;悬停文本&quot; alt&#x3D;&quot;图片资源加载失败 显示这里文字&quot;&#x2F;&gt;  相对 从自身出发                1 当资源文件和自身处于同一级目录下 路径直接写文">
+<meta property="og:description" content="4 html常用标签    html4标题 h1~h6 语义化 容器标签 可以包裹其他标签诸如p、span、a、img  画线 &lt;hr &#x2F;&gt; 段落标签 &lt;p&gt;.....&lt;&#x2F;p&gt; 换行标签  &lt;br &#x2F;&gt; div&#x2F;span 文本格式化标签 b strong i em s del u ins   &lt;img src&#x3D;&quot;路径&quot; t">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-02-11T01:54:42.607Z">
-<meta property="article:modified_time" content="2020-02-20T08:00:53.353Z">
+<meta property="article:modified_time" content="2020-03-07T13:22:24.187Z">
 <meta property="article:author" content="CodesLong">
-<meta property="article:tag" content="前端">
-<meta property="article:tag" content="html">
 <meta property="article:tag" content="上课笔记">
+<meta property="article:tag" content="html">
+<meta property="article:tag" content="前端">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -186,7 +186,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p> 4 html常用标签<br>    html4<br>标题 h1~h6 语义化 容器标签 可以包裹其他标签诸如p、span、a、img  </p>
+        <p> 4 html常用标签<br>    html4<br>标题 h1~h6 语义化 容器标签 可以包裹其他标签诸如p、span、a、img </p>
+<pre><code>画线 &lt;hr /&gt;
+段落标签 &lt;p&gt;.....&lt;/p&gt;
+换行标签  &lt;br /&gt;
+div/span
+文本格式化标签 b strong i em s del u ins </code></pre><hr>
+
 <pre><code>&lt;img src=&quot;路径&quot; title=&quot;悬停文本&quot; alt=&quot;图片资源加载失败 显示这里文字&quot;/&gt;
 
 相对 从自身出发
@@ -240,38 +246,22 @@
             &lt;/dd&gt;
         &lt;/dl&gt;
 表格  
-    展示数据或制作表格    </code></pre><h1 id="表单收集用户信息"><a href="#表单收集用户信息" class="headerlink" title="表单收集用户信息"></a>表单收集用户信息</h1><h2 id="css学习有两部分"><a href="#css学习有两部分" class="headerlink" title="css学习有两部分"></a>css学习有两部分</h2><ol>
-<li>选择器 选中元素标签</li>
-<li>各种属性   </li>
-</ol>
-<p>选择器<br>    1 基本选择器<br>    标签选择器 </p>
-<pre><code>div {     
+    展示数据或制作表格    </code></pre><h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><pre><code>&lt;table border=&quot;1&quot; cellspacing=&quot;0&quot; align=&quot;center&quot; width=&quot;500&quot; height=&quot;300&quot; cellpadding=&quot;25&quot;&gt;
+&lt;/table&gt;
+&lt;!--定义行--&gt;&lt;tr&gt;
+&lt;!--定义列--&gt;&lt;td&gt;
+border属性 表格边框
+cellspacing 单元格边距
+align 表格对齐方式
+width 宽度
+height高度
+cellpadding 内容与单元格之间距离 </code></pre><h2 id="表单-用于收集用户信息"><a href="#表单-用于收集用户信息" class="headerlink" title="表单 用于收集用户信息"></a>表单 用于收集用户信息</h2><pre><code>input type(text/password/radio/checkbox/file/button/submit/reset/image)
+textarea
+select
 
-}   
-h2 {
-
-}  </code></pre><p>类选择器 推荐经常用<br>id选择器</p>
-<pre><code>通配符 * 代表所有标签  </code></pre><h2 id="2-高级选择器"><a href="#2-高级选择器" class="headerlink" title="2  高级选择器"></a>2  高级选择器</h2><pre><code>后代选择器  div p 表示div中所有后代p  
-交集选择器  div.box { }    div.box li {}   p.p1#p1  
-(ie6不支持连续交集写法)
-并集选择器  div,p,h1,li {
-       color: red
-   }</code></pre><h2 id="css两性-继承性与层叠性"><a href="#css两性-继承性与层叠性" class="headerlink" title="css两性-继承性与层叠性"></a>css两性-继承性与层叠性</h2><p>继承性  css中有一部分属性可以被继承，比如文字和文本的属性color,font-size,font-family,font-<em>、text-</em>。即便标签本身不设置 也能被加载 </p>
-<h1 id="层叠性"><a href="#层叠性" class="headerlink" title="层叠性"></a>层叠性</h1><pre><code>以下三种选择器都可以直接选择到p,此时比较权重
-         id选择器个数  class选择器个数  标签选择器个数
-    #box1 .box2 .box3 p{
-        color:red;
-    }
-    #box1 div.box2 div.box3 p{
-        color: green;
-    }
-    #box2 div p{
-        color: lawngreen;
-    }
-1.以上权重相同,谁写在最后听谁的  
-2.三种选择器都没有直接选择元素 通过继承让p拥有属性，此时看谁描述的近,
-一样近,此时再比较权重，权重是最高就听谁的,假如权重一样，
-以代码的顺序为准听后面的</code></pre>
+&lt;form action=&quot;url&quot; method=&quot;get&quot;&gt;&lt;/form&gt;
+action属性指定表单提交给什么程序处理
+method属性指定表单提交方式 一般是get/post  </code></pre>
       
 
       
@@ -315,7 +305,7 @@ h2 {
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">上课笔记</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
@@ -323,7 +313,7 @@ h2 {
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">上课笔记</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
         		</li>
       		
 		</ul>
@@ -393,11 +383,11 @@ h2 {
   
 <nav id="article-nav">
   
-    <a href="/2020/02/19/2.19java/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/02/19/2.19/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          java 基础（2）[基础语法]
+          I/O流（源码阅读）
         
       </div>
     </a>
@@ -431,7 +421,7 @@ h2 {
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#表单收集用户信息"><span class="toc-number">1.</span> <span class="toc-text">表单收集用户信息</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#css学习有两部分"><span class="toc-number">1.1.</span> <span class="toc-text">css学习有两部分</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-高级选择器"><span class="toc-number">1.2.</span> <span class="toc-text">2  高级选择器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#css两性-继承性与层叠性"><span class="toc-number">1.3.</span> <span class="toc-text">css两性-继承性与层叠性</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#层叠性"><span class="toc-number">2.</span> <span class="toc-text">层叠性</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#表格"><span class="toc-number">1.</span> <span class="toc-text">表格</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#表单-用于收集用户信息"><span class="toc-number">2.</span> <span class="toc-text">表单 用于收集用户信息</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -575,11 +565,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">自学</a>
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" class="js-tag color3">自学</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -591,15 +581,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">课程笔记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+                <a href="javascript:void(0)" class="js-tag color5">上课笔记</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -607,7 +589,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">上课笔记</a>
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">自动生成</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -616,10 +606,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">markdown</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">自动生成</a>
               </li>
             
             <div class="clearfix"></div>
