@@ -16,9 +16,8 @@
 <meta property="og:description" content="1.多态：同一个引用类型，因为实例不同，表现的形式也不同2.抽象类：在某些情况下，引用类型是一个抽象的概念，那么这样的类型，我们可以把他定义为抽象类(1)    语法：在class前加关键字abstract，用于表示当前类为抽象类(2)    注意：    ①    在抽象类当中，可以有普通方法，也可以有抽象方法；但是，抽象方法只能在抽象类当中声明；    ②    抽象类除了多了抽象方法和不能被">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://yoursite.com/2020/03/17/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B9%8B%E5%A4%9A%E6%80%81/codeslong.github.io/img/leitu.png">
-<meta property="og:image" content="http://pic.baike.soso.com/ugc/baikepic2/13751/20160809060345-444550724.jpg/0">
 <meta property="article:published_time" content="2020-03-17T02:58:05.229Z">
-<meta property="article:modified_time" content="2020-03-17T03:54:33.360Z">
+<meta property="article:modified_time" content="2020-03-17T05:37:52.582Z">
 <meta property="article:author" content="CodesLong">
 <meta property="article:tag" content="上课笔记">
 <meta property="article:tag" content="后端">
@@ -192,7 +191,7 @@
         <p>1.多态：同一个引用类型，因为实例不同，表现的形式也不同<br>2.抽象类：在某些情况下，引用类型是一个抽象的概念，那么这样的类型，我们可以把他定义为抽象类<br>(1)    语法：在class前加关键字abstract，用于表示当前类为抽象类<br>(2)    注意：<br>    ①    在抽象类当中，可以有普通方法，也可以有抽象方法；但是，抽象方法只能在抽象类当中声明；<br>    ②    抽象类除了多了抽象方法和不能被实例化之外，和普通类一致<br>    ③    抽象方法的语法，在修饰符和返回值之间，添加关键字abstract，抽象方法没有方法体，即不需要立即实现<br>    ④    没有抽象的属性<br>    ⑤    抽象类，不可被实例化<br>    ⑥    抽象方法必须在子类当中被实现，除非子类也是抽象类，也就是说，在抽象的类的子类当中，只要有一个子类实现了抽象方法，其后代将不必一定实现该抽象方法<br>    ⑦    对于一个子类来说，其父类当中所有的抽象方法，如果没有被实现过，那么将都需要去实现这些抽象方法<br>(3)    向上转型：父类声明指向子类对象<br>    ①    向上转型，父类声明，只能调用子类重写的方法，或者本身实现没有被子类重写的方法<br>    ②    多个子类实现同一个重写的方法，优先调用距离实现类最近的那个<br>    ③    向上转型，子类特有的方法，无法被调用<br>    ④    向上转型属于自动类型转换<br>(4)    向下转型：强制将父类型变为子类型  </p>
 <pre><code>①    首先要向上转型过了，才能向下转型
 ②    向下转型之前，一定要判断实例的类型，要强转为那个引用，就判断是否是这个引用
-③    向下转型属于强制类型转换</code></pre><p>3.接口：<br>(1)    语法：使用interface来声明<br>(2)    方法：所有的方法都是抽象方法，不存在普通方法<br>(3)    抽象方法，只能使用共有的和默认的两种修饰符；因为，如果是私有的，那么除了本类以外不可见，如果是受保护的，要继承可见，那么问题就是是否可见。<br>(4)    接口当中，所有的属性都是静态常量<br>(5)    接口可以多实现，用逗号隔开，但是继承只能单根继承<br>(6)    接口同样不可以被实例化<br>(7)    接口和接口之间是多继承<br>(8)    所有接口当中的抽象方法，都必须被实现类实现<br>(9)    instanceof判断是否是某个类型，看实现类，而不是看声明的类型<br>(10)    接口没有构造，抽象类有构造<br>4.工厂模式：帮助生产具体接口或者抽象类的实现类<br> <img src="codeslong.github.io/img/leitu.png" alt="类图"><br> <img src="http://pic.baike.soso.com/ugc/baikepic2/13751/20160809060345-444550724.jpg/0" alt="类图"><br>类图  </p>
+③    向下转型属于强制类型转换</code></pre><p>3.接口：<br>(1)    语法：使用interface来声明<br>(2)    方法：所有的方法都是抽象方法，不存在普通方法<br>(3)    抽象方法，只能使用共有的和默认的两种修饰符；因为，如果是私有的，那么除了本类以外不可见，如果是受保护的，要继承可见，那么问题就是是否可见。<br>(4)    接口当中，所有的属性都是静态常量<br>(5)    接口可以多实现，用逗号隔开，但是继承只能单根继承<br>(6)    接口同样不可以被实例化<br>(7)    接口和接口之间是多继承<br>(8)    所有接口当中的抽象方法，都必须被实现类实现<br>(9)    instanceof判断是否是某个类型，看实现类，而不是看声明的类型<br>(10)    接口没有构造，抽象类有构造<br>4.工厂模式：帮助生产具体接口或者抽象类的实现类<br> <img src="codeslong.github.io/img/leitu.png" alt="类图"><br>类图  </p>
 <pre><code>1. 类名：
 (1)    接口在类名之上有&lt;interface&gt;&lt;接口&gt;  
 (2)    抽象类斜体  
@@ -534,11 +533,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+                <a href="javascript:void(0)" class="js-tag color2">git 内容</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">git 内容</a>
+                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
               </li>
              
               <li class="article-tag-list-item">
