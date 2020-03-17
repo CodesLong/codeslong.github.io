@@ -50,7 +50,7 @@
 		</hgroup>
 		
 		<!-- 显示文章总数 -->
-		总文章数 23
+		总文章数 24
 		<nav class="header-menu">
 			<ul>
 			
@@ -149,6 +149,120 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-定位" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/17/%E5%AE%9A%E4%BD%8D/">css属性-定位</a>
+    </h1>
+  
+
+        <!--显示阅读次数-->
+        
+        <!--显示阅读次数完毕-->
+        
+        <a href="/2020/03/17/%E5%AE%9A%E4%BD%8D/" class="archive-article-date">
+  	<time datetime="2020-03-17T09:39:52.750Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="相对定位的元素"><a href="#相对定位的元素" class="headerlink" title="相对定位的元素"></a>相对定位的元素</h2><pre><code>1 相对于自己标准流的位置进行局部的位置微调
+2 相对定位的元素还是标准流的元素  
+         /*相对定位 */
+         position: relative;
+         /* 往右走20px*/
+         left: 20px;
+         top: 60px;
+         /* right: -20px; */</code></pre><h2 id="绝对定位"><a href="#绝对定位" class="headerlink" title="绝对定位"></a>绝对定位</h2><p> position: absolute<br>           1 一个绝对定位元素是body儿子，此时参考点就是body左上角<br>           2 在工程上，一般采用子绝父相，也就是儿子设置绝对定位，父亲设置为相对定位，父亲设置相对定位，此时儿子绝对定位的参考点就是以<br>           最近的带有定位的祖先元素为准<br>           3 绝对定位的元素脱离标准流 </p>
+<hr>
+<pre><code>top: 50%;
+top: 60px;
+left: 50px; 
+/*失效 因为绝对定位的元素脱标*/
+/* margin: 0 auto;</code></pre><hr>
+<pre><code>  position: static    
+  position: relative  
+  position: absolute 1 脱标 2 子绝父相  
+  position: fixed 1 脱标 2 相对于浏览器   
+注意 元素设置浮动 固定定位和绝对定位 可以解决margin合并</code></pre><hr>
+<p>z-index 只对定位的元素有效,取值是一个整数可以是0或者负数 默认值是0 数字越大 代表盒子越靠上<br>overflow: scroll; 总是会出现滚动条<br>overflow: auto;  根据内容是否超出 超出的话 显示滚动条 不超出不显示<br>white-space: nowrap; 强制一行显示  </p>
+<hr>
+<p>元素隐藏 不保留位置–&gt;display: none;  </p>
+<pre><code>(鼠标状态的设置) 
+cursor: pointer;
+cursor: text;
+cursor: move;
+cursor: default;
+/* 禁止*/
+cursor: not-allowed;</code></pre><hr>
+<p>vertical-align对行内元素或行内块元素有效</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">html</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">上课笔记</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/03/17/%E5%AE%9A%E4%BD%8D/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-面向对象之多态" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -723,7 +837,24 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>外边距塌陷：（上下方向）     transparent 透明<br>        1. 上下两个相邻的块元素，假如上面的元素有margin-bottom,下面元素有margin-top,会发生合并，一较大的值为准<br>        2. 父子嵌套的元素，子元素的上边距会和父亲的外边距合并，一较大的值为准<br>解决父亲塌陷问题：<br>            1. 给父亲加border<br>            2. 给父亲加padding<br>            3. 给父亲加overflow:hidden<br>            border: 1px solid transparent;<br>            padding: 1px;<br>标准流，默认状态<br>    css元素的划分（块级.行内元素。。。）和特征都是在标准流的前提下<br>浮动元素<br>        1.脱离标准流<br>        2.相互贴靠<br>        3.浮动元素可以设置宽高，不设置，默认靠内容撑开<br>        4. 可以做文字环绕   了解<br>display: inline-block;<br>            可以让div并排，但出现空白<br>            <em>/<br>            /</em> 浮动可以进行并排，并且没有空白现象<br>浮动元素影响的自己和后面的元素</p>
+        <ul>
+<li>display: inline-block;虽然可以让div并排 但是会出现空白  </li>
+<li>浮动可以帮我们进行元素并排 并且没有空白现象–&gt; float: left;  </li>
+<li>标准流 默认状态–&gt; css元素的划分(块级元素、行内元素。。。)和特征都是在标准流前提下成立  </li>
+<li>浮动元素 1 脱标 2 相互贴靠 3 浮动元素可以设置宽高，不设置宽高，默认靠内容撑开 4 文字环绕(了解)</li>
+<li>浮动元素影响的是自己和后面的元素</li>
+</ul>
+<p>外边距塌陷：（上下方向）     transparent 透明<br>        1. 上下两个相邻的块元素，假如上面的元素有margin-bottom,下面元素有margin-top,会发生合并，一较大的值为准<br>        2. 父子嵌套的元素，子元素的上边距会和父亲的外边距合并，一较大的值为准</p>
+<ul>
+<li>浮动的元素不能撑开父亲<br>  浮动往往会对后面的元素布局造成影响，所以需要清除浮动造成的影响<br>  清除浮动方法<br>  1 隔墙法（给父亲加border）-给浮动的元素增加一个高度 缺点 儿子的高度有时候<br>  不确定 所以高度设置固定 不灵活<br>  2 额外标签法 （给父亲加padding）<br>  clear:left; clear:right;<br>  clear:both<br>  在浮动元素末尾加一个空标签(一般是块级元素) 给这个标签设置clear: bot<br>  缺点 会影响页面的结构<br>  3 给浮动元素的父亲增加overflow: hidden<br>  overflow:hidden overflow:auto overflow:scroll<br>  4 使用after伪元素清除浮动<pre><code>.clearfix:after {
+content: &apos;&apos;;
+display: block;
+height: 0;
+visibility: hidden;
+clear: both;
+}</code></pre>  5 双伪元素清除浮动  </li>
+</ul>
+<p>*zoom: 1—&gt;专门ie6/7清除浮动</p>
 
       
 
@@ -943,12 +1074,15 @@ td {
     border-collapse: collapse;
 }</code></pre><hr>
  盒子的实际宽度为width+padding+左右border    
-设置padding如何保证盒子总宽不变，调整width，(宽度剩余)  
+设置padding:如何保证盒子总宽不变，调整width，(宽度剩余) 
 
+<p>复合写法  上  右  下  左 从上顺时针设置 : padding: 6px 10px 8px 10px;</p>
 <pre><code>四个方向都是6px  
 按照单个方向：上下左右
 综合写法：上 右 下 左
-上 （右，左） 下 --顺时针看  </code></pre>
+上 （右，左） 下 --顺时针看   </code></pre><hr>
+<p>可以让文本 行内元素 行内块元素在盒子里面水平居中   text-align: center;<br>margin: 0 auto; 可以让有宽度的块级元素水平居中<br>margin 对行内元素 设置上下外边距无效 左右可以设置</p>
+
       
 
       
@@ -1009,14 +1143,14 @@ td {
 
 
   
-    <article id="post-后端3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-类和对象0" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/08/%E5%90%8E%E7%AB%AF3/">类和对象1</a>
+      <a class="article-title" href="/2020/03/08/%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A10/">类和对象1</a>
     </h1>
   
 
@@ -1024,7 +1158,7 @@ td {
         
         <!--显示阅读次数完毕-->
         
-        <a href="/2020/03/08/%E5%90%8E%E7%AB%AF3/" class="archive-article-date">
+        <a href="/2020/03/08/%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A10/" class="archive-article-date">
   	<time datetime="2020-03-08T02:21:37.618Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-08</time>
 </a>
         
@@ -1039,6 +1173,8 @@ td {
 <li>对象：是一个实实在在存在的东西，是一个你能看得见摸得着的东西，是一个你能指名道姓的东西，是一个一说你就知道具体是什么的东西。  </li>
 <li>从编程角度来讲：<br>(1)    类：是一个文件<br>①    一个.java文件<br>②    用class来声明类<br>③    类的首字母必须大写<br>(2)    对象：是我们程序中的一个数据<br>①    对象也是一种变量，叫引用类型变量<br>②    对象的声明过程，完全符合一般变量的声明过程，new+构造才是真正的对象<br>③    操作对象前，一定要确保对象new过了<br>(3)    方法<br>①    语法：修饰符 返回值类型 方法名(形参列表){方法体}<br>②    返回值类型：明确调用者可以获得的结果类型。<br>1)    无值（没有返回值）：void(这是一个关键字，要变颜色的)<br>a.    没有返回值，可以有return，也可以没有<br>2)    有值：要声明一个类型，那么返回的结果必须是这个类型<br>3)    如果返回值不是void，那么在方法当中，必须执行一次，也只能执行一次  return<br>4)    Return执行之后，后面的代码会报错<br>5)    中断方法继续执行<br>③    普通方法在类的内部调用，不需要对象名或者类名，直接用方法名调用<br>④    在类的外部调用普通方法，一定要通过对象来调用</li>
 </ol>
+<hr>
+<p>函数：定义在类外面的 –&gt; 面向过程<br>方法：定义在类里面的 –&gt; 面向对象的</p>
 
       
 
@@ -1070,122 +1206,7 @@ td {
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/03/08/%E5%90%8E%E7%AB%AF3/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-标签作用总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/07/%E6%A0%87%E7%AD%BE%E4%BD%9C%E7%94%A8%E6%80%BB%E7%BB%93/">标签总结</a>
-    </h1>
-  
-
-        <!--显示阅读次数-->
-        
-        <!--显示阅读次数完毕-->
-        
-        <a href="/2020/03/07/%E6%A0%87%E7%AD%BE%E4%BD%9C%E7%94%A8%E6%80%BB%E7%BB%93/" class="archive-article-date">
-  	<time datetime="2020-03-07T12:44:54.186Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>font-size: 20px; 文字大小<br>text-decoration: underline; 文字下划线<br>综合性写法：font: 样式 粗细  字号/行高 字体 （ 其中 字号和字体是必须的）  </p>
-<pre><code>/* 设置字体*/
-font-family: Arial, &quot;Microsoft YaHei&quot;, &quot;黑体&quot;;
-
-/* 文字样式 正常/倾斜*/
-font-style: italic;
-
-/* 字体加粗  400正常 700 */
-font-weight: 500;
-
-/*上划线*/
-text-decoration: overline;
-
-/*中划线*/
-text-decoration: line-through;
-
-/*首行缩进 2em 2倍的字号*/
-text-indent: 2em;</code></pre><hr>  
-
-<pre><code>/*背景图设置*/
-background-image: url(p.jpg);
-/*控制背景图是否平铺*/
-background-repeat: no-repeat;
-/* background-repeat: repeat-x;
-background-repeat: repeat-y; */
-/* 背景定位 
-background-position: 0 0; 水平方向坐标 垂直方向坐标 
-*/
-/*也可以用方位名词 水平 left center right
-竖直 top center bottom
-假如只写一个方向 另外一个方向默认是center
-*/
-background-position: center center;
-background-position: bottom left;
-background-position: top;
-background-position: 30px center;</code></pre>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">html</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/03/07/%E6%A0%87%E7%AD%BE%E4%BD%9C%E7%94%A8%E6%80%BB%E7%BB%93/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/03/08/%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A10/">展开全文 >></a>
         </p>
       
 
