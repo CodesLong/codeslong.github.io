@@ -50,7 +50,7 @@
 		</hgroup>
 		
 		<!-- 显示文章总数 -->
-		总文章数 31
+		总文章数 32
 		<nav class="header-menu">
 			<ul>
 			
@@ -149,6 +149,103 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-枚举与范型" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/21/%E6%9E%9A%E4%B8%BE%E4%B8%8E%E8%8C%83%E5%9E%8B/">枚举与范型</a>
+    </h1>
+  
+
+        <!--显示阅读次数-->
+        
+        <!--显示阅读次数完毕-->
+        
+        <a href="/2020/04/21/%E6%9E%9A%E4%B8%BE%E4%B8%8E%E8%8C%83%E5%9E%8B/" class="archive-article-date">
+  	<time datetime="2020-04-21T03:23:37.413Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="在集合当中使用泛型："><a href="#在集合当中使用泛型：" class="headerlink" title="在集合当中使用泛型："></a>在集合当中使用泛型：</h3><p>(1)    为什么要用泛型：为了统一集合当中的数据类型，为了更加方便的操作数据<br>(2)    泛型是一个参数化的类型<br>(3)    是用于规定要操作的数据的类型</p>
+<h3 id="泛型类："><a href="#泛型类：" class="headerlink" title="泛型类："></a>泛型类：</h3><p>(1)    泛型标识：标识可以随便写，通常是一个大写字母，需要具备一定的可读性<br>(2)    比如：T(type),I(item),K(key),V(value)<br>(3)    如果在泛型类当中没有指定泛型，那么该类型，默认为Object<br>(4)    Public void test(T t){}：这种不是泛型方法！！！！！！<br>(5)    通常来说，我们不会对已泛型方式传入的数据做什么操作，因为使用泛型的前提是，我不知道用户会提供什么类型给我，所以，不会去操作他<br>(6)    <T> ：泛型形参<br>(7)    <String>：泛型实参<br><img src="/img/fanxinglei.png" alt="alt 泛型类定义"></p>
+<h3 id="泛型接口"><a href="#泛型接口" class="headerlink" title="泛型接口"></a>泛型接口</h3><p>(1)    泛型接口是定义在接口上<br>(2)    泛型类和泛型接口的泛型，在实现或者继承的情况下，重写或者实现的方法，泛型的参数和返回值需要保持一致<br>(3)    泛型接口的泛型实参必须指定，而实现类，可以不必指定，如果不指定，则沿用其接口的泛型类型<br>![alt 泛型接口][/img/fanxingjiekou.png]</p>
+<h3 id="泛型通配符"><a href="#泛型通配符" class="headerlink" title="泛型通配符"></a>泛型通配符</h3><p>(1)    ?：代表任意泛型<br>(2)    ？：是泛型实参，不是泛型形参<br>(3)    可以指定边界，规定某一批类型可以作为泛型，既可以规定泛型形参，也可以规定泛型实参<br>![alt 泛型边界][/img/bianjie.png]</p>
+<h3 id="泛型方法"><a href="#泛型方法" class="headerlink" title="泛型方法"></a>泛型方法</h3><p>(1)    如果一个类当中，不必多个方法公用同一个类型，某个方法的泛型是独立在当前方法当中的，这时，建议使用泛型方法，不影响到其他方法的类型<br>(2)    在方法的修饰符和返回值之间，申明泛型，该泛型，只作用于当前方法<br>![alt 泛型方法][/img/fangfa.png]</p>
+<h3 id="枚举："><a href="#枚举：" class="headerlink" title="枚举："></a>枚举：</h3><p>(1)    注意：不建议大家用枚举！！！！只是应为有这个东西，所以讲一下，了解足以。<br>(2)    一些散列值：如果存在数据的安全风险，那么在使用的过程中，该数据可以定义为枚举来避免风险数据对安全性的影响<br>![alt 枚举][/img/meiju.png]</p>
+<h3 id="枚举的构造"><a href="#枚举的构造" class="headerlink" title="枚举的构造"></a>枚举的构造</h3><p>(1)    构造是针对所有的枚举的元素，每一个枚举的元素都相当于一个类。<br>(2)    构造必须私有，调用构造的方法是通过调用类型<br>(3)    枚举中的类型是单例，有几个类型创建几个单例（问题之一）<br>(4)    枚举可以重写方法<br>(5)    枚举可以实现接口</p>
+<h3 id="枚举的问题："><a href="#枚举的问题：" class="headerlink" title="枚举的问题："></a>枚举的问题：</h3><p>(1)    有可能会大量产生单例，但是这个问题并不是枚举最致命的问题<br>(2)    在网络当中，WEB开发，枚举和很多主流的数据结构不兼容<br>![alt 优缺点][/img/youquedian.png]</p>
+<h3 id="JAVA的异常"><a href="#JAVA的异常" class="headerlink" title="JAVA的异常"></a>JAVA的异常</h3><p>(1)    如果程序发生异常，会影响后续程序的执行<br>(2)    使用异常处理机制，保证程序能够正常下去，不崩溃。  </p>
+<h3 id="捕获异常"><a href="#捕获异常" class="headerlink" title="捕获异常"></a>捕获异常</h3><p>(1)    捕获异常后，在异常类型匹配的情况下，可以保证在异常捕获之外的程序能够继续执行下去<br>(2)    异常堆栈信息：最上面是异常发生的最开始的位置<br>(3)    异常的本质只是一个标识类，效果等同用户返回值，是返回值的一种。<br>(4)    可以有多个catch，由上而下依次匹配，取第一个匹配上的，父类只能在子类异常的后面<br>(5)    try当中有多个异常的时候，哪个先碰到，先处理哪个<br>(6)    不要把一个代码块当中所有的代码都放到一个try-catch当中，这样做等同于什么也没做</p>
+<h3 id="自动抛出异常"><a href="#自动抛出异常" class="headerlink" title="自动抛出异常"></a>自动抛出异常</h3><p>(1)    当前方法不想处理异常，那么可以抛出异常，交给调用者处理（捕获/抛出），谁调用谁处理<br>(2)    异常最终抛无可抛，则必须要被处理；在中途被处理过的异常，其调用者就不必再处理了</p>
+<h3 id="手动抛出异常"><a href="#手动抛出异常" class="headerlink" title="手动抛出异常"></a>手动抛出异常</h3><p>(1)    根据使用者的实际情况，来判断是否需要手动抛出<br>(2)    运行时异常不是必须被处理的异常<br>(3)    Checked异常是必须被处理的异常</p>
+<h3 id="自定义异常"><a href="#自定义异常" class="headerlink" title="自定义异常"></a>自定义异常</h3><p>(1)    创建一类类，符合异常命名规范<br>(2)    继承Exception或者RuntimeException<br>(3)    实现所有父类构造调用</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">上课笔记</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">后端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/04/21/%E6%9E%9A%E4%B8%BE%E4%B8%8E%E8%8C%83%E5%9E%8B/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-集合" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -1202,139 +1299,6 @@ cursor: not-allowed;</code></pre><hr>
 
 
   
-    <article id="post-面向对象之继承" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/17/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B9%8B%E7%BB%A7%E6%89%BF/">类和对象4</a>
-    </h1>
-  
-
-        <!--显示阅读次数-->
-        
-        <!--显示阅读次数完毕-->
-        
-        <a href="/2020/03/17/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B9%8B%E7%BB%A7%E6%89%BF/" class="archive-article-date">
-  	<time datetime="2020-03-17T02:34:36.801Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>1.继承：子类对父类的继承<br>2.父类：可以是一个普通的类<br>3.子类：使用关键字extends继承父类（除了私有和父类构造以外的所有成员；如果不在同一个包里，默认的成员则无法继承，但是可以继承受保护的成员；如果在同一个包里，则除了私有以外，都可以继承。）<br>4.Java是单根继承：只能有一个爸爸，爸爸的爸爸是爷爷；即：每个类，只能有一个直接的父类<br>5.This和Super:  </p>
-<pre><code>(1)    This代表对象本身，Super代表父类（爸爸，爷爷，太爷爷，……）对象  
-(2)    Super可以调用父类的构造，属性和方法</code></pre><p>6.一些需要注意的地方：<br>(1)    默认情况下，子类构造将默认调用父类的空参构造；如果父类没有空参构造，则子类需显式调用某个父类的构造；如果子类显式的调用父类的某个构造，则不会再调用默认空参构造<br>(2)    使用this和super可以用来区分，父类和子类当中的成员，如果该成员是继承来的，那么也可以使用this来调用<br>(3)    为了防止父类和子类属性间的相互污染<br>(4)    方法重写：如果说，在子类当中不满足父类的某个方法，需要对该方法进行修改或者补充，那么可以通过方法重写来实现。 </p>
-<pre><code>①    当子类重写了父类的某个方法后，子类调用重写后的方法，父类调用原本的方法  
-②    当父类当中有某个成员方法被多次重写，那么子类优先调用最近的那个  
-③    构造方法不能被重写  
-④    重写可以理解为“覆盖”：  </code></pre><hr>
-<table>
-<thead>
-<tr>
-<th align="center">比较项</th>
-<th align="center">位置</th>
-<th align="center">方法名</th>
-<th align="center">参数表</th>
-<th align="center">返回值</th>
-<th align="center">访问修饰符</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">方法重写</td>
-<td align="center">子类</td>
-<td align="center">相同</td>
-<td align="center">相同</td>
-<td align="center">相同或是其子类</td>
-<td align="center">不能比父类更严格</td>
-</tr>
-<tr>
-<td align="center">方法重载</td>
-<td align="center">同类</td>
-<td align="center">相同</td>
-<td align="center">不相同</td>
-<td align="center">无关</td>
-<td align="center">无关</td>
-</tr>
-</tbody></table>
-<hr>
-<pre><code>1)    防止笔试当中有：重写和重载的区别这样的题目
-2)    访问权限不能严与父类
-3)    子类的返回值和父类相同，或者是父类返回值的子类
-4)    参数不能变，必须一样
-5)    方法名一样
-6)    实际应用当中：重写就是子类重写一个父类相同的方法（写个一模一样的）</code></pre><hr>
-<p>7.Object类：是java当中用于描述对象的一个类，是所有类的父类，当某个类，没有显式继承具体的类的时候，则会默认继承Object类。所有类都会直接或者间接的继承Object类。  </p>
-<pre><code>(1)    Object的equals方法：用于指定判断两个对象是否相等的规则   
-(2)    Object的toString方法：如果不重写toString方法，默认打印的就是内存地址  
-(3)    判断对象是否是指定类型，使用关键字instanceof：  
-    ①如果是指定类型，返回true    
-    ②如果是指定类型的子类，返回true</code></pre><p>8.最终类和最终方法<br>(1)    最终类，不可被继承<br>(2)    最终方法，不可被重写  </p>
-<p>四种修饰符<br>Public ： 所有地方可见<br>Protected：同包和子类可见<br>不写（默认的）：同包可见<br>Private：同类可见  </p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">上课笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">后端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/03/17/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B9%8B%E7%BB%A7%E6%89%BF/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
@@ -1484,11 +1448,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">后端</a>
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">java</a>
+                <a href="javascript:void(0)" class="js-tag color3">后端</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1496,11 +1460,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">git 内容</a>
+                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+                <a href="javascript:void(0)" class="js-tag color2">git 内容</a>
               </li>
              
               <li class="article-tag-list-item">

@@ -50,7 +50,7 @@
 		</hgroup>
 		
 		<!-- 显示文章总数 -->
-		总文章数 31
+		总文章数 32
 		<nav class="header-menu">
 			<ul>
 			
@@ -149,6 +149,139 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-面向对象之继承" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/17/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B9%8B%E7%BB%A7%E6%89%BF/">类和对象4</a>
+    </h1>
+  
+
+        <!--显示阅读次数-->
+        
+        <!--显示阅读次数完毕-->
+        
+        <a href="/2020/03/17/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B9%8B%E7%BB%A7%E6%89%BF/" class="archive-article-date">
+  	<time datetime="2020-03-17T02:34:36.801Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1.继承：子类对父类的继承<br>2.父类：可以是一个普通的类<br>3.子类：使用关键字extends继承父类（除了私有和父类构造以外的所有成员；如果不在同一个包里，默认的成员则无法继承，但是可以继承受保护的成员；如果在同一个包里，则除了私有以外，都可以继承。）<br>4.Java是单根继承：只能有一个爸爸，爸爸的爸爸是爷爷；即：每个类，只能有一个直接的父类<br>5.This和Super:  </p>
+<pre><code>(1)    This代表对象本身，Super代表父类（爸爸，爷爷，太爷爷，……）对象  
+(2)    Super可以调用父类的构造，属性和方法</code></pre><p>6.一些需要注意的地方：<br>(1)    默认情况下，子类构造将默认调用父类的空参构造；如果父类没有空参构造，则子类需显式调用某个父类的构造；如果子类显式的调用父类的某个构造，则不会再调用默认空参构造<br>(2)    使用this和super可以用来区分，父类和子类当中的成员，如果该成员是继承来的，那么也可以使用this来调用<br>(3)    为了防止父类和子类属性间的相互污染<br>(4)    方法重写：如果说，在子类当中不满足父类的某个方法，需要对该方法进行修改或者补充，那么可以通过方法重写来实现。 </p>
+<pre><code>①    当子类重写了父类的某个方法后，子类调用重写后的方法，父类调用原本的方法  
+②    当父类当中有某个成员方法被多次重写，那么子类优先调用最近的那个  
+③    构造方法不能被重写  
+④    重写可以理解为“覆盖”：  </code></pre><hr>
+<table>
+<thead>
+<tr>
+<th align="center">比较项</th>
+<th align="center">位置</th>
+<th align="center">方法名</th>
+<th align="center">参数表</th>
+<th align="center">返回值</th>
+<th align="center">访问修饰符</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">方法重写</td>
+<td align="center">子类</td>
+<td align="center">相同</td>
+<td align="center">相同</td>
+<td align="center">相同或是其子类</td>
+<td align="center">不能比父类更严格</td>
+</tr>
+<tr>
+<td align="center">方法重载</td>
+<td align="center">同类</td>
+<td align="center">相同</td>
+<td align="center">不相同</td>
+<td align="center">无关</td>
+<td align="center">无关</td>
+</tr>
+</tbody></table>
+<hr>
+<pre><code>1)    防止笔试当中有：重写和重载的区别这样的题目
+2)    访问权限不能严与父类
+3)    子类的返回值和父类相同，或者是父类返回值的子类
+4)    参数不能变，必须一样
+5)    方法名一样
+6)    实际应用当中：重写就是子类重写一个父类相同的方法（写个一模一样的）</code></pre><hr>
+<p>7.Object类：是java当中用于描述对象的一个类，是所有类的父类，当某个类，没有显式继承具体的类的时候，则会默认继承Object类。所有类都会直接或者间接的继承Object类。  </p>
+<pre><code>(1)    Object的equals方法：用于指定判断两个对象是否相等的规则   
+(2)    Object的toString方法：如果不重写toString方法，默认打印的就是内存地址  
+(3)    判断对象是否是指定类型，使用关键字instanceof：  
+    ①如果是指定类型，返回true    
+    ②如果是指定类型的子类，返回true</code></pre><p>8.最终类和最终方法<br>(1)    最终类，不可被继承<br>(2)    最终方法，不可被重写  </p>
+<p>四种修饰符<br>Public ： 所有地方可见<br>Protected：同包和子类可见<br>不写（默认的）：同包可见<br>Private：同类可见  </p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">上课笔记</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">后端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/03/17/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B9%8B%E7%BB%A7%E6%89%BF/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-类和对象之封装" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -1153,123 +1286,6 @@ background-position: 30px center;</code></pre><hr>
 
 
   
-    <article id="post-后端1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/25/%E5%90%8E%E7%AB%AF1/">java基础</a>
-    </h1>
-  
-
-        <!--显示阅读次数-->
-        
-        <!--显示阅读次数完毕-->
-        
-        <a href="/2020/02/25/%E5%90%8E%E7%AB%AF1/" class="archive-article-date">
-  	<time datetime="2020-02-25T03:24:59.746Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="第一个程序"><a href="#第一个程序" class="headerlink" title="第一个程序"></a>第一个程序</h2><ol>
-<li>程序入口：main方法不能错</li>
-<li>大小写敏感：大小写，是不一样的东西</li>
-<li>类名和文件名完全一致</li>
-<li>类名首字母大写！！！！！！！！！！<br>注释:不影响程序本身执行，是给程序员阅读代码提供帮助的</li>
-<li>单行注释：//</li>
-<li>多行注释：/**/</li>
-<li>DOC注释：/** */<h2 id="编码规范："><a href="#编码规范：" class="headerlink" title="编码规范："></a>编码规范：</h2></li>
-<li>一行写一句</li>
-<li>注意缩进</li>
-<li>注意大小写</li>
-<li>所有符号都是英文状态下的半角<h2 id="java的数据类型："><a href="#java的数据类型：" class="headerlink" title="java的数据类型："></a>java的数据类型：</h2></li>
-<li>8种基本数据类型</li>
-<li>变量的命名规则：字、下、美、人、数、骆驼</li>
-<li>变量名首字母小写</li>
-<li>Byte:初级面试笔试题中，有可能会问长度</li>
-<li>在java中，整型默认是int类型，浮点型默认是double类型</li>
-<li>同一个代码块当中：变量名不可以重复声明</li>
-<li>布尔类型</li>
-<li>字符类型</li>
-<li>常量：在声明前加final</li>
-<li>命名规则：所有字母大写，单词之间区分用下划线分割</li>
-<li>类型转换：<br>(1)    短的可以直接放到长的里面<br>(2)    长的不可以直接放到短的里，需要强制转换<br>(3)    低精度可以直接转为高精度<br>(4)    高精度不可以直接转为低精度，需要强制转换。</li>
-</ol>
-<hr>
-<h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符*****"></a>运算符*****</h2><ol>
-<li>赋值运算符：=<br>(1)    优先级最低  </li>
-<li>算数运算：<br>(1)    取整：当除数和被除数都是整数时，结果一定是忽略了精度的整型<br>(2)    除数不可为0，否则报错<br>(3)    希望得到浮点数结果：除数或者被除数，只要有一个是浮点数，结果就是浮点数<br>(4)    自增自减的运用  </li>
-<li>关系运算符<br>(1)    判断两端 必须是 基本数据类型<br>①    == 和 != 可以用于判断字符和布尔类型，以及数值（可以用于判断引用数据类型的地址是否相等）<br>②    不等式判断 ：只可以用于判断数值<br>③    结果一定是布尔类型<br>④    处理优先级的时候，如果逻辑不清，可以无脑使用括号，提高可读性  </li>
-<li>逻辑运算符<br>(1)    判断的是布尔类型，结果也是布尔类型<br>(2)    短路：当左面就已经能得到结果了，则右面不再执行（常用）<br>(3)    长路：无论左面是否有结果，右面一定会执行（基本不用）  </li>
-<li>三目运算符：条件是布尔类型，结果类型要统一  </li>
-<li>位运算符  </li>
-</ol>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">上课笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">后端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/02/25/%E5%90%8E%E7%AB%AF1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/">Next &amp;raquo;</a>
@@ -1419,11 +1435,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">后端</a>
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">java</a>
+                <a href="javascript:void(0)" class="js-tag color3">后端</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1431,11 +1447,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">git 内容</a>
+                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+                <a href="javascript:void(0)" class="js-tag color2">git 内容</a>
               </li>
              
               <li class="article-tag-list-item">

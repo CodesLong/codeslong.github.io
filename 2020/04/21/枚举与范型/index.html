@@ -6,26 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>集合 | Hexo</title>
+  <title>枚举与范型 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="JAVASE高级应用(1)集合泛型枚举(2)实用类(3)流(4)XML(5)反射(6)线程(7)网络编程   集合(1)List：有序不唯一的集合（插入顺序）     ①所在包：java.util.*   ②ArrayList：       1)本质是一个数组       2)不适合频繁增减元素：比如一个数组如果有1000W个元素，我如果需要增加一个元素，那么就意味着你需要先创建1000W零1个元">
+  <meta name="description" content="在集合当中使用泛型：(1)    为什么要用泛型：为了统一集合当中的数据类型，为了更加方便的操作数据(2)    泛型是一个参数化的类型(3)    是用于规定要操作的数据的类型 泛型类：(1)    泛型标识：标识可以随便写，通常是一个大写字母，需要具备一定的可读性(2)    比如：T(type),I(item),K(key),V(value)(3)    如果在泛型类当中没有指定泛型，那么该">
 <meta property="og:type" content="article">
-<meta property="og:title" content="集合">
-<meta property="og:url" content="http://yoursite.com/2020/04/21/%E9%9B%86%E5%90%88/index.html">
+<meta property="og:title" content="枚举与范型">
+<meta property="og:url" content="http://yoursite.com/2020/04/21/%E6%9E%9A%E4%B8%BE%E4%B8%8E%E8%8C%83%E5%9E%8B/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="JAVASE高级应用(1)集合泛型枚举(2)实用类(3)流(4)XML(5)反射(6)线程(7)网络编程   集合(1)List：有序不唯一的集合（插入顺序）     ①所在包：java.util.*   ②ArrayList：       1)本质是一个数组       2)不适合频繁增减元素：比如一个数组如果有1000W个元素，我如果需要增加一个元素，那么就意味着你需要先创建1000W零1个元">
+<meta property="og:description" content="在集合当中使用泛型：(1)    为什么要用泛型：为了统一集合当中的数据类型，为了更加方便的操作数据(2)    泛型是一个参数化的类型(3)    是用于规定要操作的数据的类型 泛型类：(1)    泛型标识：标识可以随便写，通常是一个大写字母，需要具备一定的可读性(2)    比如：T(type),I(item),K(key),V(value)(3)    如果在泛型类当中没有指定泛型，那么该">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://yoursite.com/img/ArrayList.png">
-<meta property="og:image" content="http://yoursite.com/img/LinkedList.png">
-<meta property="og:image" content="http://yoursite.com/img/Map.png">
-<meta property="article:published_time" content="2020-04-21T01:44:40.091Z">
-<meta property="article:modified_time" content="2020-04-21T03:13:50.536Z">
+<meta property="og:image" content="http://yoursite.com/img/fanxinglei.png">
+<meta property="article:published_time" content="2020-04-21T03:23:37.413Z">
+<meta property="article:modified_time" content="2020-04-21T03:50:49.890Z">
 <meta property="article:author" content="CodesLong">
 <meta property="article:tag" content="上课笔记">
 <meta property="article:tag" content="Java">
 <meta property="article:tag" content="后端">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/img/ArrayList.png">
+<meta name="twitter:image" content="http://yoursite.com/img/fanxinglei.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -159,14 +157,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-集合" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-枚举与范型" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      集合
+      枚举与范型
     </h1>
   
 
@@ -182,45 +180,28 @@
         
         <!--显示阅读次数完毕-->
         
-        <a href="/2020/04/21/%E9%9B%86%E5%90%88/" class="archive-article-date">
-  	<time datetime="2020-04-21T01:44:40.091Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-21</time>
+        <a href="/2020/04/21/%E6%9E%9A%E4%B8%BE%E4%B8%8E%E8%8C%83%E5%9E%8B/" class="archive-article-date">
+  	<time datetime="2020-04-21T03:23:37.413Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-21</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="JAVASE高级应用"><a href="#JAVASE高级应用" class="headerlink" title="JAVASE高级应用"></a>JAVASE高级应用</h3><p>(1)集合泛型枚举<br>(2)实用类<br>(3)流<br>(4)XML<br>(5)反射<br>(6)线程<br>(7)网络编程  </p>
-<h3 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h3><p>(1)List：有序不唯一的集合（插入顺序）    </p>
-<pre><code>①所在包：java.util.*  
-②ArrayList：  
-    1)本质是一个数组  
-    2)不适合频繁增减元素：比如一个数组如果有1000W个元素，我如果需要增加一个元素，那么就意味着你需要先创建1000W零1个元素先创建出来，然后复制，这个才算是拓展成功  
-    3)擅长随机访问  </code></pre><p><img src="/img/ArrayList.png" alt="alt ArrayList常用方法"><br>    ③LinkedList  </p>
-<pre><code>1)是一个双向链表  
-2)适合于增减元素操作  
-3)不擅长随机访问  
-4)使用LinkedList，因为该实现类，实现了很多List接口中没有的方法，所以通常使用该类本身来声明   </code></pre><p><img src="/img/LinkedList.png" alt="alt LinkedList"><br>(2)Set：无序，唯一  </p>
-<pre><code>    ①唯一是指equals相同  
-    ②遍历set  
-        1)获取迭代器  
-        2)增强for循环遍历  
-③HashSet使用的是HashMap的Key  </code></pre><p>(3)Map键值对  </p>
-<pre><code>①Key具有唯一性，且无序  
-    1)如果再次放入某个key相同的值，那么value覆盖原来的值  
-    2)key可以是null:但是null值也是一个唯一存在的key  
-②Value：可以重复，可以是任意值  
-③获取所有key和所有map  </code></pre><p><img src="/img/Map.png" alt="alt Map常用方法"><br>(4)Hash，set和map(理解):  </p>
-<pre><code>①hashMap
-    1)Entry：是一个单向链表
-    2)TreeEntry：包含了hash的双向链
-    3)红黑树
-②Hash:
-    1)hash可以重写
-    2)native默认情况下，hash是由本地调用提供的，比如调用本地C
-    3)集合中的hashcode是被重写过的</code></pre><p>(5)泛型  </p>
-<pre><code>①目的：统一集合当中的元素
-②对于基本数据类型：泛型只能使用包装类来定义基本数据类型</code></pre>
+        <h3 id="在集合当中使用泛型："><a href="#在集合当中使用泛型：" class="headerlink" title="在集合当中使用泛型："></a>在集合当中使用泛型：</h3><p>(1)    为什么要用泛型：为了统一集合当中的数据类型，为了更加方便的操作数据<br>(2)    泛型是一个参数化的类型<br>(3)    是用于规定要操作的数据的类型</p>
+<h3 id="泛型类："><a href="#泛型类：" class="headerlink" title="泛型类："></a>泛型类：</h3><p>(1)    泛型标识：标识可以随便写，通常是一个大写字母，需要具备一定的可读性<br>(2)    比如：T(type),I(item),K(key),V(value)<br>(3)    如果在泛型类当中没有指定泛型，那么该类型，默认为Object<br>(4)    Public void test(T t){}：这种不是泛型方法！！！！！！<br>(5)    通常来说，我们不会对已泛型方式传入的数据做什么操作，因为使用泛型的前提是，我不知道用户会提供什么类型给我，所以，不会去操作他<br>(6)    <T> ：泛型形参<br>(7)    <String>：泛型实参<br><img src="/img/fanxinglei.png" alt="alt 泛型类定义"></p>
+<h3 id="泛型接口"><a href="#泛型接口" class="headerlink" title="泛型接口"></a>泛型接口</h3><p>(1)    泛型接口是定义在接口上<br>(2)    泛型类和泛型接口的泛型，在实现或者继承的情况下，重写或者实现的方法，泛型的参数和返回值需要保持一致<br>(3)    泛型接口的泛型实参必须指定，而实现类，可以不必指定，如果不指定，则沿用其接口的泛型类型<br>![alt 泛型接口][/img/fanxingjiekou.png]</p>
+<h3 id="泛型通配符"><a href="#泛型通配符" class="headerlink" title="泛型通配符"></a>泛型通配符</h3><p>(1)    ?：代表任意泛型<br>(2)    ？：是泛型实参，不是泛型形参<br>(3)    可以指定边界，规定某一批类型可以作为泛型，既可以规定泛型形参，也可以规定泛型实参<br>![alt 泛型边界][/img/bianjie.png]</p>
+<h3 id="泛型方法"><a href="#泛型方法" class="headerlink" title="泛型方法"></a>泛型方法</h3><p>(1)    如果一个类当中，不必多个方法公用同一个类型，某个方法的泛型是独立在当前方法当中的，这时，建议使用泛型方法，不影响到其他方法的类型<br>(2)    在方法的修饰符和返回值之间，申明泛型，该泛型，只作用于当前方法<br>![alt 泛型方法][/img/fangfa.png]</p>
+<h3 id="枚举："><a href="#枚举：" class="headerlink" title="枚举："></a>枚举：</h3><p>(1)    注意：不建议大家用枚举！！！！只是应为有这个东西，所以讲一下，了解足以。<br>(2)    一些散列值：如果存在数据的安全风险，那么在使用的过程中，该数据可以定义为枚举来避免风险数据对安全性的影响<br>![alt 枚举][/img/meiju.png]</p>
+<h3 id="枚举的构造"><a href="#枚举的构造" class="headerlink" title="枚举的构造"></a>枚举的构造</h3><p>(1)    构造是针对所有的枚举的元素，每一个枚举的元素都相当于一个类。<br>(2)    构造必须私有，调用构造的方法是通过调用类型<br>(3)    枚举中的类型是单例，有几个类型创建几个单例（问题之一）<br>(4)    枚举可以重写方法<br>(5)    枚举可以实现接口</p>
+<h3 id="枚举的问题："><a href="#枚举的问题：" class="headerlink" title="枚举的问题："></a>枚举的问题：</h3><p>(1)    有可能会大量产生单例，但是这个问题并不是枚举最致命的问题<br>(2)    在网络当中，WEB开发，枚举和很多主流的数据结构不兼容<br>![alt 优缺点][/img/youquedian.png]</p>
+<h3 id="JAVA的异常"><a href="#JAVA的异常" class="headerlink" title="JAVA的异常"></a>JAVA的异常</h3><p>(1)    如果程序发生异常，会影响后续程序的执行<br>(2)    使用异常处理机制，保证程序能够正常下去，不崩溃。  </p>
+<h3 id="捕获异常"><a href="#捕获异常" class="headerlink" title="捕获异常"></a>捕获异常</h3><p>(1)    捕获异常后，在异常类型匹配的情况下，可以保证在异常捕获之外的程序能够继续执行下去<br>(2)    异常堆栈信息：最上面是异常发生的最开始的位置<br>(3)    异常的本质只是一个标识类，效果等同用户返回值，是返回值的一种。<br>(4)    可以有多个catch，由上而下依次匹配，取第一个匹配上的，父类只能在子类异常的后面<br>(5)    try当中有多个异常的时候，哪个先碰到，先处理哪个<br>(6)    不要把一个代码块当中所有的代码都放到一个try-catch当中，这样做等同于什么也没做</p>
+<h3 id="自动抛出异常"><a href="#自动抛出异常" class="headerlink" title="自动抛出异常"></a>自动抛出异常</h3><p>(1)    当前方法不想处理异常，那么可以抛出异常，交给调用者处理（捕获/抛出），谁调用谁处理<br>(2)    异常最终抛无可抛，则必须要被处理；在中途被处理过的异常，其调用者就不必再处理了</p>
+<h3 id="手动抛出异常"><a href="#手动抛出异常" class="headerlink" title="手动抛出异常"></a>手动抛出异常</h3><p>(1)    根据使用者的实际情况，来判断是否需要手动抛出<br>(2)    运行时异常不是必须被处理的异常<br>(3)    Checked异常是必须被处理的异常</p>
+<h3 id="自定义异常"><a href="#自定义异常" class="headerlink" title="自定义异常"></a>自定义异常</h3><p>(1)    创建一类类，符合异常命名规范<br>(2)    继承Exception或者RuntimeException<br>(3)    实现所有父类构造调用</p>
+
       
 
       
@@ -328,7 +309,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/21/%E9%9B%86%E5%90%88/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/21/%E6%9E%9A%E4%B8%BE%E4%B8%8E%E8%8C%83%E5%9E%8B/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -342,18 +323,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/04/21/%E6%9E%9A%E4%B8%BE%E4%B8%8E%E8%8C%83%E5%9E%8B/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          枚举与范型
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/04/04/Java%E9%9D%A2%E8%AF%955/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">java 面试（5）</div>
+    <a href="/2020/04/21/%E9%9B%86%E5%90%88/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">集合</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -380,7 +352,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#JAVASE高级应用"><span class="toc-number">1.</span> <span class="toc-text">JAVASE高级应用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#集合"><span class="toc-number">2.</span> <span class="toc-text">集合</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#在集合当中使用泛型："><span class="toc-number">1.</span> <span class="toc-text">在集合当中使用泛型：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#泛型类："><span class="toc-number">2.</span> <span class="toc-text">泛型类：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#泛型接口"><span class="toc-number">3.</span> <span class="toc-text">泛型接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#泛型通配符"><span class="toc-number">4.</span> <span class="toc-text">泛型通配符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#泛型方法"><span class="toc-number">5.</span> <span class="toc-text">泛型方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#枚举："><span class="toc-number">6.</span> <span class="toc-text">枚举：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#枚举的构造"><span class="toc-number">7.</span> <span class="toc-text">枚举的构造</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#枚举的问题："><span class="toc-number">8.</span> <span class="toc-text">枚举的问题：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JAVA的异常"><span class="toc-number">9.</span> <span class="toc-text">JAVA的异常</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#捕获异常"><span class="toc-number">10.</span> <span class="toc-text">捕获异常</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#自动抛出异常"><span class="toc-number">11.</span> <span class="toc-text">自动抛出异常</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#手动抛出异常"><span class="toc-number">12.</span> <span class="toc-text">手动抛出异常</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#自定义异常"><span class="toc-number">13.</span> <span class="toc-text">自定义异常</span></a></li></ol>
                     </div>
                 </span>
             </div>
