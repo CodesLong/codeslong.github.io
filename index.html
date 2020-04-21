@@ -50,7 +50,7 @@
 		</hgroup>
 		
 		<!-- 显示文章总数 -->
-		总文章数 27
+		总文章数 31
 		<nav class="header-menu">
 			<ul>
 			
@@ -149,6 +149,463 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-集合" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/21/%E9%9B%86%E5%90%88/">集合</a>
+    </h1>
+  
+
+        <!--显示阅读次数-->
+        
+        <!--显示阅读次数完毕-->
+        
+        <a href="/2020/04/21/%E9%9B%86%E5%90%88/" class="archive-article-date">
+  	<time datetime="2020-04-21T01:44:40.091Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="JAVASE高级应用"><a href="#JAVASE高级应用" class="headerlink" title="JAVASE高级应用"></a>JAVASE高级应用</h3><p>(1)集合泛型枚举<br>(2)实用类<br>(3)流<br>(4)XML<br>(5)反射<br>(6)线程<br>(7)网络编程  </p>
+<h3 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h3><p>(1)List：有序不唯一的集合（插入顺序）    </p>
+<pre><code>①所在包：java.util.*  
+②ArrayList：  
+    1)本质是一个数组  
+    2)不适合频繁增减元素：比如一个数组如果有1000W个元素，我如果需要增加一个元素，那么就意味着你需要先创建1000W零1个元素先创建出来，然后复制，这个才算是拓展成功  
+    3)擅长随机访问  </code></pre><p><img src="../img/ArrayList.png" alt="alt ArrayList常用方法"><br>    ③LinkedList  </p>
+<pre><code>1)是一个双向链表  
+2)适合于增减元素操作  
+3)不擅长随机访问  
+4)使用LinkedList，因为该实现类，实现了很多List接口中没有的方法，所以通常使用该类本身来声明   </code></pre><p><img src="../img/LinkedList.png" alt="alt LinkedList"><br>(2)Set：无序，唯一  </p>
+<pre><code>    ①唯一是指equals相同  
+    ②遍历set  
+        1)获取迭代器  
+        2)增强for循环遍历  
+③HashSet使用的是HashMap的Key  </code></pre><p>(3)Map键值对  </p>
+<pre><code>①Key具有唯一性，且无序  
+    1)如果再次放入某个key相同的值，那么value覆盖原来的值  
+    2)key可以是null:但是null值也是一个唯一存在的key  
+②Value：可以重复，可以是任意值  
+③获取所有key和所有map  </code></pre><p><img src="../img/Map.png" alt="alt Map常用方法"><br>(4)Hash，set和map(理解):  </p>
+<pre><code>①hashMap
+    1)Entry：是一个单向链表
+    2)TreeEntry：包含了hash的双向链
+    3)红黑树
+②Hash:
+    1)hash可以重写
+    2)native默认情况下，hash是由本地调用提供的，比如调用本地C
+    3)集合中的hashcode是被重写过的</code></pre><p>(5)泛型  </p>
+<pre><code>①目的：统一集合当中的元素
+②对于基本数据类型：泛型只能使用包装类来定义基本数据类型</code></pre>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">上课笔记</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">后端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/04/21/%E9%9B%86%E5%90%88/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Java面试5" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/04/Java%E9%9D%A2%E8%AF%955/">java 面试（5）</a>
+    </h1>
+  
+
+        <!--显示阅读次数-->
+        
+        <!--显示阅读次数完毕-->
+        
+        <a href="/2020/04/04/Java%E9%9D%A2%E8%AF%955/" class="archive-article-date">
+  	<time datetime="2020-04-03T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="strictfp有什么作用"><a href="#strictfp有什么作用" class="headerlink" title="strictfp有什么作用"></a>strictfp有什么作用</h2>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">自学</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java面试</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/java//" class="article-tag-list-link color5">java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/java/后端//" class="article-tag-list-link color3">后端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/04/04/Java%E9%9D%A2%E8%AF%955/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Java面试4" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/03/Java%E9%9D%A2%E8%AF%954/">java 面试（4）</a>
+    </h1>
+  
+
+        <!--显示阅读次数-->
+        
+        <!--显示阅读次数完毕-->
+        
+        <a href="/2020/04/03/Java%E9%9D%A2%E8%AF%954/" class="archive-article-date">
+  	<time datetime="2020-04-02T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="final，finally和finalize有什么区别"><a href="#final，finally和finalize有什么区别" class="headerlink" title="final，finally和finalize有什么区别"></a>final，finally和finalize有什么区别</h2><h2 id="assert有什么作用"><a href="#assert有什么作用" class="headerlink" title="assert有什么作用"></a>assert有什么作用</h2><h2 id="static关键字有那些作用"><a href="#static关键字有那些作用" class="headerlink" title="static关键字有那些作用"></a>static关键字有那些作用</h2><h2 id="使用switch时有那些注意事项"><a href="#使用switch时有那些注意事项" class="headerlink" title="使用switch时有那些注意事项"></a>使用switch时有那些注意事项</h2><h2 id="volatile有什么作用"><a href="#volatile有什么作用" class="headerlink" title="volatile有什么作用"></a>volatile有什么作用</h2><h2 id="instanceof有什么作用"><a href="#instanceof有什么作用" class="headerlink" title="instanceof有什么作用"></a>instanceof有什么作用</h2><h2 id="strictfp有什么作用"><a href="#strictfp有什么作用" class="headerlink" title="strictfp有什么作用"></a>strictfp有什么作用</h2>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">自学</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java面试</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/java//" class="article-tag-list-link color5">java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/java/后端//" class="article-tag-list-link color3">后端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/04/03/Java%E9%9D%A2%E8%AF%954/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-java面试3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/02/java%E9%9D%A2%E8%AF%953/">java 面试（3）</a>
+    </h1>
+  
+
+        <!--显示阅读次数-->
+        
+        <!--显示阅读次数完毕-->
+        
+        <a href="/2020/04/02/java%E9%9D%A2%E8%AF%953/" class="archive-article-date">
+  	<time datetime="2020-04-01T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="组合和继承有什么区别"><a href="#组合和继承有什么区别" class="headerlink" title="组合和继承有什么区别"></a>组合和继承有什么区别</h2><ul>
+<li><p>组合指在新类里面创建原有类的对象，重复利用已有类的功能。（显示的在新类中设置子对象）</p>
+</li>
+<li><p>继承指根据其他类的实现来定设计者义一个类的实现。（隐式的）</p>
+</li>
+<li><p>继承和组合选择的原则–&gt;</p>
+<ul>
+<li><p>除非两个类之间是继承关系（is-a），否则不要轻易使用继承。否则会影响后期程序的维护难度和成本</p>
+</li>
+<li><p>不要仅仅为了实现多态而使用继承。若没有继承关系，可通过实现接口和组合的方式来达到相同的目的。采用接口和组合的方式有更好的可扩展性。</p>
+<blockquote>
+<p>class Verhicle{<br>}<br>class Car extends Verhicle{<br>}<br>class Tire{<br>}<br>class Car extends Verhicle{<br>}</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="多态的实现机制是什么"><a href="#多态的实现机制是什么" class="headerlink" title="多态的实现机制是什么"></a>多态的实现机制是什么</h2><p>多态的表现方式：  </p>
+<ol>
+<li>方法的重载：重载指同一个类中有多个同名的方法，但这些方法有着不同的参数。重载可被看成一个类中的方法多态性  </li>
+<li>方法的覆盖：子类可以覆盖父类的方法，相同的方法可以在父子类中有不同的表现形式。通过动态绑定的方法实现了多态。（理解书）<h2 id="重载-overload-和覆盖-override-有什么区别"><a href="#重载-overload-和覆盖-override-有什么区别" class="headerlink" title="重载(overload)和覆盖(override)有什么区别"></a>重载(overload)和覆盖(override)有什么区别</h2>重载：</li>
+<li>重载通过不同的方法参数来区分，（参数个数，参数类型，参数顺序）</li>
+<li>不能通过方法的访问权限。返回值类型和抛出异常类型进行重载</li>
+<li>对继承来说，若基类方法的权限为private，则不能在派生类对其进行重载；若派生类也定义了一个同名函数，这是一个新函数，不会达到重载的效果。  </li>
+</ol>
+<p>覆盖：</p>
+<ul>
+<li>派生类中的覆盖方法必须要和积累中的被覆盖方法有相同的函数名和参数</li>
+<li>派生类中的覆盖方法的返回值必须和基类中的被覆盖方法的返回值相同</li>
+<li>派生类中的覆盖方法所抛出的异常必须和基类（或其子类）中被覆盖方法所抛出异常一致</li>
+<li>基类中被覆盖的方法不能为private，否则其子类只是定义了一个方法，并没有对其覆盖</li>
+</ul>
+<p>重载和覆盖的区别：</p>
+<ol>
+<li>覆盖是子类和父类之间的关系，是垂直关系；重载是同一个类中方法之间的关系，是水平关系</li>
+<li>覆盖只能由一个方法或只能由一对方法产生关系；重载是多个方法之间的关系</li>
+<li>覆盖要求参数列表相同；重载要求参数列表不同</li>
+<li>覆盖关系中，调用方法体是根据对象的类型（对象对应存储空间类型）来决定；而重载关系是根据调用时的实参列表与形参列表的选择方法提的。<h2 id="抽象类（abstract-class）和接口（interface）有什么异同"><a href="#抽象类（abstract-class）和接口（interface）有什么异同" class="headerlink" title="抽象类（abstract class）和接口（interface）有什么异同"></a>抽象类（abstract class）和接口（interface）有什么异同</h2><h4 id="相同点："><a href="#相同点：" class="headerlink" title="相同点："></a>相同点：</h4></li>
+<li>都不能实列化</li>
+<li>接口的实现类或者抽象类的子类都有实现了接口或抽象类中的方法后才能被实例化<h4 id="不同点："><a href="#不同点：" class="headerlink" title="不同点："></a>不同点：</h4></li>
+<li>Java8之前，接口只有定义，其方法不能在接口中实现，只有实现接口的类才能实现接口中的方法，而抽象类可以有定义与实现（其方法可以在抽象类中实现）</li>
+<li>接口需要实现（用implements）。但抽象类只能被继承，（用extends）。一个类可以实现多个接口，但一个类只能继承一个抽象类。</li>
+<li>接口强调特定功能的实现，（has-a关系），而抽象类强调所属关系，（is-a关系）</li>
+<li>接口定义的成员变量默认为public static final，只能有静态的不能够被修改的数据成员，而且必须能给其赋初值，其所有成员方法都是public、abstract。</li>
+<li>接口被用于实现经常用的功能，便于后期维护；抽象类用于充当公共类的角色，不适用后期对代码进行修改。<h2 id="内部类有那些"><a href="#内部类有那些" class="headerlink" title="内部类有那些"></a>内部类有那些</h2></li>
+</ol>
+<ul>
+<li>静态内部类</li>
+<li>成员内部类</li>
+<li>局部内部类</li>
+<li>匿名内部类<h4 id="内部类的使用原则："><a href="#内部类的使用原则：" class="headerlink" title="内部类的使用原则："></a>内部类的使用原则：</h4></li>
+<li>匿名内部类不能有构造函数</li>
+<li>匿名内部类不能定义静态成员，方法和类</li>
+<li>匿名内部类不能是public，protected。private，static</li>
+<li>只能创建匿名内部类的一个实例</li>
+<li>一个匿名内部类一定是在new的后面，这个匿名类碧玺继承一个父类或者实现一个接口</li>
+<li>因为匿名内部类为局部内部类，所以局部内部类的所有限制都对其生效。<h2 id="如何获取父类的类名"><a href="#如何获取父类的类名" class="headerlink" title="如何获取父类的类名"></a>如何获取父类的类名</h2><h2 id="this-和super有什么区别"><a href="#this-和super有什么区别" class="headerlink" title="this 和super有什么区别"></a>this 和super有什么区别</h2><h2 id="变量命名的规则"><a href="#变量命名的规则" class="headerlink" title="变量命名的规则"></a>变量命名的规则</h2><h2 id="break，continue以及return有什么区别"><a href="#break，continue以及return有什么区别" class="headerlink" title="break，continue以及return有什么区别"></a>break，continue以及return有什么区别</h2></li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">自学</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java面试</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/java//" class="article-tag-list-link color5">java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/java/后端//" class="article-tag-list-link color3">后端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/04/02/java%E9%9D%A2%E8%AF%953/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-java面试2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -878,422 +1335,9 @@ cursor: not-allowed;</code></pre><hr>
 
 
   
-    <article id="post-类和对象之封装" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/17/%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1%E4%B9%8B%E5%B0%81%E8%A3%85/">类和对象3</a>
-    </h1>
-  
-
-        <!--显示阅读次数-->
-        
-        <!--显示阅读次数完毕-->
-        
-        <a href="/2020/03/17/%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1%E4%B9%8B%E5%B0%81%E8%A3%85/" class="archive-article-date">
-  	<time datetime="2020-03-17T02:07:05.310Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="1-为什么要封装（最简单也是最难的一个部分）：setter-getter只是封装的一种形式而已"><a href="#1-为什么要封装（最简单也是最难的一个部分）：setter-getter只是封装的一种形式而已" class="headerlink" title="1.    为什么要封装（最简单也是最难的一个部分）：setter/getter只是封装的一种形式而已"></a>1.    为什么要封装（最简单也是最难的一个部分）：setter/getter只是封装的一种形式而已</h2><p>(1)    是为了保护数据，把更多的东西隐藏起来，提供更加简洁的功能<br>(2)    Getter/setter更多的是为了保护实体类的数据安全，是java中的非常重要的一种命名格式，命名格式严格定义，绝对不要随意更改<br>(3)    Get:必须没有参数，必须有返回值<br>(4)    Set：必须有参数（参数个数1个，类型和对应属性一致，不能多也不能少），返回值不论<br>(5)    数据不安全是指：当前数据，有可能会对我们后期利用数据时产生安全隐患<br>(6)    不管是什么情况下，一个类当中的属性，如果不是静态或者常量，通常来说都需要改为private修饰<br>(7)    验证数据合法性，通常是在写的时候验证，如果验证不同过，可以根据业务自己设计拒绝方案<br>(8)    补充一种编程风格：链式调用  </p>
-<h2 id="2-实体类：是用于描述实际事物的一种类"><a href="#2-实体类：是用于描述实际事物的一种类" class="headerlink" title="2.    实体类：是用于描述实际事物的一种类"></a>2.    实体类：是用于描述实际事物的一种类</h2><h2 id="3-工具类：例如Arrays，这是java中为了编程而设计的有特定功能和目的的一种类"><a href="#3-工具类：例如Arrays，这是java中为了编程而设计的有特定功能和目的的一种类" class="headerlink" title="3.    工具类：例如Arrays，这是java中为了编程而设计的有特定功能和目的的一种类"></a>3.    工具类：例如Arrays，这是java中为了编程而设计的有特定功能和目的的一种类</h2><h2 id="4-包："><a href="#4-包：" class="headerlink" title="4.    包："></a>4.    包：</h2><p>(1)    包的本质，就是文件夹，路径<br>(2)    一个文件夹当中，是否可以放两个同名，同类型文件？<br>(3)    文件管理的时候，有条理；在以后的实际项目开发中，包的定义和管理是有着严格要求<br>(4)    package在一个类的最上面，通常是有效第一行，且只能有一行<br>(5)    包命名中，点用于目录分级，点不能在最前面和最后面<br>(6)    命名，字母和数字，最好不要加特殊符号，要求字母小写。<br>(7)    命名，规则一般是网络域名倒置，加上模块名<br>(8)    在引用类的时候，通常是优先引用同一个包下的对应类；如果要引用的类，不在当前包下，需要引入后才能使用<br>(9)    引入包   </p>
-<pre><code>①    引入对应包下的类：import 包名+类名
-②    使用通配符*引入某个包下所有的类，不包含该包下子包中的类
-③    不可以在一个类当中引入一个以上的同名类，不管这些类如何分布
-④    如果要同时使用不同包下的同名类，可以用全局限定名（全名类）来进行类的操作
-⑤    默认情况下，优先使用同包下的类，如果引入了指定类，则优先使用指定类</code></pre><h2 id="5-访问权限："><a href="#5-访问权限：" class="headerlink" title="5.    访问权限："></a>5.    访问权限：</h2><p>(1)    什么是访问权限：一个类，或者类当中的成员，可以在什么情况下可见<br>(2)    四种访问权限：<br>①    Public：公用，任何地方（同类，不同类，同包，不同包，子类……）都可见<br>②    默认（不写）：同类，不同类但是同包情况下可见<br>③    Protected：同类，不同类但是同包情况下可见；子类中可见，哪怕这个子类和他不是一个包<br>④    Private：同类可见    </p>
-<hr>
-<table>
-<thead>
-<tr>
-<th align="center">修饰符/作用域</th>
-<th align="center">同一个类中</th>
-<th align="center">同一个包中</th>
-<th align="center">子类中</th>
-<th align="center">任何地方</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">private</td>
-<td align="center">可以</td>
-<td align="center">不可以</td>
-<td align="center">不可以</td>
-<td align="center">不可以</td>
-</tr>
-<tr>
-<td align="center">默认修饰符</td>
-<td align="center">可以</td>
-<td align="center">可以</td>
-<td align="center">不可以</td>
-<td align="center">不可以</td>
-</tr>
-<tr>
-<td align="center">protected</td>
-<td align="center">可以</td>
-<td align="center">可以</td>
-<td align="center">可以</td>
-<td align="center">不可以</td>
-</tr>
-<tr>
-<td align="center">public</td>
-<td align="center">可以</td>
-<td align="center">可以</td>
-<td align="center">可以</td>
-<td align="center">可以</td>
-</tr>
-</tbody></table>
-<hr>
-<h2 id="6-静态：不应为个体的改变而变化的这些特质，是属于类的特质"><a href="#6-静态：不应为个体的改变而变化的这些特质，是属于类的特质" class="headerlink" title="6.    静态：不应为个体的改变而变化的这些特质，是属于类的特质"></a>6.    静态：不应为个体的改变而变化的这些特质，是属于类的特质</h2><p>(1)    静态成员可以直接使用类名调用：静态属性和静态方法<br>(2)    在内存当中，静态的成员处于常量池当中<br>(3)    普通属性和普通方法，是属于对象的一个部分，而静态的不属于某个对象；即：即便是对象不存在，静态的也是存在的<br>(4)    静态具有唯一性：即内存中唯一<br>(5)    静态使用的规则：  </p>
-<pre><code>①    在静态方法中，不可以使用this或者super
-②    静态的只能访问静态的，不可以访问非静态的；非静态的，可以访问非静态和静态的所有属性和方法
-③    静态方法必须被实现（抽象类和接口）</code></pre><p>(6)    静态属性<br>(7)    静态方法<br>(8)    静态代码块<br>    ①    某个类当中固有的代码块<br>    ②    一个类当中可以有多个静态代码块，按编写顺序执行<br>    ③    静态代码块，只会在类被加载的情况下执行一次（声明例外）<br>    ④    类加载机制：只要执行了和这个类有关的调用，那么该类必然已经被加载<br>(9)    所有对象和类，公用的属性和方法，可以设计为静态（没有安全风险的）</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">上课笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">后端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/03/17/%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1%E4%B9%8B%E5%B0%81%E8%A3%85/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-面试注意" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/17/%E9%9D%A2%E8%AF%95%E6%B3%A8%E6%84%8F/">面试要点积累</a>
-    </h1>
-  
-
-        <!--显示阅读次数-->
-        
-        <!--显示阅读次数完毕-->
-        
-        <a href="/2020/03/17/%E9%9D%A2%E8%AF%95%E6%B3%A8%E6%84%8F/" class="archive-article-date">
-  	<time datetime="2020-03-17T02:01:46.534Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="笔试中不能错的题："><a href="#笔试中不能错的题：" class="headerlink" title="笔试中不能错的题："></a>笔试中不能错的题：</h2><p>1.凡是和面向对象有关的题，不能错<br>2.凡是和SQL有关的题，不能错<br>3.凡是和基本算法有关的题，不能错<br>4.凡是和J2EE中servlet有关的题，不能错<br>5.凡是和J2EE中JDBC事务控制有关系的题，不能错<br>6.凡是和SSM中基本开发应用流程有关的题，不能错<br>人事面试<br>稳定，上进，积极，乐观，一切以公司为核心<br>技术面试</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">后端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/03/17/%E9%9D%A2%E8%AF%95%E6%B3%A8%E6%84%8F/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-后端（简单排序）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/17/%E5%90%8E%E7%AB%AF%EF%BC%88%E7%AE%80%E5%8D%95%E6%8E%92%E5%BA%8F%EF%BC%89/">简单排序</a>
-    </h1>
-  
-
-        <!--显示阅读次数-->
-        
-        <!--显示阅读次数完毕-->
-        
-        <a href="/2020/03/17/%E5%90%8E%E7%AB%AF%EF%BC%88%E7%AE%80%E5%8D%95%E6%8E%92%E5%BA%8F%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2020-03-17T01:58:45.732Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ol>
-<li>两个数交换位置</li>
-<li>声明数组&gt;声明对象&gt;创建基本类型变量&gt;赋值</li>
-<li>For-each:<br>(1)    优点：语法精炼<br>(2)    缺点：只能遍历，无现成的游标</li>
-<li>找最小值：在一个数组当中，随意挑出一个值，然后依次用其他值和他比较，只要比他小，就替换最小值，一轮结束，就可以找到最小的那个值。</li>
-<li>冒泡排序的意义在于：每一轮，把所有的值比较一遍，把最小/最大的挑到一端。</li>
-<li>选择排序的意义在于：每一轮，把最小或者最大的那个值的游标找出来，然后和基准值交换，一轮只交换一次</li>
-<li>插入排序的意义在于：稳定的把后面的值，在已排序好的序列中，找到合适的位置</li>
-<li>思考：每一种排序（冒泡、选择、插入）<br>(1)    最多比较多少次<br>(2)    最少比较多少次<br>(3)    最多交换多少次<br>(4)    最少交换多少次</li>
-</ol>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">上课笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">后端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/03/17/%E5%90%8E%E7%AB%AF%EF%BC%88%E7%AE%80%E5%8D%95%E6%8E%92%E5%BA%8F%EF%BC%89/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-浮动" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/11/%E6%B5%AE%E5%8A%A8/">css属性-浮动</a>
-    </h1>
-  
-
-        <!--显示阅读次数-->
-        
-        <!--显示阅读次数完毕-->
-        
-        <a href="/2020/03/11/%E6%B5%AE%E5%8A%A8/" class="archive-article-date">
-  	<time datetime="2020-03-11T03:29:20.973Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>display: inline-block;虽然可以让div并排 但是会出现空白  </li>
-<li>浮动可以帮我们进行元素并排 并且没有空白现象–&gt; float: left;  </li>
-<li>标准流 默认状态–&gt; css元素的划分(块级元素、行内元素。。。)和特征都是在标准流前提下成立  </li>
-<li>浮动元素 1 脱标 2 相互贴靠 3 浮动元素可以设置宽高，不设置宽高，默认靠内容撑开 4 文字环绕(了解)</li>
-<li>浮动元素影响的是自己和后面的元素</li>
-</ul>
-<p>外边距塌陷：（上下方向）     transparent 透明<br>        1. 上下两个相邻的块元素，假如上面的元素有margin-bottom,下面元素有margin-top,会发生合并，一较大的值为准<br>        2. 父子嵌套的元素，子元素的上边距会和父亲的外边距合并，一较大的值为准</p>
-<ul>
-<li>浮动的元素不能撑开父亲<br>  浮动往往会对后面的元素布局造成影响，所以需要清除浮动造成的影响<br>  清除浮动方法<br>  1 隔墙法（给父亲加border）-给浮动的元素增加一个高度 缺点 儿子的高度有时候<br>  不确定 所以高度设置固定 不灵活<br>  2 额外标签法 （给父亲加padding）<br>  clear:left; clear:right;<br>  clear:both<br>  在浮动元素末尾加一个空标签(一般是块级元素) 给这个标签设置clear: bot<br>  缺点 会影响页面的结构<br>  3 给浮动元素的父亲增加overflow: hidden<br>  overflow:hidden overflow:auto overflow:scroll<br>  4 使用after伪元素清除浮动<pre><code>.clearfix:after {
-content: &apos;&apos;;
-display: block;
-height: 0;
-visibility: hidden;
-clear: both;
-}</code></pre>  5 双伪元素清除浮动  </li>
-</ul>
-<p>*zoom: 1—&gt;专门ie6/7清除浮动</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">html</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">上课笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/03/11/%E6%B5%AE%E5%8A%A8/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
     </nav>
   
 
@@ -1432,7 +1476,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">java</a>
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1440,11 +1484,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+                <a href="javascript:void(0)" class="js-tag color3">后端</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1452,7 +1496,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">后端</a>
+                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
               </li>
              
               <li class="article-tag-list-item">

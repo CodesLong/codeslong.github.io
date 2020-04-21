@@ -50,7 +50,7 @@
 		</hgroup>
 		
 		<!-- 显示文章总数 -->
-		总文章数 27
+		总文章数 31
 		<nav class="header-menu">
 			<ul>
 			
@@ -150,6 +150,424 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-2.23" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/23/2.23/">css属性</a>
+    </h1>
+  
+
+        <!--显示阅读次数-->
+        
+        <!--显示阅读次数完毕-->
+        
+        <a href="/2020/02/23/2.23/" class="archive-article-date">
+  	<time datetime="2020-02-23T08:51:12.175Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h2><p>1 简介<br>   层叠样式表 负责页面的表现给页面标签增加样式 如字体颜色、宽高、背景色<br>   …<br>2 引入CSS  </p>
+<pre><code>* 行内样式 &lt;p style=&quot;color:red;font-size: 20px;&quot;&gt;大家都是年轻人嘛。相互伤害&lt;/p&gt;  
+* 内嵌式 在head标签内部 放置 &lt;style&gt;
+        div {
+            color: orange;
+        }
+    &lt;/style&gt;
+
+    选择器（帮我们选择到操作的元素）{
+        k:v;
+        k:v;
+    }  
+* 外链式  把样式写到一个或多个css文件中，在网页中通过link引用需要的样式文件  </code></pre><p>3 选择器<br>  选中我们要设置样式的标签  </p>
+<pre><code>— 标签选择器(标签名)  
+    div {
+
+    }
+    特点：选中页面所有的div  
+— id选择器 
+    先给作用的元素设置id，然后通过#id值
+    #div1 {
+            text-decoration: underline;
+    }  
+    特点 选中唯一的元素
+— 类选择器   
+    .类名 {
+        k:v;
+        k:v;
+        ...
+    }        给需要设置该类样式的标签 添加class=&quot;类名&quot;
+    特点 一般情况把某一类样式定义一个类 这样以后可以复用
+— 通配符选择器
+    * {
+
+    }   
+
+    * 代表所有元素
+
+/*未访问前*/a:link {}
+
+/* 链接访问后的状态*/a:visited {}
+
+/* 鼠标放入超链接时的状态*/a:hover {}
+
+ /* 按住超链接不放的状态*/a:active {}</code></pre><h2 id="css的元素显示模式"><a href="#css的元素显示模式" class="headerlink" title="css的元素显示模式"></a>css的元素显示模式</h2><p> 1 块级元素  </p>
+<pre><code>div、p、li、dt、dd、h1-h6...
+* 独占一行
+* 设置宽高起效
+* 不设置宽度，宽度默认值是父亲的百分之百  </code></pre><p> 2 行内元素   </p>
+<pre><code>a、span em i strong b ...   
+* 可以和其他行内元素并排 
+* 设置宽高无效
+* 宽高由其子元素决定  </code></pre><p> 3 行内块元素    </p>
+<pre><code>img、input
+* 设置宽高  
+* 可以与其他行内元素或行内块元素并排</code></pre><h3 id="display属性-改变元素的显示模式"><a href="#display属性-改变元素的显示模式" class="headerlink" title="display属性 改变元素的显示模式"></a>display属性 改变元素的显示模式</h3><pre><code>display: inline; 转成行内元素  
+display: inline-block; 转成行内块元素  
+display: block 转成块元素  
+display: none 让元素隐藏</code></pre><h2 id="css特性"><a href="#css特性" class="headerlink" title="css特性"></a>css特性</h2><h3 id="1-层叠性-解决冲突的能力"><a href="#1-层叠性-解决冲突的能力" class="headerlink" title="1  层叠性-解决冲突的能力"></a>1  层叠性-解决冲突的能力</h3><p>   当相同的选择器设置到同一个元素上 这个时候后面的会覆盖前面相同属性的值  </p>
+<h3 id="2-继承性-后代元素继承祖先元素的部分属性"><a href="#2-继承性-后代元素继承祖先元素的部分属性" class="headerlink" title="2  继承性-后代元素继承祖先元素的部分属性"></a>2  继承性-后代元素继承祖先元素的部分属性</h3><p>  font-<em>、line-*、color、text-</em>   </p>
+<h3 id="3-优先级"><a href="#3-优先级" class="headerlink" title="3  优先级"></a>3  优先级</h3><p>  不同的选择器选择到同一个元素，此时用计算权重来决定谁优先  </p>
+<pre><code>继承或*               0 0 0 0  
+标签选择器             0,0,0,1  
+类选择器、伪类选择器     0,0,1,0  
+id选择器               0,1,0,0   
+行内样式               1,0,0,0   </code></pre><p>  可以通过 !important 提升权重 无法提升继承属性的权重</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">html</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">上课笔记</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/02/23/2.23/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-2.21java" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/21/2.21java/">java基础（3）[变量类型]</a>
+    </h1>
+  
+
+        <!--显示阅读次数-->
+        
+        <!--显示阅读次数完毕-->
+        
+        <a href="/2020/02/21/2.21java/" class="archive-article-date">
+  	<time datetime="2020-02-21T02:05:22.135Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="变量类型："><a href="#变量类型：" class="headerlink" title="变量类型："></a>变量类型：</h2><ul>
+<li>类变量：独立于方法之外的变量，用 static 修饰</li>
+<li>实例变量：独立于方法之外的变量，不过没有 static 修饰</li>
+<li>局部变量：类的方法中的变量。 </li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">自学</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/02/21/2.21java/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-2.20java" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/20/2.20java/">java基础（3）[类对象]</a>
+    </h1>
+  
+
+        <!--显示阅读次数-->
+        
+        <!--显示阅读次数完毕-->
+        
+        <a href="/2020/02/20/2.20java/" class="archive-article-date">
+  	<time datetime="2020-02-20T07:52:55.451Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-20</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Java-对象和类"><a href="#Java-对象和类" class="headerlink" title="Java 对象和类"></a>Java 对象和类</h2><ul>
+<li>对象（object）：对象是类的一个实例，有状态和行为。例如，一条狗是一个对象，它的状态有：颜色、名字、品种；行为有：摇尾巴、叫、吃等。  </li>
+<li>类（class）：类是一个模板，它描述一类对象的行为和状态。<h3 id="一个类可以包含以下类型变量"><a href="#一个类可以包含以下类型变量" class="headerlink" title="一个类可以包含以下类型变量"></a>一个类可以包含以下类型变量</h3></li>
+<li><em>局部变量</em>：在方法、构造方法或者语句块中定义的变量被称为局部变量。变量声明和初始化都是在方法中，方法结束后，变量就会自动销毁。</li>
+<li><em>成员变量</em>：成员变量是定义在类中，方法体之外的变量。这种变量在创建对象的时候实例化。成员变量可以被类中方法、构造方法和特定类的语句块访问</li>
+<li><em>类变量</em>：类变量也声明在类中，方法体之外，但必须声明为static类型。</li>
+</ul>
+<h2 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h2><ul>
+<li><p>每个类都有构造方法。如果没有显式地为类定义构造方法，Java编译器将会为该类提供一个默认构造方法。</p>
+</li>
+<li><p>在创建一个对象的时候，至少要调用一个构造方法。构造方法的名称必须与类同名，一个类可以有多个构造方法。</p>
+<h2 id="创建对象"><a href="#创建对象" class="headerlink" title="创建对象"></a>创建对象</h2></li>
+</ul>
+<h3 id="对象是根据类创建的-使用关键字new来创建一个新的对象"><a href="#对象是根据类创建的-使用关键字new来创建一个新的对象" class="headerlink" title="对象是根据类创建的,使用关键字new来创建一个新的对象:"></a>对象是根据类创建的,使用关键字new来创建一个新的对象:</h3><ul>
+<li><em>声明</em>：声明一个对象，包括对象名称和对象类型。</li>
+<li><em>实例化</em>：使用关键字new来创建一个对象。</li>
+<li><em>初始化</em>：使用new创建对象时，会调用构造方法初始化对象。
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">自学</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/02/20/2.20java/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-2.19java" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/19/2.19java/">java 基础（2）[基础语法]</a>
+    </h1>
+  
+
+        <!--显示阅读次数-->
+        
+        <!--显示阅读次数完毕-->
+        
+        <a href="/2020/02/19/2.19java/" class="archive-article-date">
+  	<time datetime="2020-02-18T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-19</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Java-基础语法"><a href="#Java-基础语法" class="headerlink" title="Java 基础语法"></a>Java 基础语法</h2><ul>
+<li>对象:  对象是类的一个实例，有状态和行为。</li>
+<li>类: 类是一个模板，它描述一类对象的行为和状态。</li>
+<li>方法: 就是行为，一个类可以有很多方法。逻辑运算、数据修改以及所有动作都是在方法中完成的。</li>
+<li>实例变量：每个对象都有独特的实例变量，对象的状态由这些实例变量的值决定。</li>
+</ul>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">自学</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/02/19/2.19java/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-2.19" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -209,11 +627,11 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">后端</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">后端</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
         		</li>
       		
 		</ul>
@@ -508,11 +926,11 @@ Boolean hasNext() 有输入数据返回true</code></pre>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">自学</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">自学</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
         		</li>
       		
 		</ul>
@@ -747,90 +1165,9 @@ git reset HEAD 命令用于取消已缓存的内容。(git reset HEAD hello.php)
 
 
   
-    <article id="post-我的第一篇文章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/01/04/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/">markdown 语法</a>
-    </h1>
-  
-
-        <!--显示阅读次数-->
-        
-        <!--显示阅读次数完毕-->
-        
-        <a href="/2020/01/04/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2020-01-04T12:03:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="我的博客文章编写"><a href="#我的博客文章编写" class="headerlink" title="我的博客文章编写"></a>我的博客文章编写</h1>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">自学</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">markdown</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/01/04/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/2/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+      <a class="extend prev" rel="prev" href="/page/2/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">Next &amp;raquo;</a>
     </nav>
   
 
@@ -969,7 +1306,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">java</a>
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -977,11 +1314,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+                <a href="javascript:void(0)" class="js-tag color3">后端</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -989,7 +1326,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">后端</a>
+                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
               </li>
              
               <li class="article-tag-list-item">
