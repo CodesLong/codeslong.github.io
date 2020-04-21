@@ -50,7 +50,7 @@
 		</hgroup>
 		
 		<!-- 显示文章总数 -->
-		总文章数 32
+		总文章数 33
 		<nav class="header-menu">
 			<ul>
 			
@@ -149,6 +149,159 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-后端2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/03/%E5%90%8E%E7%AB%AF2/">java基础</a>
+    </h1>
+  
+
+        <!--显示阅读次数-->
+        
+        <!--显示阅读次数完毕-->
+        
+        <a href="/2020/03/03/%E5%90%8E%E7%AB%AF2/" class="archive-article-date">
+  	<time datetime="2020-03-03T04:35:30.878Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="流程控制"><a href="#流程控制" class="headerlink" title="流程控制"></a>流程控制</h2><h3 id="1-if语句："><a href="#1-if语句：" class="headerlink" title="1.    if语句："></a>1.    if语句：</h3><p>(1)    语法：if(表达式){}<br>(2)    复杂逻辑：使用括号增加可读性<br>(3)    多重if：  </p>
+<pre><code>①    语法：if - else if - else  
+②    If只能在第一位，且必须有一个  
+③    Else只能在最后一位，且最多一个  
+④    Else if在中间，可以有若干个（0-n）  
+⑤    If-else if-else：是由上往下依次判断，匹配第一个结果为true的，执行该代码块，代码块执行完毕后，跳出。  
+⑥    If嵌套：是为了让代码的可读性更高，逻辑更清楚  
+⑦    在单个代码块当中，某一次嵌套，最好不要超过三层，如果超过，检查逻辑  </code></pre><h2 id="2-Switch："><a href="#2-Switch：" class="headerlink" title="2.    Switch："></a>2.    Switch：</h2><p>(1)    条件不是布尔类型，除了long以外的整形+枚举+（JDK1.7以后的String）+char<br>(2)    比较的一定常量等值判断，且常量不可重复<br>(3)    Break：防止穿透<br>(4)    是一个独立的作用域<br>(5)    无需依次比较，一次找到目标<br>(6)    Default：当所有条件都不满足的时候，执行default，可以有，也可以没有；可以在任何位置；但是通常来说，我们习惯性将其放在首位或者末尾；如果不是末尾，一般需要加上break;  </p>
+<h2 id="3-循环"><a href="#3-循环" class="headerlink" title="3.    循环"></a>3.    循环</h2><p>(1)    循环四大要素  </p>
+<pre><code>①    初始化变量：从哪开始  
+②    判断条件：到哪结束  
+③    循环体：是循环执行的主要内容  
+④    迭代：无限向目标趋近  </code></pre><p>(2)    while和do-while循环：  </p>
+<pre><code>①    while循环，当条件不满足时，一次也不执行；先判断，再执行。  
+②    Do-while循环，当条件不满足时，至少执行一次；先执行，再判断。  </code></pre><p>(3)    循环有固定长度和不定长度<br>(4)    正序和倒序<br>(5)    定义步长<br>(6)    多条件<br>(7)    For循环：for(;;){}<br>(8)    跳出和跳过    </p>
+<pre><code>①    Continue：跳过本次循环  
+②    Break：跳出所有循环  
+③    只会对当前循环生效  </code></pre><ol start="4">
+<li>术语  </li>
+</ol>
+<hr>
+<h3 id="1-Debug-（Eclipse）"><a href="#1-Debug-（Eclipse）" class="headerlink" title="1.    Debug:（Eclipse）"></a>1.    Debug:（Eclipse）</h3><pre><code>(1)    F5:往调用内追踪  
+(2)    F6:按行追踪  
+(3)    F8:跳过剩余或者跳到下一个断点  </code></pre><h3 id="2-循环的训练"><a href="#2-循环的训练" class="headerlink" title="2.    循环的训练"></a>2.    循环的训练</h3><p>(1)    循环嵌套：外层循环一次，内层循环一轮</p>
+<h3 id="3-数组"><a href="#3-数组" class="headerlink" title="3.    数组"></a>3.    数组</h3><pre><code>(1)    数组是一个变量：引用数据类型  
+(2)    存储相同数据类型的一组数据  
+(3)    任何数据都可以保存在数组当中  
+(4)    下标/游标：用于标识元素在数组序列当中的位置，从0开始  
+(5)    数组长度不可变！！！！！  
+(6)    堆栈的地址引用！！！！！！！！！！  
+(7)    8个基本数据类型都是放在栈当中  
+(8)    除了8个基本数据类型之外，都是在堆当中  
+(9)    一维数组  
+(10)    多维数组（侧重点） </code></pre><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>boolean equals(array1,array2)</td>
+<td>比较array1和array2两个数组是否相等</td>
+</tr>
+<tr>
+<td>sort(array)</td>
+<td>对数组array的元素进行升序排列</td>
+</tr>
+<tr>
+<td>String toString(array)</td>
+<td>将一个数组array转换成一个字符串</td>
+</tr>
+<tr>
+<td>void fill(array,val)</td>
+<td>把数组array所有元素都赋值为val</td>
+</tr>
+<tr>
+<td>copyOf(array,length)</td>
+<td>把数组array复制成一个长度为length的新数组，返回类型与复制的数组一致</td>
+</tr>
+<tr>
+<td>int binarySearch(array, val)</td>
+<td>查询元素值val在数组array中的下标（要求数组中元素已经按升序排列）</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">上课笔记</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">后端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/03/03/%E5%90%8E%E7%AB%AF2/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-后端1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -555,11 +708,11 @@ id选择器               0,1,0,0
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">自学</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">自学</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
         		</li>
       		
 		</ul>
@@ -570,92 +723,6 @@ id选择器               0,1,0,0
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2020/02/20/2.20java/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2.19java" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/19/2.19java/">java 基础（2）[基础语法]</a>
-    </h1>
-  
-
-        <!--显示阅读次数-->
-        
-        <!--显示阅读次数完毕-->
-        
-        <a href="/2020/02/19/2.19java/" class="archive-article-date">
-  	<time datetime="2020-02-18T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Java-基础语法"><a href="#Java-基础语法" class="headerlink" title="Java 基础语法"></a>Java 基础语法</h2><ul>
-<li>对象:  对象是类的一个实例，有状态和行为。</li>
-<li>类: 类是一个模板，它描述一类对象的行为和状态。</li>
-<li>方法: 就是行为，一个类可以有很多方法。逻辑运算、数据修改以及所有动作都是在方法中完成的。</li>
-<li>实例变量：每个对象都有独特的实例变量，对象的状态由这些实例变量的值决定。</li>
-</ul>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">自学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/02/19/2.19java/">展开全文 >></a>
         </p>
       
 
@@ -744,11 +811,11 @@ id选择器               0,1,0,0
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">后端</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">后端</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
         		</li>
       		
 		</ul>
@@ -759,6 +826,92 @@ id选择器               0,1,0,0
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2020/02/19/2.19/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-2.19java" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/19/2.19java/">java 基础（2）[基础语法]</a>
+    </h1>
+  
+
+        <!--显示阅读次数-->
+        
+        <!--显示阅读次数完毕-->
+        
+        <a href="/2020/02/19/2.19java/" class="archive-article-date">
+  	<time datetime="2020-02-18T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-19</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Java-基础语法"><a href="#Java-基础语法" class="headerlink" title="Java 基础语法"></a>Java 基础语法</h2><ul>
+<li>对象:  对象是类的一个实例，有状态和行为。</li>
+<li>类: 类是一个模板，它描述一类对象的行为和状态。</li>
+<li>方法: 就是行为，一个类可以有很多方法。逻辑运算、数据修改以及所有动作都是在方法中完成的。</li>
+<li>实例变量：每个对象都有独特的实例变量，对象的状态由这些实例变量的值决定。</li>
+</ul>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">自学</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/02/19/2.19java/">展开全文 >></a>
         </p>
       
 
@@ -1102,97 +1255,6 @@ Boolean hasNext() 有输入数据返回true</code></pre>
 
 
   
-    <article id="post-git " class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/01/06/git%20/">git 用法</a>
-    </h1>
-  
-
-        <!--显示阅读次数-->
-        
-        <!--显示阅读次数完毕-->
-        
-        <a href="/2020/01/06/git%20/" class="archive-article-date">
-  	<time datetime="2020-01-06T15:33:47.950Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="git-version"><a href="#git-version" class="headerlink" title="git version"></a>git version</h1><pre><code>git config --global user.name &apos;runoob&apos;
-git config --global user.email test@runoob.com</code></pre><h2 id="git-init"><a href="#git-init" class="headerlink" title="git init"></a>git init</h2><pre><code>git config
-staying  本地操作 未保存
-working 本地保存</code></pre><h2 id="Git-add-“文件“-可将该文件添加到缓存"><a href="#Git-add-“文件“-可将该文件添加到缓存" class="headerlink" title="Git add “文件“     可将该文件添加到缓存"></a>Git add “文件“     可将该文件添加到缓存</h2><h2 id="执行-git-diff-来查看执行-git-status-的结果的详细信息。"><a href="#执行-git-diff-来查看执行-git-status-的结果的详细信息。" class="headerlink" title="执行 git diff 来查看执行 git status 的结果的详细信息。"></a>执行 git diff 来查看执行 git status 的结果的详细信息。</h2><pre><code>git diff 命令显示已写入缓存与已修改但尚未写入缓存的改动的区别。git diff 有两个主要的应用场景。
-
-尚未缓存的改动：git diff
-查看已缓存的改动： git diff --cached
-查看已缓存的与未缓存的所有改动：git diff HEAD
-显示摘要而非整个 diff：git diff --stat
-git reset HEAD 命令用于取消已缓存的内容。(git reset HEAD hello.php)</code></pre><h2 id="git-status-命令用于查看项目的当前状态。-git-status-以查看在你上次提交之后是否有修改。"><a href="#git-status-命令用于查看项目的当前状态。-git-status-以查看在你上次提交之后是否有修改。" class="headerlink" title="git status 命令用于查看项目的当前状态。(git status 以查看在你上次提交之后是否有修改。)"></a>git status 命令用于查看项目的当前状态。(git status 以查看在你上次提交之后是否有修改。)</h2><pre><code>新项目中，添加所有文件很普遍，我们可以使用 git add . 命令来添加当前项目的所有文件
-&quot;AM&quot; 状态的意思是，这个文件在我们将它添加到缓存之后又有改动。改动后我们再执行 git add 命令将其添加到缓存中</code></pre><h2 id="Git-commit-m-“注释”"><a href="#Git-commit-m-“注释”" class="headerlink" title="Git commit -m “注释”"></a>Git commit -m “注释”</h2><pre><code>使用 git add 命令将想要快照的内容写入缓存区， 而执行 git commit 将缓存区内容添加到仓库中</code></pre><h2 id="Git-remote-add-origin-网址"><a href="#Git-remote-add-origin-网址" class="headerlink" title="Git remote add origin + 网址"></a>Git remote add origin + 网址</h2>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">自学</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">git 内容</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/01/06/git%20/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/2/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">Next &amp;raquo;</a>
@@ -1334,19 +1396,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">自学</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">java</a>
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">后端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
               </li>
              
               <li class="article-tag-list-item">

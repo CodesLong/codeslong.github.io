@@ -50,7 +50,7 @@
 		</hgroup>
 		
 		<!-- 显示文章总数 -->
-		总文章数 32
+		总文章数 33
 		<nav class="header-menu">
 			<ul>
 			
@@ -149,6 +149,112 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-面向对象之多态" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/17/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B9%8B%E5%A4%9A%E6%80%81/">类和对象5</a>
+    </h1>
+  
+
+        <!--显示阅读次数-->
+        
+        <!--显示阅读次数完毕-->
+        
+        <a href="/2020/03/17/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B9%8B%E5%A4%9A%E6%80%81/" class="archive-article-date">
+  	<time datetime="2020-03-17T02:58:05.229Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1.多态：同一个引用类型，因为实例不同，表现的形式也不同<br>2.抽象类：在某些情况下，引用类型是一个抽象的概念，那么这样的类型，我们可以把他定义为抽象类<br>(1)    语法：在class前加关键字abstract，用于表示当前类为抽象类<br>(2)    注意：<br>    ①    在抽象类当中，可以有普通方法，也可以有抽象方法；但是，抽象方法只能在抽象类当中声明；<br>    ②    抽象类除了多了抽象方法和不能被实例化之外，和普通类一致<br>    ③    抽象方法的语法，在修饰符和返回值之间，添加关键字abstract，抽象方法没有方法体，即不需要立即实现<br>    ④    没有抽象的属性<br>    ⑤    抽象类，不可被实例化<br>    ⑥    抽象方法必须在子类当中被实现，除非子类也是抽象类，也就是说，在抽象的类的子类当中，只要有一个子类实现了抽象方法，其后代将不必一定实现该抽象方法<br>    ⑦    对于一个子类来说，其父类当中所有的抽象方法，如果没有被实现过，那么将都需要去实现这些抽象方法<br>(3)    向上转型：父类声明指向子类对象<br>    ①    向上转型，父类声明，只能调用子类重写的方法，或者本身实现没有被子类重写的方法<br>    ②    多个子类实现同一个重写的方法，优先调用距离实现类最近的那个<br>    ③    向上转型，子类特有的方法，无法被调用<br>    ④    向上转型属于自动类型转换<br>(4)    向下转型：强制将父类型变为子类型  </p>
+<pre><code>①    首先要向上转型过了，才能向下转型
+②    向下转型之前，一定要判断实例的类型，要强转为那个引用，就判断是否是这个引用
+③    向下转型属于强制类型转换</code></pre><p>3.接口：<br>(1)    语法：使用interface来声明<br>(2)    方法：所有的方法都是抽象方法，不存在普通方法<br>(3)    抽象方法，只能使用共有的和默认的两种修饰符；因为，如果是私有的，那么除了本类以外不可见，如果是受保护的，要继承可见，那么问题就是是否可见。<br>(4)    接口当中，所有的属性都是静态常量<br>(5)    接口可以多实现，用逗号隔开，但是继承只能单根继承<br>(6)    接口同样不可以被实例化<br>(7)    接口和接口之间是多继承<br>(8)    所有接口当中的抽象方法，都必须被实现类实现<br>(9)    instanceof判断是否是某个类型，看实现类，而不是看声明的类型<br>(10)    接口没有构造，抽象类有构造<br>4.工厂模式：帮助生产具体接口或者抽象类的实现类<br> <img src="codeslong.github.io/img/leitu.png" alt="类图"><br>类图  </p>
+<pre><code>1. 类名：
+(1)    接口在类名之上有&lt;interface&gt;&lt;接口&gt;  
+(2)    抽象类斜体  
+(3)    普通类是正楷  
+2. 属性  
+(1)    前面+号：共有  
+(2)    前面-号：私有  
+(3)    属性名:属性类型  
+3. 方法  
+(1)    斜体是抽象方法  
+(2)    正楷是普通方法  
+(3)    参数：方法名（in/out 参数名:参数类型）：返回值  
+(4)    前面+号：共有
+(5)    前面-号：私有
+4. 实线：继承
+5. 虚线：实现
+注意：工作所谓的接口，有2种含义
+1. Interface
+2. 通讯接口</code></pre>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">上课笔记</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">后端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/03/17/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B9%8B%E5%A4%9A%E6%80%81/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-面向对象之继承" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -1133,159 +1239,6 @@ background-position: 30px center;</code></pre><hr>
 
 
   
-    <article id="post-后端2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/03/%E5%90%8E%E7%AB%AF2/">java基础</a>
-    </h1>
-  
-
-        <!--显示阅读次数-->
-        
-        <!--显示阅读次数完毕-->
-        
-        <a href="/2020/03/03/%E5%90%8E%E7%AB%AF2/" class="archive-article-date">
-  	<time datetime="2020-03-03T04:35:30.878Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="流程控制"><a href="#流程控制" class="headerlink" title="流程控制"></a>流程控制</h2><h3 id="1-if语句："><a href="#1-if语句：" class="headerlink" title="1.    if语句："></a>1.    if语句：</h3><p>(1)    语法：if(表达式){}<br>(2)    复杂逻辑：使用括号增加可读性<br>(3)    多重if：  </p>
-<pre><code>①    语法：if - else if - else  
-②    If只能在第一位，且必须有一个  
-③    Else只能在最后一位，且最多一个  
-④    Else if在中间，可以有若干个（0-n）  
-⑤    If-else if-else：是由上往下依次判断，匹配第一个结果为true的，执行该代码块，代码块执行完毕后，跳出。  
-⑥    If嵌套：是为了让代码的可读性更高，逻辑更清楚  
-⑦    在单个代码块当中，某一次嵌套，最好不要超过三层，如果超过，检查逻辑  </code></pre><h2 id="2-Switch："><a href="#2-Switch：" class="headerlink" title="2.    Switch："></a>2.    Switch：</h2><p>(1)    条件不是布尔类型，除了long以外的整形+枚举+（JDK1.7以后的String）+char<br>(2)    比较的一定常量等值判断，且常量不可重复<br>(3)    Break：防止穿透<br>(4)    是一个独立的作用域<br>(5)    无需依次比较，一次找到目标<br>(6)    Default：当所有条件都不满足的时候，执行default，可以有，也可以没有；可以在任何位置；但是通常来说，我们习惯性将其放在首位或者末尾；如果不是末尾，一般需要加上break;  </p>
-<h2 id="3-循环"><a href="#3-循环" class="headerlink" title="3.    循环"></a>3.    循环</h2><p>(1)    循环四大要素  </p>
-<pre><code>①    初始化变量：从哪开始  
-②    判断条件：到哪结束  
-③    循环体：是循环执行的主要内容  
-④    迭代：无限向目标趋近  </code></pre><p>(2)    while和do-while循环：  </p>
-<pre><code>①    while循环，当条件不满足时，一次也不执行；先判断，再执行。  
-②    Do-while循环，当条件不满足时，至少执行一次；先执行，再判断。  </code></pre><p>(3)    循环有固定长度和不定长度<br>(4)    正序和倒序<br>(5)    定义步长<br>(6)    多条件<br>(7)    For循环：for(;;){}<br>(8)    跳出和跳过    </p>
-<pre><code>①    Continue：跳过本次循环  
-②    Break：跳出所有循环  
-③    只会对当前循环生效  </code></pre><ol start="4">
-<li>术语  </li>
-</ol>
-<hr>
-<h3 id="1-Debug-（Eclipse）"><a href="#1-Debug-（Eclipse）" class="headerlink" title="1.    Debug:（Eclipse）"></a>1.    Debug:（Eclipse）</h3><pre><code>(1)    F5:往调用内追踪  
-(2)    F6:按行追踪  
-(3)    F8:跳过剩余或者跳到下一个断点  </code></pre><h3 id="2-循环的训练"><a href="#2-循环的训练" class="headerlink" title="2.    循环的训练"></a>2.    循环的训练</h3><p>(1)    循环嵌套：外层循环一次，内层循环一轮</p>
-<h3 id="3-数组"><a href="#3-数组" class="headerlink" title="3.    数组"></a>3.    数组</h3><pre><code>(1)    数组是一个变量：引用数据类型  
-(2)    存储相同数据类型的一组数据  
-(3)    任何数据都可以保存在数组当中  
-(4)    下标/游标：用于标识元素在数组序列当中的位置，从0开始  
-(5)    数组长度不可变！！！！！  
-(6)    堆栈的地址引用！！！！！！！！！！  
-(7)    8个基本数据类型都是放在栈当中  
-(8)    除了8个基本数据类型之外，都是在堆当中  
-(9)    一维数组  
-(10)    多维数组（侧重点） </code></pre><table>
-<thead>
-<tr>
-<th>方法</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>boolean equals(array1,array2)</td>
-<td>比较array1和array2两个数组是否相等</td>
-</tr>
-<tr>
-<td>sort(array)</td>
-<td>对数组array的元素进行升序排列</td>
-</tr>
-<tr>
-<td>String toString(array)</td>
-<td>将一个数组array转换成一个字符串</td>
-</tr>
-<tr>
-<td>void fill(array,val)</td>
-<td>把数组array所有元素都赋值为val</td>
-</tr>
-<tr>
-<td>copyOf(array,length)</td>
-<td>把数组array复制成一个长度为length的新数组，返回类型与复制的数组一致</td>
-</tr>
-<tr>
-<td>int binarySearch(array, val)</td>
-<td>查询元素值val在数组array中的下标（要求数组中元素已经按升序排列）</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">上课笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">后端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/03/03/%E5%90%8E%E7%AB%AF2/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/">Next &amp;raquo;</a>
@@ -1427,19 +1380,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">自学</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">java</a>
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">后端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
               </li>
              
               <li class="article-tag-list-item">
