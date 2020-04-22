@@ -6,20 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>java 面试（3） | Hexo</title>
+  <title>学习XML | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="组合和继承有什么区别 组合指在新类里面创建原有类的对象，重复利用已有类的功能。（显示的在新类中设置子对象）  继承指根据其他类的实现来定设计者义一个类的实现。（隐式的）  继承和组合选择的原则–&gt;  除非两个类之间是继承关系（is-a），否则不要轻易使用继承。否则会影响后期程序的维护难度和成本  不要仅仅为了实现多态而使用继承。若没有继承关系，可通过实现接口和组合的方式来达到相同的目的。采用">
+  <meta name="description" content="XML：可扩展标记语言，首先是一种语言作用：(1)    数据交互 (2)    配置应用 (3)    AJAX的基石XML的元素(1)    &lt;元素名 属性名&#x3D;“属性值”&gt;元素内容&lt;&#x2F;元素名&gt; (2)    正常情况下，有元素内容，那么元素除了开始，还要有闭合 (3)    但是，如果没有元素内容的情况下，可以写为自闭合标签形式&lt;元素名 属性&#x3D;’属性值’&#x2F;&gt;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="java 面试（3）">
-<meta property="og:url" content="http://yoursite.com/2020/04/02/java%E9%9D%A2%E8%AF%953/index.html">
+<meta property="og:title" content="学习XML">
+<meta property="og:url" content="http://yoursite.com/2020/04/22/%E5%AD%A6%E4%B9%A0%EF%BC%88xml%EF%BC%89/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="组合和继承有什么区别 组合指在新类里面创建原有类的对象，重复利用已有类的功能。（显示的在新类中设置子对象）  继承指根据其他类的实现来定设计者义一个类的实现。（隐式的）  继承和组合选择的原则–&gt;  除非两个类之间是继承关系（is-a），否则不要轻易使用继承。否则会影响后期程序的维护难度和成本  不要仅仅为了实现多态而使用继承。若没有继承关系，可通过实现接口和组合的方式来达到相同的目的。采用">
+<meta property="og:description" content="XML：可扩展标记语言，首先是一种语言作用：(1)    数据交互 (2)    配置应用 (3)    AJAX的基石XML的元素(1)    &lt;元素名 属性名&#x3D;“属性值”&gt;元素内容&lt;&#x2F;元素名&gt; (2)    正常情况下，有元素内容，那么元素除了开始，还要有闭合 (3)    但是，如果没有元素内容的情况下，可以写为自闭合标签形式&lt;元素名 属性&#x3D;’属性值’&#x2F;&gt;">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-04-01T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-04-14T13:19:11.813Z">
+<meta property="article:published_time" content="2020-04-22T13:52:43.797Z">
+<meta property="article:modified_time" content="2020-04-22T14:02:37.135Z">
 <meta property="article:author" content="CodesLong">
-<meta property="article:tag" content="自学">
-<meta property="article:tag" content="java面试">
+<meta property="article:tag" content="Java">
+<meta property="article:tag" content="后端">
+<meta property="article:tag" content="上课笔记">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -154,14 +155,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-java面试3" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-学习（xml）" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      java 面试（3）
+      学习XML
     </h1>
   
 
@@ -177,73 +178,49 @@
         
         <!--显示阅读次数完毕-->
         
-        <a href="/2020/04/02/java%E9%9D%A2%E8%AF%953/" class="archive-article-date">
-  	<time datetime="2020-04-01T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-02</time>
+        <a href="/2020/04/22/%E5%AD%A6%E4%B9%A0%EF%BC%88xml%EF%BC%89/" class="archive-article-date">
+  	<time datetime="2020-04-22T13:52:43.797Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-22</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="组合和继承有什么区别"><a href="#组合和继承有什么区别" class="headerlink" title="组合和继承有什么区别"></a>组合和继承有什么区别</h2><ul>
-<li><p>组合指在新类里面创建原有类的对象，重复利用已有类的功能。（显示的在新类中设置子对象）</p>
-</li>
-<li><p>继承指根据其他类的实现来定设计者义一个类的实现。（隐式的）</p>
-</li>
-<li><p>继承和组合选择的原则–&gt;</p>
-<ul>
-<li><p>除非两个类之间是继承关系（is-a），否则不要轻易使用继承。否则会影响后期程序的维护难度和成本</p>
-</li>
-<li><p>不要仅仅为了实现多态而使用继承。若没有继承关系，可通过实现接口和组合的方式来达到相同的目的。采用接口和组合的方式有更好的可扩展性。</p>
-<blockquote>
-<p>class Verhicle{<br>}<br>class Car extends Verhicle{<br>}<br>class Tire{<br>}<br>class Car extends Verhicle{<br>}</p>
-</blockquote>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="多态的实现机制是什么"><a href="#多态的实现机制是什么" class="headerlink" title="多态的实现机制是什么"></a>多态的实现机制是什么</h2><p>多态的表现方式：  </p>
-<ol>
-<li>方法的重载：重载指同一个类中有多个同名的方法，但这些方法有着不同的参数。重载可被看成一个类中的方法多态性  </li>
-<li>方法的覆盖：子类可以覆盖父类的方法，相同的方法可以在父子类中有不同的表现形式。通过动态绑定的方法实现了多态。（理解书）<h2 id="重载-overload-和覆盖-override-有什么区别"><a href="#重载-overload-和覆盖-override-有什么区别" class="headerlink" title="重载(overload)和覆盖(override)有什么区别"></a>重载(overload)和覆盖(override)有什么区别</h2>重载：</li>
-<li>重载通过不同的方法参数来区分，（参数个数，参数类型，参数顺序）</li>
-<li>不能通过方法的访问权限。返回值类型和抛出异常类型进行重载</li>
-<li>对继承来说，若基类方法的权限为private，则不能在派生类对其进行重载；若派生类也定义了一个同名函数，这是一个新函数，不会达到重载的效果。  </li>
-</ol>
-<p>覆盖：</p>
-<ul>
-<li>派生类中的覆盖方法必须要和积累中的被覆盖方法有相同的函数名和参数</li>
-<li>派生类中的覆盖方法的返回值必须和基类中的被覆盖方法的返回值相同</li>
-<li>派生类中的覆盖方法所抛出的异常必须和基类（或其子类）中被覆盖方法所抛出异常一致</li>
-<li>基类中被覆盖的方法不能为private，否则其子类只是定义了一个方法，并没有对其覆盖</li>
-</ul>
-<p>重载和覆盖的区别：</p>
-<ol>
-<li>覆盖是子类和父类之间的关系，是垂直关系；重载是同一个类中方法之间的关系，是水平关系</li>
-<li>覆盖只能由一个方法或只能由一对方法产生关系；重载是多个方法之间的关系</li>
-<li>覆盖要求参数列表相同；重载要求参数列表不同</li>
-<li>覆盖关系中，调用方法体是根据对象的类型（对象对应存储空间类型）来决定；而重载关系是根据调用时的实参列表与形参列表的选择方法提的。<h2 id="抽象类（abstract-class）和接口（interface）有什么异同"><a href="#抽象类（abstract-class）和接口（interface）有什么异同" class="headerlink" title="抽象类（abstract class）和接口（interface）有什么异同"></a>抽象类（abstract class）和接口（interface）有什么异同</h2><h4 id="相同点："><a href="#相同点：" class="headerlink" title="相同点："></a>相同点：</h4></li>
-<li>都不能实列化</li>
-<li>接口的实现类或者抽象类的子类都有实现了接口或抽象类中的方法后才能被实例化<h4 id="不同点："><a href="#不同点：" class="headerlink" title="不同点："></a>不同点：</h4></li>
-<li>Java8之前，接口只有定义，其方法不能在接口中实现，只有实现接口的类才能实现接口中的方法，而抽象类可以有定义与实现（其方法可以在抽象类中实现）</li>
-<li>接口需要实现（用implements）。但抽象类只能被继承，（用extends）。一个类可以实现多个接口，但一个类只能继承一个抽象类。</li>
-<li>接口强调特定功能的实现，（has-a关系），而抽象类强调所属关系，（is-a关系）</li>
-<li>接口定义的成员变量默认为public static final，只能有静态的不能够被修改的数据成员，而且必须能给其赋初值，其所有成员方法都是public、abstract。</li>
-<li>接口被用于实现经常用的功能，便于后期维护；抽象类用于充当公共类的角色，不适用后期对代码进行修改。<h2 id="内部类有那些"><a href="#内部类有那些" class="headerlink" title="内部类有那些"></a>内部类有那些</h2></li>
-</ol>
-<ul>
-<li>静态内部类</li>
-<li>成员内部类</li>
-<li>局部内部类</li>
-<li>匿名内部类<h4 id="内部类的使用原则："><a href="#内部类的使用原则：" class="headerlink" title="内部类的使用原则："></a>内部类的使用原则：</h4></li>
-<li>匿名内部类不能有构造函数</li>
-<li>匿名内部类不能定义静态成员，方法和类</li>
-<li>匿名内部类不能是public，protected。private，static</li>
-<li>只能创建匿名内部类的一个实例</li>
-<li>一个匿名内部类一定是在new的后面，这个匿名类碧玺继承一个父类或者实现一个接口</li>
-<li>因为匿名内部类为局部内部类，所以局部内部类的所有限制都对其生效。<h2 id="如何获取父类的类名"><a href="#如何获取父类的类名" class="headerlink" title="如何获取父类的类名"></a>如何获取父类的类名</h2><h2 id="this-和super有什么区别"><a href="#this-和super有什么区别" class="headerlink" title="this 和super有什么区别"></a>this 和super有什么区别</h2><h2 id="变量命名的规则"><a href="#变量命名的规则" class="headerlink" title="变量命名的规则"></a>变量命名的规则</h2><h2 id="break，continue以及return有什么区别"><a href="#break，continue以及return有什么区别" class="headerlink" title="break，continue以及return有什么区别"></a>break，continue以及return有什么区别</h2></li>
-</ul>
-
+        <h3 id="XML：可扩展标记语言，首先是一种语言"><a href="#XML：可扩展标记语言，首先是一种语言" class="headerlink" title="XML：可扩展标记语言，首先是一种语言"></a>XML：可扩展标记语言，首先是一种语言</h3><h3 id="作用："><a href="#作用：" class="headerlink" title="作用："></a>作用：</h3><pre><code>(1)    数据交互
+(2)    配置应用
+(3)    AJAX的基石</code></pre><h3 id="XML的元素"><a href="#XML的元素" class="headerlink" title="XML的元素"></a>XML的元素</h3><pre><code>(1)    &lt;元素名 属性名=“属性值”&gt;元素内容&lt;/元素名&gt;
+(2)    正常情况下，有元素内容，那么元素除了开始，还要有闭合
+(3)    但是，如果没有元素内容的情况下，可以写为自闭合标签形式&lt;元素名 属性=’属性值’/&gt;
+(4)    所有XML元素都必须有结束标签
+(5)    XML标签对大小写敏感
+(6)    XML必须正确的嵌套
+(7)    同级标签以缩进对齐
+(8)    元素名称可以包含字母、数字或其他的字符
+(9)    元素名称不能以数字或者标点符号开始
+(10)    元素名称中不能含空格
+(11)    &lt;![CDATA[]]&gt;：只能用于文本
+(12)    在编辑XML的时候，完全可以遵循面向对象的基本思路</code></pre><h3 id="XML的基本结构"><a href="#XML的基本结构" class="headerlink" title="XML的基本结构"></a>XML的基本结构</h3><pre><code>(1)    节点：在XML当中，所有的内容，都是节点
+(2)    文档节点：
+    ①    就是XML文件本身，就是文档节点
+    ②    名称：Document
+    ③    类型：9
+    ④    值：无
+(3)    元素节点：
+    ①    就是标签
+    ②    名称：Element
+    ③    类型：1
+    ④    值：无
+(4)    属性节点：
+    ①    属性定义在[标签/元素]当中
+    ②    名称：Attribute
+    ③    类型：2
+    ④    值：有值
+(5)    文本节点：
+    ①    在元素当中
+    ②    名称：
+    ③    类型：
+    ④    值：
+(6)    注释节点：</code></pre>
       
 
       
@@ -287,32 +264,21 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">自学</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java面试</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">后端</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">上课笔记</a>
         		</li>
       		
 		</ul>
 	</div>
 
       
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/java//" class="article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/java/后端//" class="article-tag-list-link color3">后端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
 
       
 
@@ -362,7 +328,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/02/java%E9%9D%A2%E8%AF%953/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/22/%E5%AD%A6%E4%B9%A0%EF%BC%88xml%EF%BC%89/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -376,18 +342,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/04/03/Java%E9%9D%A2%E8%AF%954/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          java 面试（4）
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/04/01/java%E9%9D%A2%E8%AF%952/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">java 面试（2）</div>
+    <a href="/2020/04/22/IO%E6%B5%81/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">I/O流</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -414,7 +371,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#组合和继承有什么区别"><span class="toc-number">1.</span> <span class="toc-text">组合和继承有什么区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#多态的实现机制是什么"><span class="toc-number">2.</span> <span class="toc-text">多态的实现机制是什么</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#重载-overload-和覆盖-override-有什么区别"><span class="toc-number">3.</span> <span class="toc-text">重载(overload)和覆盖(override)有什么区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#抽象类（abstract-class）和接口（interface）有什么异同"><span class="toc-number">4.</span> <span class="toc-text">抽象类（abstract class）和接口（interface）有什么异同</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#相同点："><span class="toc-number">4.0.1.</span> <span class="toc-text">相同点：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#不同点："><span class="toc-number">4.0.2.</span> <span class="toc-text">不同点：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#内部类有那些"><span class="toc-number">5.</span> <span class="toc-text">内部类有那些</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#内部类的使用原则："><span class="toc-number">5.0.1.</span> <span class="toc-text">内部类的使用原则：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何获取父类的类名"><span class="toc-number">6.</span> <span class="toc-text">如何获取父类的类名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#this-和super有什么区别"><span class="toc-number">7.</span> <span class="toc-text">this 和super有什么区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#变量命名的规则"><span class="toc-number">8.</span> <span class="toc-text">变量命名的规则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#break，continue以及return有什么区别"><span class="toc-number">9.</span> <span class="toc-text">break，continue以及return有什么区别</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#XML：可扩展标记语言，首先是一种语言"><span class="toc-number">1.</span> <span class="toc-text">XML：可扩展标记语言，首先是一种语言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#作用："><span class="toc-number">2.</span> <span class="toc-text">作用：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#XML的元素"><span class="toc-number">3.</span> <span class="toc-text">XML的元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#XML的基本结构"><span class="toc-number">4.</span> <span class="toc-text">XML的基本结构</span></a></li></ol>
                     </div>
                 </span>
             </div>

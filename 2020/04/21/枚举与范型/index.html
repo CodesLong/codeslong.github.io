@@ -17,11 +17,11 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://yoursite.com/img/fanxinglei.png">
 <meta property="article:published_time" content="2020-04-21T03:23:37.413Z">
-<meta property="article:modified_time" content="2020-04-21T03:50:49.890Z">
+<meta property="article:modified_time" content="2020-04-21T09:03:52.215Z">
 <meta property="article:author" content="CodesLong">
-<meta property="article:tag" content="上课笔记">
 <meta property="article:tag" content="Java">
 <meta property="article:tag" content="后端">
+<meta property="article:tag" content="上课笔记">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/img/fanxinglei.png">
   
@@ -59,7 +59,7 @@
 		</hgroup>
 		
 		<!-- 显示文章总数 -->
-		总文章数 33
+		总文章数 35
 		<nav class="header-menu">
 			<ul>
 			
@@ -196,7 +196,7 @@
 <h3 id="枚举："><a href="#枚举：" class="headerlink" title="枚举："></a>枚举：</h3><p>(1)    注意：不建议大家用枚举！！！！只是应为有这个东西，所以讲一下，了解足以。<br>(2)    一些散列值：如果存在数据的安全风险，那么在使用的过程中，该数据可以定义为枚举来避免风险数据对安全性的影响<br>![alt 枚举][/img/meiju.png]</p>
 <h3 id="枚举的构造"><a href="#枚举的构造" class="headerlink" title="枚举的构造"></a>枚举的构造</h3><p>(1)    构造是针对所有的枚举的元素，每一个枚举的元素都相当于一个类。<br>(2)    构造必须私有，调用构造的方法是通过调用类型<br>(3)    枚举中的类型是单例，有几个类型创建几个单例（问题之一）<br>(4)    枚举可以重写方法<br>(5)    枚举可以实现接口</p>
 <h3 id="枚举的问题："><a href="#枚举的问题：" class="headerlink" title="枚举的问题："></a>枚举的问题：</h3><p>(1)    有可能会大量产生单例，但是这个问题并不是枚举最致命的问题<br>(2)    在网络当中，WEB开发，枚举和很多主流的数据结构不兼容<br>![alt 优缺点][/img/youquedian.png]</p>
-<h3 id="JAVA的异常"><a href="#JAVA的异常" class="headerlink" title="JAVA的异常"></a>JAVA的异常</h3><p>(1)    如果程序发生异常，会影响后续程序的执行<br>(2)    使用异常处理机制，保证程序能够正常下去，不崩溃。  </p>
+<h3 id="JAVA的异常"><a href="#JAVA的异常" class="headerlink" title="JAVA的异常"></a>JAVA的异常</h3><p>![alt 异常类型][/img/youquedian.png]<br>(1)    如果程序发生异常，会影响后续程序的执行<br>(2)    使用异常处理机制，保证程序能够正常下去，不崩溃。  </p>
 <h3 id="捕获异常"><a href="#捕获异常" class="headerlink" title="捕获异常"></a>捕获异常</h3><p>(1)    捕获异常后，在异常类型匹配的情况下，可以保证在异常捕获之外的程序能够继续执行下去<br>(2)    异常堆栈信息：最上面是异常发生的最开始的位置<br>(3)    异常的本质只是一个标识类，效果等同用户返回值，是返回值的一种。<br>(4)    可以有多个catch，由上而下依次匹配，取第一个匹配上的，父类只能在子类异常的后面<br>(5)    try当中有多个异常的时候，哪个先碰到，先处理哪个<br>(6)    不要把一个代码块当中所有的代码都放到一个try-catch当中，这样做等同于什么也没做</p>
 <h3 id="自动抛出异常"><a href="#自动抛出异常" class="headerlink" title="自动抛出异常"></a>自动抛出异常</h3><p>(1)    当前方法不想处理异常，那么可以抛出异常，交给调用者处理（捕获/抛出），谁调用谁处理<br>(2)    异常最终抛无可抛，则必须要被处理；在中途被处理过的异常，其调用者就不必再处理了</p>
 <h3 id="手动抛出异常"><a href="#手动抛出异常" class="headerlink" title="手动抛出异常"></a>手动抛出异常</h3><p>(1)    根据使用者的实际情况，来判断是否需要手动抛出<br>(2)    运行时异常不是必须被处理的异常<br>(3)    Checked异常是必须被处理的异常</p>
@@ -245,15 +245,15 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">上课笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">后端</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">上课笔记</a>
         		</li>
       		
 		</ul>
@@ -327,7 +327,7 @@
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          枚举与范型
+          实用类
         
       </div>
     </a>
@@ -505,23 +505,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">上课笔记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">自学</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -533,6 +521,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">上课笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">java面试</a>
               </li>
              
@@ -541,11 +541,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">git 内容</a>
+                <a href="javascript:void(0)" class="js-tag color5">自动生成</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">自动生成</a>
+                <a href="javascript:void(0)" class="js-tag color2">git 内容</a>
               </li>
              
               <li class="article-tag-list-item">

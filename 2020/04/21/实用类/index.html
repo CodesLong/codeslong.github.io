@@ -6,26 +6,32 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>枚举与范型 | Hexo</title>
+  <title>实用类 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="都是重点包装类：(1)    在JAVA当中，JDK为基本数据类型设计了相应的包装类，把基本数据类型变为了一个引用数据类型，那么他就是包装类型(2)    学习包装类型的过程当中，要观察其规律①    命名规律：首字母由基本数据类型的小写变为大写，除了Integer和Character之外②    对于数值，包装类型的构造和方法当中，如果用了不属于数值的书写方式，会报  NumberFormatE">
 <meta property="og:type" content="article">
-<meta property="og:title" content="枚举与范型">
+<meta property="og:title" content="实用类">
 <meta property="og:url" content="http://yoursite.com/2020/04/21/%E5%AE%9E%E7%94%A8%E7%B1%BB/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="都是重点包装类：(1)    在JAVA当中，JDK为基本数据类型设计了相应的包装类，把基本数据类型变为了一个引用数据类型，那么他就是包装类型(2)    学习包装类型的过程当中，要观察其规律①    命名规律：首字母由基本数据类型的小写变为大写，除了Integer和Character之外②    对于数值，包装类型的构造和方法当中，如果用了不属于数值的书写方式，会报  NumberFormatE">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/img/shiyonglei_1.png">
 <meta property="og:image" content="http://yoursite.com/img/duiyingfangf.png">
+<meta property="og:image" content="http://yoursite.com/img/shiyonglei_2.png">
+<meta property="og:image" content="http://yoursite.com/img/shiyonglei_3.png">
+<meta property="og:image" content="http://yoursite.com/img/shiyonglei_4.png">
+<meta property="og:image" content="http://yoursite.com/img/shiyonglei_5.png">
 <meta property="og:image" content="http://yoursite.com/img/time.png">
 <meta property="og:image" content="http://yoursite.com/img/get.png">
+<meta property="og:image" content="http://yoursite.com/img/shiyonglei_6.png">
 <meta property="article:published_time" content="2020-04-21T04:57:13.245Z">
-<meta property="article:modified_time" content="2020-04-21T05:07:29.017Z">
+<meta property="article:modified_time" content="2020-04-21T09:53:19.098Z">
 <meta property="article:author" content="CodesLong">
-<meta property="article:tag" content="上课笔记">
 <meta property="article:tag" content="Java">
 <meta property="article:tag" content="后端">
+<meta property="article:tag" content="上课笔记">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/img/duiyingfangf.png">
+<meta name="twitter:image" content="http://yoursite.com/img/shiyonglei_1.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -61,7 +67,7 @@
 		</hgroup>
 		
 		<!-- 显示文章总数 -->
-		总文章数 33
+		总文章数 35
 		<nav class="header-menu">
 			<ul>
 			
@@ -166,7 +172,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      枚举与范型
+      实用类
     </h1>
   
 
@@ -190,15 +196,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="都是重点"><a href="#都是重点" class="headerlink" title="都是重点"></a>都是重点</h1><h3 id="包装类："><a href="#包装类：" class="headerlink" title="包装类："></a>包装类：</h3><p>(1)    在JAVA当中，JDK为基本数据类型设计了相应的包装类，把基本数据类型变为了一个引用数据类型，那么他就是包装类型<br>(2)    学习包装类型的过程当中，要观察其规律<br>①    命名规律：首字母由基本数据类型的小写变为大写，除了Integer和Character之外<br>②    对于数值，包装类型的构造和方法当中，如果用了不属于数值的书写方式，会报  NumberFormatException异常<br>③    包装类型的字符串参数构造，不可以把数值类型，例如L,D,F加入字符串<br>④    字符的包装类型，只有其本身类型参数的构造，没有字符串类型参数的构造<br>⑤    布尔类型的包装类，只有一种情况下才会返回true，就是不区分大小写的true字符串；否则，输入任意其他类型，或null类型，那么结果都为false;<br>⑥    包装类型的方法：</p>
-<pre><code>1)    XxxValue：包装类变为基本数据类型，这是一个普通的方法，即该方法必须通过包装类型的对象来进行调用，每一种包装类型，都有自己各自对应的方法</code></pre><p> <img src="/img/duiyingfangf.png" alt="alt 对应方法">  </p>
+        <h1 id="都是重点"><a href="#都是重点" class="headerlink" title="都是重点"></a>都是重点</h1><h3 id="包装类："><a href="#包装类：" class="headerlink" title="包装类："></a>包装类：</h3><p>(1)    在JAVA当中，JDK为基本数据类型设计了相应的包装类，把基本数据类型变为了一个引用数据类型，那么他就是包装类型<br><img src="/img/shiyonglei_1.png" alt="alt 包装类"><br>(2)    学习包装类型的过程当中，要观察其规律<br>①    命名规律：首字母由基本数据类型的小写变为大写，除了Integer和Character之外<br>②    对于数值，包装类型的构造和方法当中，如果用了不属于数值的书写方式，会报  NumberFormatException异常<br>③    包装类型的字符串参数构造，不可以把数值类型，例如L,D,F加入字符串<br>④    字符的包装类型，只有其本身类型参数的构造，没有字符串类型参数的构造<br>⑤    布尔类型的包装类，只有一种情况下才会返回true，就是不区分大小写的true字符串；否则，输入任意其他类型，或null类型，那么结果都为false;<br>⑥    包装类型的方法：</p>
+<pre><code>1)    XxxValue：包装类变为基本数据类型，这是一个普通的方法，即该方法必须通过包装类型的对象来进行调用，每一种包装类型，都有自己各自对应的方法</code></pre><p><img src="/img/duiyingfangf.png" alt="alt 对应方法">  </p>
 <pre><code>2)    转字符串的三种方式
 3)    字符串变为基本数据类型，调用包装类的静态方法：例如parseInt(Str)、parseLong(Str)……
 4)    Xxx.valueOf(xxx):把基本数据类型或者字符串变为包装类型
-5)    自动装箱和自动拆箱
+5)    自动装箱(基本类型---&gt;包装类的对象)和自动拆箱
 6)    在某些框架中，会去针对自己的框架设计相应的包装类型，比如hadoop当中Text\IntWriteable……
 7)    在web工程当中的实体类，其中作为参数的数值类型，通常都是定义为包装类，因为包装类型，有null值</code></pre><h3 id="字符串：对该源码感兴趣的同学可以参考openJDK"><a href="#字符串：对该源码感兴趣的同学可以参考openJDK" class="headerlink" title="字符串：对该源码感兴趣的同学可以参考openJDK"></a>字符串：对该源码感兴趣的同学可以参考openJDK</h3><p>(1)    字符串直接已双引号赋值，那么该字符串即相当于一个static常量（内存唯一），常量之间是相等的；那么new出来的String对象是存在于堆内存当中的，所以他不可以直接和常量比较<br>(2)    intern()：是将当前字符串对象，到常量池当中寻找是否有相同的常量，如果有，则返回该常量，如果没有，则新建一个常量<br>(3)    string的方法：  </p>
-<pre><code>①    获取字符串长度
+<pre><code>①    获取字符串长度--&gt;length()
 ②    必须使用equals判断字符串是否相等：
     1)    长度相等
     2)    字符串的本质其实是一个char类型的数组
@@ -215,7 +221,14 @@
     8)    StringBuffer/StringBuilder:是一种高效扩展string的对象
             a.    StringBuffer的append是有同步锁的synchronized，在多线程使用的情况下，他是安全的，但是效率相对低
             b.    StringBuilder是没有同步锁的，所以在多线程使用的情况下，StringBuilder是不安全的
-            c.    在单线程的情况下，用哪个都一样，在实际的WEB开发当中，我们的应用，通常是被分配到某一个单独的线程里；除非他们处于常量状态，或者单例当中，必须要使用stringBuffer。</code></pre><h3 id="时间"><a href="#时间" class="headerlink" title="时间"></a>时间</h3><p>(1)    使用java.util.Date对象获取当前系统时间<br>(2)    定义时间格式<br> <img src="/img/time.png" alt="alt 时间格式"><br>(3)    字符串和时间的转换<br>(4)    GetTime():1970-01-01 00:00:00:000到当前系统时间的毫秒数<br>(5)    获取年月日<br> <img src="/img/get.png" alt="alt 获取时间格式"><br>(6)    使用Calendar的原因：<br>    ①    因为程序当中，程序的执行，是存在时间消耗的<br>    ②    如果用Date，那么在不断new的过程或在对象的传递当中，是会造成同一个对象的时间误差的</p>
+            c.    在单线程的情况下，用哪个都一样，在实际的WEB开发当中，我们的应用，通常是被分配到某一个单独的线程里；除非他们处于常量状态，或者单例当中，必须要使用stringBuffer。</code></pre><hr>
+<ul>
+<li>String是不可变对象，经常改变内容的字符串最好不要使用String</li>
+<li>StringBuffer是可变的字符串，字符串经常改变的情况可使用StringBuffer，更高效</li>
+<li>JDK5.0后提供了StringBuilder，等价StringBuffer</li>
+</ul>
+<p><img src="/img/shiyonglei_2.png" alt="alt equals原理"><br><img src="/img/shiyonglei_3.png" alt="alt 字符串连接"><br><img src="/img/shiyonglei_4.png" alt="alt 字符串常用提取方法"><br><img src="/img/shiyonglei_5.png" alt="alt StringBuffer"></p>
+<h3 id="时间"><a href="#时间" class="headerlink" title="时间"></a>时间</h3><p>(1)    使用java.util.Date对象获取当前系统时间<br>(2)    定义时间格式<br> <img src="/img/time.png" alt="alt 时间格式"><br>(3)    字符串和时间的转换<br>(4)    GetTime():1970-01-01 00:00:00:000到当前系统时间的毫秒数<br>(5)    获取年月日<br> <img src="/img/get.png" alt="alt 获取时间格式"><br>(6)    使用Calendar的原因：<br>    ①    因为程序当中，程序的执行，是存在时间消耗的<br>    ②    如果用Date，那么在不断new的过程或在对象的传递当中，是会造成同一个对象的时间误差的<br><img src="/img/shiyonglei_6.png" alt="alt StringBuffer"></p>
 
       
 
@@ -260,15 +273,15 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">上课笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">后端</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">上课笔记</a>
         		</li>
       		
 		</ul>
@@ -337,6 +350,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2020/04/22/IO%E6%B5%81/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          I/O流
+        
+      </div>
+    </a>
   
   
     <a href="/2020/04/21/%E6%9E%9A%E4%B8%BE%E4%B8%8E%E8%8C%83%E5%9E%8B/" id="article-nav-older" class="article-nav-link-wrap">
@@ -511,23 +533,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">上课笔记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">自学</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -539,6 +549,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">上课笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">java面试</a>
               </li>
              
@@ -547,11 +569,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">git 内容</a>
+                <a href="javascript:void(0)" class="js-tag color5">自动生成</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">自动生成</a>
+                <a href="javascript:void(0)" class="js-tag color2">git 内容</a>
               </li>
              
               <li class="article-tag-list-item">
