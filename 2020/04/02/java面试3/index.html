@@ -16,7 +16,7 @@
 <meta property="og:description" content="组合和继承有什么区别 组合指在新类里面创建原有类的对象，重复利用已有类的功能。（显示的在新类中设置子对象）  继承指根据其他类的实现来定设计者义一个类的实现。（隐式的）  继承和组合选择的原则–&gt;  除非两个类之间是继承关系（is-a），否则不要轻易使用继承。否则会影响后期程序的维护难度和成本  不要仅仅为了实现多态而使用继承。若没有继承关系，可通过实现接口和组合的方式来达到相同的目的。采用">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-04-01T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-04-14T13:19:11.813Z">
+<meta property="article:modified_time" content="2020-05-18T12:59:31.809Z">
 <meta property="article:author" content="CodesLong">
 <meta property="article:tag" content="自学">
 <meta property="article:tag" content="java面试">
@@ -204,11 +204,19 @@
 </ul>
 <h2 id="多态的实现机制是什么"><a href="#多态的实现机制是什么" class="headerlink" title="多态的实现机制是什么"></a>多态的实现机制是什么</h2><p>多态的表现方式：  </p>
 <ol>
-<li>方法的重载：重载指同一个类中有多个同名的方法，但这些方法有着不同的参数。重载可被看成一个类中的方法多态性  </li>
-<li>方法的覆盖：子类可以覆盖父类的方法，相同的方法可以在父子类中有不同的表现形式。通过动态绑定的方法实现了多态。（理解书）<h2 id="重载-overload-和覆盖-override-有什么区别"><a href="#重载-overload-和覆盖-override-有什么区别" class="headerlink" title="重载(overload)和覆盖(override)有什么区别"></a>重载(overload)和覆盖(override)有什么区别</h2>重载：</li>
-<li>重载通过不同的方法参数来区分，（参数个数，参数类型，参数顺序）</li>
-<li>不能通过方法的访问权限。返回值类型和抛出异常类型进行重载</li>
-<li>对继承来说，若基类方法的权限为private，则不能在派生类对其进行重载；若派生类也定义了一个同名函数，这是一个新函数，不会达到重载的效果。  </li>
+<li><p>方法的重载：重载指同一个类中有多个同名的方法，但这些方法有着不同的参数。重载可被看成一个类中的方法多态性  </p>
+</li>
+<li><p>方法的覆盖：子类可以覆盖父类的方法，相同的方法可以在父子类中有不同的表现形式。通过动态绑定的方法实现了多态。（理解书）</p>
+</li>
+</ol>
+<h2 id="重载-overload-和覆盖-override-有什么区别"><a href="#重载-overload-和覆盖-override-有什么区别" class="headerlink" title="重载(overload)和覆盖(override)有什么区别"></a>重载(overload)和覆盖(override)有什么区别</h2><p>重载：</p>
+<ol>
+<li><p>重载通过不同的方法参数来区分，（参数个数，参数类型，参数顺序</p>
+</li>
+<li><p>不能通过方法的访问权限。返回值类型和抛出异常类型进行重载</p>
+</li>
+<li><p>对继承来说，若基类方法的权限为private，则不能在派生类对其进行重载；若派生类也定义了一个同名函数，这是一个新函数，不会达到重载的效果。  </p>
+</li>
 </ol>
 <p>覆盖：</p>
 <ul>
@@ -222,26 +230,63 @@
 <li>覆盖是子类和父类之间的关系，是垂直关系；重载是同一个类中方法之间的关系，是水平关系</li>
 <li>覆盖只能由一个方法或只能由一对方法产生关系；重载是多个方法之间的关系</li>
 <li>覆盖要求参数列表相同；重载要求参数列表不同</li>
-<li>覆盖关系中，调用方法体是根据对象的类型（对象对应存储空间类型）来决定；而重载关系是根据调用时的实参列表与形参列表的选择方法提的。<h2 id="抽象类（abstract-class）和接口（interface）有什么异同"><a href="#抽象类（abstract-class）和接口（interface）有什么异同" class="headerlink" title="抽象类（abstract class）和接口（interface）有什么异同"></a>抽象类（abstract class）和接口（interface）有什么异同</h2><h4 id="相同点："><a href="#相同点：" class="headerlink" title="相同点："></a>相同点：</h4></li>
+<li>覆盖关系中，调用方法体是根据对象的类型（对象对应存储空间类型）来决定；而重载关系是根据调用时的实参列表与形参列表的选择方法提的。</li>
+</ol>
+<h2 id="抽象类（abstract-class）和接口（interface）有什么异同"><a href="#抽象类（abstract-class）和接口（interface）有什么异同" class="headerlink" title="抽象类（abstract class）和接口（interface）有什么异同"></a>抽象类（abstract class）和接口（interface）有什么异同</h2><h4 id="相同点："><a href="#相同点：" class="headerlink" title="相同点："></a>相同点：</h4><ol>
 <li>都不能实列化</li>
-<li>接口的实现类或者抽象类的子类都有实现了接口或抽象类中的方法后才能被实例化<h4 id="不同点："><a href="#不同点：" class="headerlink" title="不同点："></a>不同点：</h4></li>
+<li>接口的实现类或者抽象类的子类都有实现了接口或抽象类中的方法后才能被实例化</li>
+</ol>
+<h4 id="不同点"><a href="#不同点" class="headerlink" title="不同点"></a>不同点</h4><ol>
 <li>Java8之前，接口只有定义，其方法不能在接口中实现，只有实现接口的类才能实现接口中的方法，而抽象类可以有定义与实现（其方法可以在抽象类中实现）</li>
 <li>接口需要实现（用implements）。但抽象类只能被继承，（用extends）。一个类可以实现多个接口，但一个类只能继承一个抽象类。</li>
 <li>接口强调特定功能的实现，（has-a关系），而抽象类强调所属关系，（is-a关系）</li>
 <li>接口定义的成员变量默认为public static final，只能有静态的不能够被修改的数据成员，而且必须能给其赋初值，其所有成员方法都是public、abstract。</li>
-<li>接口被用于实现经常用的功能，便于后期维护；抽象类用于充当公共类的角色，不适用后期对代码进行修改。<h2 id="内部类有那些"><a href="#内部类有那些" class="headerlink" title="内部类有那些"></a>内部类有那些</h2></li>
+<li>接口被用于实现经常用的功能，便于后期维护；抽象类用于充当公共类的角色，不适用后期对代码进行修改。</li>
 </ol>
-<ul>
-<li>静态内部类</li>
-<li>成员内部类</li>
-<li>局部内部类</li>
-<li>匿名内部类<h4 id="内部类的使用原则："><a href="#内部类的使用原则：" class="headerlink" title="内部类的使用原则："></a>内部类的使用原则：</h4></li>
+<h2 id="内部类有那些"><a href="#内部类有那些" class="headerlink" title="内部类有那些"></a>内部类有那些</h2><ul>
+<li><p>静态内部类(static inner class)</p>
+</li>
+<li><p>成员内部类(member inner class)</p>
+</li>
+<li><p>局部内部类(local inner class)</p>
+</li>
+<li><p>匿名内部类(annoymous inner class)</p>
+<pre><code>class outerClass{
+  static class innerClass{} //静态内部类
+}
+ass outerClass{
+   class innerClass{} //成员内部类
+}
+ass outerClass{
+  public void memberFunction(){
+      class innerClass{} //局部内部类
+  }
+}
+blic class MyFrame extends Frame{// 外部类
+  public MyFrame() {
+      addWindowListener(new WindowAdapter() {// 匿名内部类
+          public void windowClosing(WindowEvent e) {
+              dispose();
+              System.exit(0);
+          }
+      });
+  }
+}</code></pre></li>
+</ul>
+<h4 id="内部类的使用原则："><a href="#内部类的使用原则：" class="headerlink" title="内部类的使用原则："></a>内部类的使用原则：</h4><ul>
 <li>匿名内部类不能有构造函数</li>
 <li>匿名内部类不能定义静态成员，方法和类</li>
 <li>匿名内部类不能是public，protected。private，static</li>
 <li>只能创建匿名内部类的一个实例</li>
 <li>一个匿名内部类一定是在new的后面，这个匿名类碧玺继承一个父类或者实现一个接口</li>
-<li>因为匿名内部类为局部内部类，所以局部内部类的所有限制都对其生效。<h2 id="如何获取父类的类名"><a href="#如何获取父类的类名" class="headerlink" title="如何获取父类的类名"></a>如何获取父类的类名</h2><h2 id="this-和super有什么区别"><a href="#this-和super有什么区别" class="headerlink" title="this 和super有什么区别"></a>this 和super有什么区别</h2><h2 id="变量命名的规则"><a href="#变量命名的规则" class="headerlink" title="变量命名的规则"></a>变量命名的规则</h2><h2 id="break，continue以及return有什么区别"><a href="#break，continue以及return有什么区别" class="headerlink" title="break，continue以及return有什么区别"></a>break，continue以及return有什么区别</h2></li>
+<li>因为匿名内部类为局部内部类，所以局部内部类的所有限制都对其生效。<h2 id="如何获取父类的类名"><a href="#如何获取父类的类名" class="headerlink" title="如何获取父类的类名"></a>如何获取父类的类名</h2></li>
+<li>利用 getClass().getName(),来获取类名</li>
+<li>会存在子类不能覆盖object类中的final ,native方法，可以利用反射来解决, 如： getClass().getSuperclass().getName()<h2 id="this-和super有什么区别"><a href="#this-和super有什么区别" class="headerlink" title="this 和super有什么区别"></a>this 和super有什么区别</h2></li>
+<li>this用来指向当前实例对象，列如构造函数中的相关操作</li>
+<li>super 用来访问父类的方法或成员变量<h2 id="break，continue以及return有什么区别"><a href="#break，continue以及return有什么区别" class="headerlink" title="break，continue以及return有什么区别"></a>break，continue以及return有什么区别</h2></li>
+<li>break : 强行跳出当前循环，可以在多重循环外设置一个（标志：），用break+标志来推出多重循环</li>
+<li>continue ： 停止当前循环</li>
+<li>return : 一个跳转语句，可使程序控制返回到调用该原来方法的地方</li>
 </ul>
 
       
@@ -376,11 +421,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/04/03/Java%E9%9D%A2%E8%AF%954/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/04/04/Java%E9%9D%A2%E8%AF%955/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          java 面试（4）
+          java 面试（5）
         
       </div>
     </a>
@@ -414,7 +459,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#组合和继承有什么区别"><span class="toc-number">1.</span> <span class="toc-text">组合和继承有什么区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#多态的实现机制是什么"><span class="toc-number">2.</span> <span class="toc-text">多态的实现机制是什么</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#重载-overload-和覆盖-override-有什么区别"><span class="toc-number">3.</span> <span class="toc-text">重载(overload)和覆盖(override)有什么区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#抽象类（abstract-class）和接口（interface）有什么异同"><span class="toc-number">4.</span> <span class="toc-text">抽象类（abstract class）和接口（interface）有什么异同</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#相同点："><span class="toc-number">4.0.1.</span> <span class="toc-text">相同点：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#不同点："><span class="toc-number">4.0.2.</span> <span class="toc-text">不同点：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#内部类有那些"><span class="toc-number">5.</span> <span class="toc-text">内部类有那些</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#内部类的使用原则："><span class="toc-number">5.0.1.</span> <span class="toc-text">内部类的使用原则：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何获取父类的类名"><span class="toc-number">6.</span> <span class="toc-text">如何获取父类的类名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#this-和super有什么区别"><span class="toc-number">7.</span> <span class="toc-text">this 和super有什么区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#变量命名的规则"><span class="toc-number">8.</span> <span class="toc-text">变量命名的规则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#break，continue以及return有什么区别"><span class="toc-number">9.</span> <span class="toc-text">break，continue以及return有什么区别</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#组合和继承有什么区别"><span class="toc-number">1.</span> <span class="toc-text">组合和继承有什么区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#多态的实现机制是什么"><span class="toc-number">2.</span> <span class="toc-text">多态的实现机制是什么</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#重载-overload-和覆盖-override-有什么区别"><span class="toc-number">3.</span> <span class="toc-text">重载(overload)和覆盖(override)有什么区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#抽象类（abstract-class）和接口（interface）有什么异同"><span class="toc-number">4.</span> <span class="toc-text">抽象类（abstract class）和接口（interface）有什么异同</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#相同点："><span class="toc-number">4.0.1.</span> <span class="toc-text">相同点：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#不同点"><span class="toc-number">4.0.2.</span> <span class="toc-text">不同点</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#内部类有那些"><span class="toc-number">5.</span> <span class="toc-text">内部类有那些</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#内部类的使用原则："><span class="toc-number">5.0.1.</span> <span class="toc-text">内部类的使用原则：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何获取父类的类名"><span class="toc-number">6.</span> <span class="toc-text">如何获取父类的类名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#this-和super有什么区别"><span class="toc-number">7.</span> <span class="toc-text">this 和super有什么区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#break，continue以及return有什么区别"><span class="toc-number">8.</span> <span class="toc-text">break，continue以及return有什么区别</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -558,11 +603,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">自学</a>
+                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -574,15 +623,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">上课笔记</a>
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+                <a href="javascript:void(0)" class="js-tag color3">自学</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -590,15 +635,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+                <a href="javascript:void(0)" class="js-tag color2">git 内容</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">自动生成</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">git 内容</a>
               </li>
              
               <li class="article-tag-list-item">

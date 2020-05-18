@@ -150,6 +150,143 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Java面试4" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/16/Java%E9%9D%A2%E8%AF%954/">java 面试（4）</a>
+    </h1>
+  
+
+        <!--显示阅读次数-->
+        
+        <!--显示阅读次数完毕-->
+        
+        <a href="/2020/05/16/Java%E9%9D%A2%E8%AF%954/" class="archive-article-date">
+  	<time datetime="2020-05-15T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="final，finally和finalize有什么区别"><a href="#final，finally和finalize有什么区别" class="headerlink" title="final，finally和finalize有什么区别"></a>final，finally和finalize有什么区别</h2><ul>
+<li>final 用于声明属性(引用不可变)，方法和类，分别代表属性不可变，方法不可覆盖，类不可被继承</li>
+<li>finally 只能用于try-catch代码块中</li>
+<li>finalize 是Object类的一个方法，在垃圾回收器执行时会调用被回收对象的finalize() 方法<h2 id="assert（断言）有什么作用"><a href="#assert（断言）有什么作用" class="headerlink" title="assert（断言）有什么作用"></a>assert（断言）有什么作用</h2></li>
+<li>主要用来保证程序的正确性，通常在程序开发和测试时使用。</li>
+<li>检查输入参数正确性</li>
+<li>检查函数结果正确性</li>
+<li>检查控制流</li>
+<li>检查程序不变量</li>
+</ul>
+<h2 id="static关键字有那些作用"><a href="#static关键字有那些作用" class="headerlink" title="static关键字有那些作用"></a>static关键字有那些作用</h2><ul>
+<li>为特定数据类型分派单一的存储空间，与其个数无关</li>
+<li>实现某个方法或属性与类</li>
+</ul>
+<ol>
+<li>static成员变量<ul>
+<li>相当于全局效果</li>
+</ul>
+</li>
+<li>static成员方法<ul>
+<li>不需要创建对象就可以被调用，其中不可使用this super关键字</li>
+<li>实现单列模式</li>
+</ul>
+</li>
+<li>static代码块<ul>
+<li>被用来初始化静态变量，并且只会被执行一次</li>
+</ul>
+</li>
+<li>static内部类<ul>
+<li>静态内部类不能与外部类有相同的名字，不能访问外部类的普通成员，只能访问外部类的静态成员和静态方法，包括私有类型<h2 id="使用switch时有那些注意事项"><a href="#使用switch时有那些注意事项" class="headerlink" title="使用switch时有那些注意事项"></a>使用switch时有那些注意事项</h2></li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>long float double String 不能隐式地转为int型，因此不能被用作switch的表达式</li>
+<li>case 语句结尾添加break<h2 id="volatile有什么作用"><a href="#volatile有什么作用" class="headerlink" title="volatile有什么作用"></a>volatile有什么作用</h2></li>
+<li>是一个修饰符，用来修饰被不同的线程访问和修改变量</li>
+<li>被volatile修饰的变量，系统每次都是直接从内存中提取，而不会利用缓存，保证了任何时候所看到的变量的值都是相同的<h2 id="instanceof有什么作用"><a href="#instanceof有什么作用" class="headerlink" title="instanceof有什么作用"></a>instanceof有什么作用</h2></li>
+<li>判断一个引用类型的变量所指的对象是否是一个类（接口，抽象类，父类）的实例<h2 id="strictfp有什么作用"><a href="#strictfp有什么作用" class="headerlink" title="strictfp有什么作用"></a>strictfp有什么作用</h2></li>
+<li>strict float point ，指的是精确浮点，用来保证浮点运算的准确性</li>
+<li>当一个类被strictfp修饰，所有方法都会自动被strictfp修饰，且在不同的硬件平台上会有一致的运行结构</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">自学</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java面试</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/java//" class="article-tag-list-link color5">java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/java/后端//" class="article-tag-list-link color3">后端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/05/16/Java%E9%9D%A2%E8%AF%954/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-学习（xml）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -220,7 +357,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
@@ -228,7 +365,7 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">上课笔记</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
         		</li>
       		
 		</ul>
@@ -358,7 +495,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
@@ -366,7 +503,7 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">上课笔记</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
         		</li>
       		
 		</ul>
@@ -475,7 +612,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
@@ -483,7 +620,7 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">上课笔记</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
         		</li>
       		
 		</ul>
@@ -572,7 +709,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
@@ -580,7 +717,7 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">上课笔记</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
         		</li>
       		
 		</ul>
@@ -686,7 +823,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
@@ -694,7 +831,7 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">上课笔记</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
         		</li>
       		
 		</ul>
@@ -829,101 +966,6 @@
 
 
   
-    <article id="post-Java面试4" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/03/Java%E9%9D%A2%E8%AF%954/">java 面试（4）</a>
-    </h1>
-  
-
-        <!--显示阅读次数-->
-        
-        <!--显示阅读次数完毕-->
-        
-        <a href="/2020/04/03/Java%E9%9D%A2%E8%AF%954/" class="archive-article-date">
-  	<time datetime="2020-04-02T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="final，finally和finalize有什么区别"><a href="#final，finally和finalize有什么区别" class="headerlink" title="final，finally和finalize有什么区别"></a>final，finally和finalize有什么区别</h2><h2 id="assert有什么作用"><a href="#assert有什么作用" class="headerlink" title="assert有什么作用"></a>assert有什么作用</h2><h2 id="static关键字有那些作用"><a href="#static关键字有那些作用" class="headerlink" title="static关键字有那些作用"></a>static关键字有那些作用</h2><h2 id="使用switch时有那些注意事项"><a href="#使用switch时有那些注意事项" class="headerlink" title="使用switch时有那些注意事项"></a>使用switch时有那些注意事项</h2><h2 id="volatile有什么作用"><a href="#volatile有什么作用" class="headerlink" title="volatile有什么作用"></a>volatile有什么作用</h2><h2 id="instanceof有什么作用"><a href="#instanceof有什么作用" class="headerlink" title="instanceof有什么作用"></a>instanceof有什么作用</h2><h2 id="strictfp有什么作用"><a href="#strictfp有什么作用" class="headerlink" title="strictfp有什么作用"></a>strictfp有什么作用</h2>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">自学</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java面试</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/java//" class="article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/java/后端//" class="article-tag-list-link color3">后端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/03/Java%E9%9D%A2%E8%AF%954/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-java面试3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -966,11 +1008,19 @@
 </ul>
 <h2 id="多态的实现机制是什么"><a href="#多态的实现机制是什么" class="headerlink" title="多态的实现机制是什么"></a>多态的实现机制是什么</h2><p>多态的表现方式：  </p>
 <ol>
-<li>方法的重载：重载指同一个类中有多个同名的方法，但这些方法有着不同的参数。重载可被看成一个类中的方法多态性  </li>
-<li>方法的覆盖：子类可以覆盖父类的方法，相同的方法可以在父子类中有不同的表现形式。通过动态绑定的方法实现了多态。（理解书）<h2 id="重载-overload-和覆盖-override-有什么区别"><a href="#重载-overload-和覆盖-override-有什么区别" class="headerlink" title="重载(overload)和覆盖(override)有什么区别"></a>重载(overload)和覆盖(override)有什么区别</h2>重载：</li>
-<li>重载通过不同的方法参数来区分，（参数个数，参数类型，参数顺序）</li>
-<li>不能通过方法的访问权限。返回值类型和抛出异常类型进行重载</li>
-<li>对继承来说，若基类方法的权限为private，则不能在派生类对其进行重载；若派生类也定义了一个同名函数，这是一个新函数，不会达到重载的效果。  </li>
+<li><p>方法的重载：重载指同一个类中有多个同名的方法，但这些方法有着不同的参数。重载可被看成一个类中的方法多态性  </p>
+</li>
+<li><p>方法的覆盖：子类可以覆盖父类的方法，相同的方法可以在父子类中有不同的表现形式。通过动态绑定的方法实现了多态。（理解书）</p>
+</li>
+</ol>
+<h2 id="重载-overload-和覆盖-override-有什么区别"><a href="#重载-overload-和覆盖-override-有什么区别" class="headerlink" title="重载(overload)和覆盖(override)有什么区别"></a>重载(overload)和覆盖(override)有什么区别</h2><p>重载：</p>
+<ol>
+<li><p>重载通过不同的方法参数来区分，（参数个数，参数类型，参数顺序</p>
+</li>
+<li><p>不能通过方法的访问权限。返回值类型和抛出异常类型进行重载</p>
+</li>
+<li><p>对继承来说，若基类方法的权限为private，则不能在派生类对其进行重载；若派生类也定义了一个同名函数，这是一个新函数，不会达到重载的效果。  </p>
+</li>
 </ol>
 <p>覆盖：</p>
 <ul>
@@ -984,26 +1034,63 @@
 <li>覆盖是子类和父类之间的关系，是垂直关系；重载是同一个类中方法之间的关系，是水平关系</li>
 <li>覆盖只能由一个方法或只能由一对方法产生关系；重载是多个方法之间的关系</li>
 <li>覆盖要求参数列表相同；重载要求参数列表不同</li>
-<li>覆盖关系中，调用方法体是根据对象的类型（对象对应存储空间类型）来决定；而重载关系是根据调用时的实参列表与形参列表的选择方法提的。<h2 id="抽象类（abstract-class）和接口（interface）有什么异同"><a href="#抽象类（abstract-class）和接口（interface）有什么异同" class="headerlink" title="抽象类（abstract class）和接口（interface）有什么异同"></a>抽象类（abstract class）和接口（interface）有什么异同</h2><h4 id="相同点："><a href="#相同点：" class="headerlink" title="相同点："></a>相同点：</h4></li>
+<li>覆盖关系中，调用方法体是根据对象的类型（对象对应存储空间类型）来决定；而重载关系是根据调用时的实参列表与形参列表的选择方法提的。</li>
+</ol>
+<h2 id="抽象类（abstract-class）和接口（interface）有什么异同"><a href="#抽象类（abstract-class）和接口（interface）有什么异同" class="headerlink" title="抽象类（abstract class）和接口（interface）有什么异同"></a>抽象类（abstract class）和接口（interface）有什么异同</h2><h4 id="相同点："><a href="#相同点：" class="headerlink" title="相同点："></a>相同点：</h4><ol>
 <li>都不能实列化</li>
-<li>接口的实现类或者抽象类的子类都有实现了接口或抽象类中的方法后才能被实例化<h4 id="不同点："><a href="#不同点：" class="headerlink" title="不同点："></a>不同点：</h4></li>
+<li>接口的实现类或者抽象类的子类都有实现了接口或抽象类中的方法后才能被实例化</li>
+</ol>
+<h4 id="不同点"><a href="#不同点" class="headerlink" title="不同点"></a>不同点</h4><ol>
 <li>Java8之前，接口只有定义，其方法不能在接口中实现，只有实现接口的类才能实现接口中的方法，而抽象类可以有定义与实现（其方法可以在抽象类中实现）</li>
 <li>接口需要实现（用implements）。但抽象类只能被继承，（用extends）。一个类可以实现多个接口，但一个类只能继承一个抽象类。</li>
 <li>接口强调特定功能的实现，（has-a关系），而抽象类强调所属关系，（is-a关系）</li>
 <li>接口定义的成员变量默认为public static final，只能有静态的不能够被修改的数据成员，而且必须能给其赋初值，其所有成员方法都是public、abstract。</li>
-<li>接口被用于实现经常用的功能，便于后期维护；抽象类用于充当公共类的角色，不适用后期对代码进行修改。<h2 id="内部类有那些"><a href="#内部类有那些" class="headerlink" title="内部类有那些"></a>内部类有那些</h2></li>
+<li>接口被用于实现经常用的功能，便于后期维护；抽象类用于充当公共类的角色，不适用后期对代码进行修改。</li>
 </ol>
-<ul>
-<li>静态内部类</li>
-<li>成员内部类</li>
-<li>局部内部类</li>
-<li>匿名内部类<h4 id="内部类的使用原则："><a href="#内部类的使用原则：" class="headerlink" title="内部类的使用原则："></a>内部类的使用原则：</h4></li>
+<h2 id="内部类有那些"><a href="#内部类有那些" class="headerlink" title="内部类有那些"></a>内部类有那些</h2><ul>
+<li><p>静态内部类(static inner class)</p>
+</li>
+<li><p>成员内部类(member inner class)</p>
+</li>
+<li><p>局部内部类(local inner class)</p>
+</li>
+<li><p>匿名内部类(annoymous inner class)</p>
+<pre><code>class outerClass{
+  static class innerClass{} //静态内部类
+}
+ass outerClass{
+   class innerClass{} //成员内部类
+}
+ass outerClass{
+  public void memberFunction(){
+      class innerClass{} //局部内部类
+  }
+}
+blic class MyFrame extends Frame{// 外部类
+  public MyFrame() {
+      addWindowListener(new WindowAdapter() {// 匿名内部类
+          public void windowClosing(WindowEvent e) {
+              dispose();
+              System.exit(0);
+          }
+      });
+  }
+}</code></pre></li>
+</ul>
+<h4 id="内部类的使用原则："><a href="#内部类的使用原则：" class="headerlink" title="内部类的使用原则："></a>内部类的使用原则：</h4><ul>
 <li>匿名内部类不能有构造函数</li>
 <li>匿名内部类不能定义静态成员，方法和类</li>
 <li>匿名内部类不能是public，protected。private，static</li>
 <li>只能创建匿名内部类的一个实例</li>
 <li>一个匿名内部类一定是在new的后面，这个匿名类碧玺继承一个父类或者实现一个接口</li>
-<li>因为匿名内部类为局部内部类，所以局部内部类的所有限制都对其生效。<h2 id="如何获取父类的类名"><a href="#如何获取父类的类名" class="headerlink" title="如何获取父类的类名"></a>如何获取父类的类名</h2><h2 id="this-和super有什么区别"><a href="#this-和super有什么区别" class="headerlink" title="this 和super有什么区别"></a>this 和super有什么区别</h2><h2 id="变量命名的规则"><a href="#变量命名的规则" class="headerlink" title="变量命名的规则"></a>变量命名的规则</h2><h2 id="break，continue以及return有什么区别"><a href="#break，continue以及return有什么区别" class="headerlink" title="break，continue以及return有什么区别"></a>break，continue以及return有什么区别</h2></li>
+<li>因为匿名内部类为局部内部类，所以局部内部类的所有限制都对其生效。<h2 id="如何获取父类的类名"><a href="#如何获取父类的类名" class="headerlink" title="如何获取父类的类名"></a>如何获取父类的类名</h2></li>
+<li>利用 getClass().getName(),来获取类名</li>
+<li>会存在子类不能覆盖object类中的final ,native方法，可以利用反射来解决, 如： getClass().getSuperclass().getName()<h2 id="this-和super有什么区别"><a href="#this-和super有什么区别" class="headerlink" title="this 和super有什么区别"></a>this 和super有什么区别</h2></li>
+<li>this用来指向当前实例对象，列如构造函数中的相关操作</li>
+<li>super 用来访问父类的方法或成员变量<h2 id="break，continue以及return有什么区别"><a href="#break，continue以及return有什么区别" class="headerlink" title="break，continue以及return有什么区别"></a>break，continue以及return有什么区别</h2></li>
+<li>break : 强行跳出当前循环，可以在多重循环外设置一个（标志：），用break+标志来推出多重循环</li>
+<li>continue ： 停止当前循环</li>
+<li>return : 一个跳转语句，可使程序控制返回到调用该原来方法的地方</li>
 </ul>
 
       
@@ -1249,15 +1336,17 @@
         <h2 id="Java程序的初始化顺序"><a href="#Java程序的初始化顺序" class="headerlink" title="Java程序的初始化顺序"></a>Java程序的初始化顺序</h2><ol>
 <li>静态对象（变量），只会初始化一次</li>
 <li>父类先于子类初始化</li>
-<li>按照成员变量的定义顺序进行初始化，（即使变量散布于方法中，依然在任何方法包括构造函数被调用之前先进行初始化）<h3 id="不同的代码块中的顺序（静态代码块，构造函数）"><a href="#不同的代码块中的顺序（静态代码块，构造函数）" class="headerlink" title="不同的代码块中的顺序（静态代码块，构造函数）"></a>不同的代码块中的顺序（静态代码块，构造函数）</h3></li>
-<li>父类静态变量，父类静态代码块，子类静态变量，子类静态代码块</li>
-<li>父类非静态变量，父类非静态代码块，父类构造函数，子类非静态变量，子类非静态代码块，子类构造函数。<h2 id="Java作用域问题（public-private-protected-default）"><a href="#Java作用域问题（public-private-protected-default）" class="headerlink" title="Java作用域问题（public private protected default）"></a>Java作用域问题（public private protected default）</h2><h2 id="一个Java文件是否可以定义多个类"><a href="#一个Java文件是否可以定义多个类" class="headerlink" title="一个Java文件是否可以定义多个类"></a>一个Java文件是否可以定义多个类</h2></li>
+<li>按照成员变量的定义顺序进行初始化，（即使变量散布于方法中，依然在任何方法包括构造函数被调用之前先进行初始化）</li>
 </ol>
-<ul>
+<h3 id="不同的代码块中的顺序（静态代码块，构造函数）"><a href="#不同的代码块中的顺序（静态代码块，构造函数）" class="headerlink" title="不同的代码块中的顺序（静态代码块，构造函数）"></a>不同的代码块中的顺序（静态代码块，构造函数）</h3><ol>
+<li>父类静态变量，父类静态代码块，子类静态变量，子类静态代码块</li>
+<li>父类非静态变量，父类非静态代码块，父类构造函数，子类非静态变量，子类非静态代码块，子类构造函数。</li>
+</ol>
+<h2 id="Java作用域问题（public-private-protected-default）"><a href="#Java作用域问题（public-private-protected-default）" class="headerlink" title="Java作用域问题（public private protected default）"></a>Java作用域问题（public private protected default）</h2><h2 id="一个Java文件是否可以定义多个类"><a href="#一个Java文件是否可以定义多个类" class="headerlink" title="一个Java文件是否可以定义多个类"></a>一个Java文件是否可以定义多个类</h2><ul>
 <li>可以，但最多只能有一个类被public修饰并且这个类名必须与文件名相同</li>
-<li>若文件中没有public类，则文件名随便是一个类名，在用javac时，会产生一个同名的.class文件<h2 id="什么是构造函数"><a href="#什么是构造函数" class="headerlink" title="什么是构造函数"></a>什么是构造函数</h2></li>
+<li>若文件中没有public类，则文件名随便是一个类名，在用javac时，会产生一个同名的.class文件</li>
 </ul>
-<ol>
+<h2 id="什么是构造函数"><a href="#什么是构造函数" class="headerlink" title="什么是构造函数"></a>什么是构造函数</h2><ol>
 <li>构造函数必须与类名相同，并且不能有返回值（返回值也不能是void）</li>
 <li>每个类可以有多个构造函数。</li>
 <li>构造函数可以有0，1，或1个以上的参数</li>
@@ -1265,12 +1354,18 @@
 <li>构造函数的主要作用是完成对象的初始化工作</li>
 <li>构造函数不能被继承，因此不能被覆盖，但是构造函数能被重载</li>
 <li>子类可以通过super来显示的调用父类的构造函数</li>
-<li>当父类和子类都没有定义构造函数时，编译器会为父类生成一个默认的无参数的构造函数，给子类也生成给一个默认的无参数的构造函数<h2 id="为什么Java中有一些接口没有任何方法"><a href="#为什么Java中有一些接口没有任何方法" class="headerlink" title="为什么Java中有一些接口没有任何方法"></a>为什么Java中有一些接口没有任何方法</h2></li>
-<li>Java是单继承，一个类只能有一个父类。一个类可以实现多个接口，以简介达成多重继承的目的。</li>
-<li>有些接口内部没有声明任何方法，（标记接口），仅仅充当标识的作用，表明它实现的类属于特定的类型，eg：Cloneable Serializable。使用时用instanceof来判断实例对象的类型是否实现了一个给定的标识接口。<h2 id="如何实现在main-方法执行前输出“hello-！”"><a href="#如何实现在main-方法执行前输出“hello-！”" class="headerlink" title="如何实现在main() 方法执行前输出“hello ！”"></a>如何实现在main() 方法执行前输出“hello ！”</h2></li>
+<li>当父类和子类都没有定义构造函数时，编译器会为父类生成一个默认的无参数的构造函数，给子类也生成给一个默认的无参数的构造函数</li>
 </ol>
-<ul>
-<li>静态块在类被加载时就被调用，可以在static内设置来实现。<h2 id="为什么要public-static-void-main-String-args-这个方法"><a href="#为什么要public-static-void-main-String-args-这个方法" class="headerlink" title="为什么要public static void main(String[] args) 这个方法"></a>为什么要public static void main(String[] args) 这个方法</h2></li>
+<h2 id="为什么Java中有一些接口没有任何方法"><a href="#为什么Java中有一些接口没有任何方法" class="headerlink" title="为什么Java中有一些接口没有任何方法"></a>为什么Java中有一些接口没有任何方法</h2><ol>
+<li><p>Java是单继承，一个类只能有一个父类。一个类可以实现多个接口，以简介达成多重继承的目的。</p>
+</li>
+<li><p>有些接口内部没有声明任何方法，（标记接口），仅仅充当标识的作用，表明它实现的类属于特定的类型，eg：Cloneable Serializable。使用时用instanceof来判断<br>实例对象的类型是否实现了一个给定的标识接口。</p>
+</li>
+</ol>
+<h2 id="如何实现在main-方法执行前输出“hello-！”"><a href="#如何实现在main-方法执行前输出“hello-！”" class="headerlink" title="如何实现在main() 方法执行前输出“hello ！”"></a>如何实现在main() 方法执行前输出“hello ！”</h2><ul>
+<li>静态块在类被加载时就被调用，可以在static内设置来实现。</li>
+</ul>
+<h2 id="为什么要public-static-void-main-String-args-这个方法"><a href="#为什么要public-static-void-main-String-args-这个方法" class="headerlink" title="为什么要public static void main(String[] args) 这个方法"></a>为什么要public static void main(String[] args) 这个方法</h2><ul>
 <li>static表明main（）是静态方法，是存储在静态存储区的。只要类被加载后，就可以使用方法而不需要实例化对象来访问。</li>
 <li>public与static没有先后顺序关系</li>
 <li>也可把main（）方法定义为final–&gt;public static final void main(String[] args)</li>
@@ -1478,11 +1573,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">自学</a>
+                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1494,15 +1593,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">上课笔记</a>
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+                <a href="javascript:void(0)" class="js-tag color3">自学</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1510,15 +1605,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+                <a href="javascript:void(0)" class="js-tag color2">git 内容</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">自动生成</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">git 内容</a>
               </li>
              
               <li class="article-tag-list-item">
