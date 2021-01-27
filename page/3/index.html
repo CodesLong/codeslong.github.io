@@ -50,7 +50,7 @@
 		</hgroup>
 		
 		<!-- 显示文章总数 -->
-		总文章数 35
+		总文章数 37
 		<nav class="header-menu">
 			<ul>
 			
@@ -149,6 +149,233 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-类和对象" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/10/%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1/">类和对象2</a>
+    </h1>
+  
+
+        <!--显示阅读次数-->
+        
+        <!--显示阅读次数完毕-->
+        
+        <a href="/2020/03/10/%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1/" class="archive-article-date">
+  	<time datetime="2020-03-10T03:32:15.323Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ol>
+<li>方法的语法：<br>(1)    修饰符 返回值类型 方法名(形参列表){方法体}<br>(2)    形参列表：形参是指，所要传递给方法的参数的类型<br>(3)    实参：调用的时候，具体传递值，叫实参。<br>(4)    参数传递：  </li>
+</ol>
+<p>①    形参和实参的个数要对应<br>②    类型位置要一一对应<br>③    形参属于局部变量  </p>
+<p>(5)    不定长参数  </p>
+<pre><code>①    形参的定义方式：类型 ... 变量名  
+②    实参的传递：类型统一，个数随意（0-n）  
+③    不定长参数的处理方式：当成一个数组处理  
+④    一个参数列表中，不定长参数只能有一个，并且只能在参数列表最后  
+⑤    一般来说，不定长参数用的不多  </code></pre><p>(6)    地址传参  </p>
+<pre><code>①    什么是地址：  
+        1)    只要是new了，那就是一个新的东西  
+        2)    如果是对象之间的赋值，那么赋值的是堆内存的地址  
+        3)    在使用引用数据类型之前，请务必做好空值判断  
+②    引用传参：引用类型传递的都是同一个内存地址  
+③    基本数据类型传参：传的是值  </code></pre><p>(7)    构造方法：<br>        ①    什么是构造方法：描述一个对象从无到有的过程<br>        ②    语法：修饰符 构造方法名(形参列表){方法体}</p>
+<pre><code>1)    构造方法名：必须和类名一致  
+2)    每调用一次构造，就相当于创建了一个新的对象  
+3)    虚拟机在一个对象的创建过程中，如果该类没有显式声明构造方法，那么虚拟机会为该类添加一个默认的空参构造  
+4)    如果你已经显式的创建了构造（包括不限于空参构造），则虚拟机将不再添加默认空参  
+5)    构造方法可以调用普通方法，普通方法不可以调用构造方法  </code></pre><p>③    重载：无论是方法，还是构造方法，都可以重载  </p>
+<pre><code>1)    方法名一致  
+2)    参数列表不同：个数，类型，位置  
+3)    和修饰符和返回值类型没有关系  </code></pre><p>④    调用重载的方法，是根据传递的实参不同，调用对应形参的方法<br>⑤    在方法当值，直接调用变量名，优先取局部变量<br>⑥    区分局部变量和全局变量<br>(8)    This关键字：  </p>
+<pre><code>①    This：代表对象本身，相当于“我”  
+②    调用属性，调用方法，调用构造  
+③    This调用构造：  
+        1)    只能写在第一行  
+        2)    每个构造，只能调用一次构造  </code></pre><p>(9)    作用域：  </p>
+<pre><code>①    代码块：写在一对{}中间的，叫代码块  
+②    JAVA的作用域，叫块级作用域
+③    成员变量：直接写在类当中的叫成员变量，也叫全局变量，处于全局作用域当中，即该类当中任何地方都可以引用
+④    局部变量：写在方法（包括构造方法，静态代码块等等……）当中的，都属于局部变量
+⑤    里面可以调用外面的，外面不可以调用里面的，平级之间相互不干扰
+⑥    成员变量会有初值：参考数组的初值（整形0，浮点型0.0，布尔类型false,char类型是空格，引用类型是null）
+⑦    局部变量没有初值
+⑧    局部变量不可以有访问修饰符
+⑨    局部变量的优先级是高于全局变量的</code></pre><p>上节课遗留问题：</p>
+<ol>
+<li>方法内的基本数据类型（局部变量）：在栈当中</li>
+<li>方法外的基本数据类型（成员变量）：在堆当中</li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">后端</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/03/10/%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-盒子模型" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/08/%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/">css属性</a>
+    </h1>
+  
+
+        <!--显示阅读次数-->
+        
+        <!--显示阅读次数完毕-->
+        
+        <a href="/2020/03/08/%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/" class="archive-article-date">
+  	<time datetime="2020-03-08T09:27:25.608Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="任何标签都可看作盒子"><a href="#任何标签都可看作盒子" class="headerlink" title="任何标签都可看作盒子"></a>任何标签都可看作盒子</h2><p><img src="/img/box.gif" alt="盒子模型图片"><br>        width,height 内容宽高<br>        border 边框 (dashed 虚线 solid 实线 dotted 点线)<br>        margin 外边距<br>        padding 内边距<br>        宽，高，样式 都得有才会显示<br>        综合属性 （宽 高 颜色）相互位置无所谓<br>        可以简写为( border: 4px solid red;)<br>        border从方向展开相当于 border-left border-right border-top border-top<br>        border-top 从三要素展开相当于 border-width border-style border-color</p>
+<pre><code>合并相邻的单元格，制作细线表格  border-collapse: collapse;  
+    table,
+td {
+    border: 1px solid #ccc;
+    /* 合并相邻的单元格，制作细线表格 */
+    border-collapse: collapse;
+}</code></pre><hr>
+ 盒子的实际宽度为width+padding+左右border    
+设置padding:如何保证盒子总宽不变，调整width，(宽度剩余) 
+
+<p>复合写法  上  右  下  左 从上顺时针设置 : padding: 6px 10px 8px 10px;</p>
+<pre><code>四个方向都是6px  
+按照单个方向：上下左右
+综合写法：上 右 下 左
+上 （右，左） 下 --顺时针看   </code></pre><hr>
+<p>可以让文本 行内元素 行内块元素在盒子里面水平居中   text-align: center;<br>margin: 0 auto; 可以让有宽度的块级元素水平居中<br>margin 对行内元素 设置上下外边距无效 左右可以设置</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">html</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/03/08/%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-类和对象0" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -918,11 +1145,11 @@ id选择器               0,1,0,0
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">自学</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">自学</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
         		</li>
       		
 		</ul>
@@ -1065,197 +1292,6 @@ id选择器               0,1,0,0
 
 
   
-    <article id="post-2.19java" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/19/2.19java/">java 基础（2）[基础语法]</a>
-    </h1>
-  
-
-        <!--显示阅读次数-->
-        
-        <!--显示阅读次数完毕-->
-        
-        <a href="/2020/02/19/2.19java/" class="archive-article-date">
-  	<time datetime="2020-02-18T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Java-基础语法"><a href="#Java-基础语法" class="headerlink" title="Java 基础语法"></a>Java 基础语法</h2><ul>
-<li>对象:  对象是类的一个实例，有状态和行为。</li>
-<li>类: 类是一个模板，它描述一类对象的行为和状态。</li>
-<li>方法: 就是行为，一个类可以有很多方法。逻辑运算、数据修改以及所有动作都是在方法中完成的。</li>
-<li>实例变量：每个对象都有独特的实例变量，对象的状态由这些实例变量的值决定。</li>
-</ul>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">自学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/02/19/2.19java/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2.11" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/11/2.11/">表单</a>
-    </h1>
-  
-
-        <!--显示阅读次数-->
-        
-        <!--显示阅读次数完毕-->
-        
-        <a href="/2020/02/11/2.11/" class="archive-article-date">
-  	<time datetime="2020-02-11T01:54:42.607Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p> 4 html常用标签<br>    html4<br>标题 h1~h6 语义化 容器标签 可以包裹其他标签诸如p、span、a、img </p>
-<pre><code>画线 &lt;hr /&gt;
-段落标签 &lt;p&gt;.....&lt;/p&gt;
-换行标签  &lt;br /&gt;
-div/span
-文本格式化标签 b strong i em s del u ins </code></pre><hr>
-
-<pre><code>&lt;img src=&quot;路径&quot; title=&quot;悬停文本&quot; alt=&quot;图片资源加载失败 显示这里文字&quot;/&gt;
-
-相对 从自身出发
-               1 当资源文件和自身处于同一级目录下 路径直接写文件名(后缀名需要写完整)
-               2 当资源文件所在文件夹与自身处于同一级目录下 路径需要加上文件夹  
-               .当前目录  ..上一级目录  ../../
-绝对 一般是带盘符的或者具体url地址
-     段落 p
-     超链接 a
-         &lt;a href=&quot;http://www.baidu.com&quot; title=&quot;点我搜索&quot; target=&quot;_blank&quot;&gt;百度一下&lt;/a&gt;
-         href 表示链接跳转地址 可以是网址也可以是本地资源文件地址  必须要写的属性
-         title 表示悬停文本
-         target 表示以何种窗口打开 假如其值是_blank新窗口打开
-         a链接也可以做锚点</code></pre>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">html</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/02/11/2.11/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/2/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">Next &amp;raquo;</a>
@@ -1270,7 +1306,7 @@ div/span
 	<div class="outer">
 	  <div id="footer-info">
 		  <div class="footer-left">
-			  &copy; 2020 CodesLong
+			  &copy; 2021 CodesLong
 			  <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
 			  <script>
 				  var now = new Date(); 
@@ -1405,11 +1441,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" class="js-tag color3">自学</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">自学</a>
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">

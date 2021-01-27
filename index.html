@@ -50,7 +50,7 @@
 		</hgroup>
 		
 		<!-- 显示文章总数 -->
-		总文章数 35
+		总文章数 37
 		<nav class="header-menu">
 			<ul>
 			
@@ -149,6 +149,472 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-h5" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/01/27/h5/">html-css</a>
+    </h1>
+  
+
+        <!--显示阅读次数-->
+        
+        <!--显示阅读次数完毕-->
+        
+        <a href="/2021/01/27/h5/" class="archive-article-date">
+  	<time datetime="2021-01-27T15:06:11.467Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="html"><a href="#html" class="headerlink" title="html"></a>html</h1><h2 id="语义化标签"><a href="#语义化标签" class="headerlink" title="语义化标签"></a>语义化标签</h2><ul>
+<li>header  网页头</li>
+<li>main     网页主题（只能有一个）</li>
+<li>footer   网页底部</li>
+<li>nav       网页导航</li>
+<li>aside     和主题相关的内容（侧边栏）</li>
+<li>article    独立的文章</li>
+<li>section  独立的区块（以上都不合适时）</li>
+</ul>
+<hr>
+<ul>
+<li>div 主要的布局元素</li>
+<li>span 行内元素（一般在网页中选择文字）</li>
+<li>target属性，用来指定超链接打开的位置<ul>
+<li>_self 默认值 在当前页面打开超链接</li>
+<li>_blank 在一个新的窗口打开超链接</li>
+</ul>
+</li>
+</ul>
+<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><ul>
+<li>alt 图片描述，默认情况不显示，图片无法显示时浏览器会根据alt中的内容来识别图片</li>
+<li>width   宽度（单位像素）</li>
+<li>height  宽度和高度中只修改一个，另一个会等比例缩放<ul>
+<li>一般在pc端不建议修改图片大小</li>
+<li>移动端经常需要对图片进行缩放</li>
+</ul>
+</li>
+<li>jpeg(jpg)<ul>
+<li>支持的颜色比较丰富，不支持透明效果，不支持动图</li>
+<li>一般用来显示照片</li>
+</ul>
+</li>
+<li>gif<ul>
+<li>支持的颜色较少，支持简单透明，能支持动图</li>
+<li>颜色单一，动图</li>
+</ul>
+</li>
+<li>png<ul>
+<li>支持颜色丰富，支持复杂透明，不支持动图</li>
+<li>颜色丰富，复杂透明图片（专为网页而生）</li>
+</ul>
+</li>
+<li>webp<ul>
+<li>谷歌新推出的图片格式，具备其他图片的所有优点，而且文件较小</li>
+<li>缺点是兼容性不好</li>
+</ul>
+</li>
+<li>base64<ul>
+<li>将图片使用base64编码，可以将图片转换为字符，通过字符形式来引用图片</li>
+<li>一般都是一些需要和网页一起加载的图片才会使用</li>
+</ul>
+</li>
+<li>原则：效果一样，用小的；效果不一样，用效果好的</li>
+</ul>
+<h2 id="音频-视频"><a href="#音频-视频" class="headerlink" title="音频 视频"></a>音频 视频</h2><ul>
+<li>audio (video)用来向网页中i纳入一个外部音频文件，默认不允许用户自己控制播放和停止</li>
+<li>属性<ul>
+<li>controls  是否允许控制播放</li>
+<li>autoplay 是否自动播放</li>
+<li>loop        是否循环播放</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">audio</span> <span class="attr">src</span>=<span class="string">"./source/audio.mp3"</span> <span class="attr">controls</span> <span class="attr">autoplay</span> <span class="attr">loop</span>&gt;</span><span class="tag">&lt;/<span class="name">audio</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">--也可通过source来指定文件--</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">audio</span> <span class="attr">controls</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">"./source/audio.mp3"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">"./source/audio.ogg"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">"./source/audio.mp3"</span> <span class="attr">type</span> =<span class="string">"audio/mp3"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">audio</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><ul>
+<li>可以实现指定为是的跳转（href=#id）</li>
+<li>id属性：<ul>
+<li>每个标签都可以添加一个id属性</li>
+<li>id属性是元素的唯一标识，同一个页面不能出现重复的id属性</li>
+</ul>
+</li>
+<li>（#）可以作为超链接的占位符</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"javascript:;"</span>&gt;</span>超链接<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>此时点击超链接什么变化都没有</p>
+<h1 id="css"><a href="#css" class="headerlink" title="css"></a>css</h1><h2 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h2><ul>
+<li><p>子元素选择器</p>
+<ul>
+<li>作用：选中指定父元素的指定子元素</li>
+<li>语法：父元素 &gt; 子元素</li>
+</ul>
+</li>
+<li><p>后代选择器</p>
+<ul>
+<li>作用：选中指定元素内的指定元素内的后代元素</li>
+<li>语法：祖先 后代</li>
+</ul>
+</li>
+<li><p>下一个兄弟</p>
+<ul>
+<li>语法：前一个 + 下一个</li>
+</ul>
+</li>
+<li><p>选择下边所有的兄弟</p>
+<ul>
+<li>语法：兄 ~ 弟</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>[属性名] 选择含有指定属性的元素</p>
+<p>[属性名=属性值] 选择含有指定属性的属性值的元素</p>
+<p>[属性名^=属性值] 选择属性值以指定值开头的元素</p>
+<p>[属性名$=属性值]  选择属性值以指定值结尾的元素</p>
+<p>[属性名*=属性值]  选择属性值含有某值的元素</p>
+</blockquote>
+<h2 id="伪类"><a href="#伪类" class="headerlink" title="伪类"></a>伪类</h2><h2 id="伪类用来描述一个元素的特殊状态"><a href="#伪类用来描述一个元素的特殊状态" class="headerlink" title="伪类用来描述一个元素的特殊状态"></a>伪类用来描述一个元素的特殊状态</h2><p>比如：第一个子元素、元素被点击、鼠标移入。。。</p>
+<p>伪类一般清空都是使用：开头</p>
+<ul>
+<li>:first-child  第一个子元素</li>
+<li>:last-child</li>
+<li>:nth-child()<ul>
+<li>特殊值：<ul>
+<li>n 第n个</li>
+<li>2n 或 even 偶数</li>
+<li>2n+1 或 odd 奇数</li>
+</ul>
+</li>
+<li>在所有子元素中进行排序</li>
+</ul>
+</li>
+<li>:first-of-type</li>
+<li>:last-of-type</li>
+<li>:nth-of-type()<ul>
+<li>在同类元素类型中进行排序</li>
+</ul>
+</li>
+<li>:not() 否定伪类<ul>
+<li>将符合条件的元素从选择器中去除</li>
+</ul>
+</li>
+<li>:link 没访问过的链接（整成链接）</li>
+<li>:visited 访问过的链接（只能修改链接的颜色）</li>
+<li>:hover 鼠标移入的状态</li>
+<li>:active 用来表示鼠标点击</li>
+</ul>
+<p>伪元素：表示一些特殊的并不真实存在的元素（特殊的位置）</p>
+<ul>
+<li>伪元素以（::)开头<ul>
+<li>::first-letter  第一个字母</li>
+<li>::first-line     第一行</li>
+<li>::selection    选中的内容</li>
+<li>::before        元素的开始</li>
+<li>::after           元素的最后<ul>
+<li>before 和after必须结合content属性来使用</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="样式"><a href="#样式" class="headerlink" title="样式"></a>样式</h2><ul>
+<li>当通过不同的选择器，选中相同的元素，并且设置了不同的样式时，就发生了样式冲突</li>
+<li>冲突时，由选择器的权重决定：</li>
+</ul>
+<blockquote>
+<p>内联样式                   1，0，0，0</p>
+<p>id选择器                    0，1，0，0</p>
+<p>类和伪类选择器          0，0，1，0</p>
+<p>元素选择器                 0，0，0，1</p>
+<p>通配选择器                 0，0，0，0</p>
+<p>机场的样式                 没有优先级</p>
+</blockquote>
+<ul>
+<li>比较优先级时，将所有的选择器权重累加，比大小来决定显示</li>
+<li>可以在某个样式后添加  !important，此时改样式会获取到最高的优先级，甚至超过内联样式<ul>
+<li>注意：在开发中要谨慎使用！</li>
+</ul>
+</li>
+</ul>
+<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><ul>
+<li>样式 的继承：<ul>
+<li>元素的样式同时也会应用到他的后代元素上</li>
+</ul>
+</li>
+<li>继承是发生在祖先和后代之间的</li>
+<li>继承的设计方便更好的开发<ul>
+<li>利用继承可以将一些通用的员工是统一设置到共同的祖先元素上</li>
+</ul>
+</li>
+<li>注意：并不是所有的样式都会被继承（背景、布局则不会）</li>
+</ul>
+<h2 id="长度单位"><a href="#长度单位" class="headerlink" title="长度单位"></a>长度单位</h2><ul>
+<li>像素<ul>
+<li>屏幕实际由像素点构成</li>
+<li>像素越小的显示效果越清晰</li>
+<li>因此同样的200px在不同的设备下显示效果不同</li>
+</ul>
+</li>
+<li>百分比<ul>
+<li>可以将属性设置为相对于其父元素属性的百分比</li>
+<li>设置百分比可以使子元素跟随父元素的改变而改变</li>
+</ul>
+</li>
+<li>em<ul>
+<li>em是相对于元素的字体大小而计算的</li>
+<li>1 em = 1 font-size</li>
+<li>em会根据字体大小的改变而改变</li>
+</ul>
+</li>
+<li>rem<ul>
+<li>rem是相对于根元素的字体大小来计算的</li>
+</ul>
+</li>
+</ul>
+<h2 id="颜色单位"><a href="#颜色单位" class="headerlink" title="颜色单位"></a>颜色单位</h2><ul>
+<li>RGB值<ul>
+<li>通过三原色的不同浓度来调配出不同的颜色</li>
+<li>每种颜色的范围在0-255（0%-100%）</li>
+<li>RGB（r,g,b)</li>
+</ul>
+</li>
+<li>RGBA<ul>
+<li>增加了不透明度</li>
+<li>1表示完全不透明   0表示完全透明</li>
+</ul>
+</li>
+<li>十六进制的RGB<ul>
+<li>语法：#红色绿色蓝色</li>
+<li>颜色浓度— 00-ff</li>
+<li>简写：#aabbcc—&gt; #abc</li>
+</ul>
+</li>
+<li>HSL值<ul>
+<li>H色相（0-360）</li>
+<li>S饱和度，颜色的浓度0%-100%</li>
+<li>L 亮度，0%-100%</li>
+</ul>
+</li>
+</ul>
+<h2 id="文档流"><a href="#文档流" class="headerlink" title="文档流"></a>文档流</h2><ul>
+<li><p>网页是多层的结构，一层叠着一层</p>
+</li>
+<li><p>通过css分别为每一层来设置样式</p>
+</li>
+<li><p>用户只能看到最上面的一层</p>
+</li>
+<li><p>这些层中最底层的为文档流，它是网页的基础，所有创建的元素默认都是在文档流中进行排列</p>
+</li>
+<li><p>元素状态</p>
+<ul>
+<li>在文档流中</li>
+<li>不在文档流中</li>
+</ul>
+</li>
+<li><p>元素在文档流中的特点</p>
+<ul>
+<li>块元素<ul>
+<li>在页面中但独占一行（自上而下垂直排列）</li>
+<li>默认宽度是父元素的全部（把父元素撑满）</li>
+<li>默认高度被内容撑开</li>
+</ul>
+</li>
+<li>行内元素<ul>
+<li>不会单独占一行，只占自身大小</li>
+<li>在页面中从左向右排列（和书写习惯一直）</li>
+<li>默认宽度和高度都是被内容撑开</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>子元素是在父元素的内容中排列的</p>
+<ul>
+<li>若子元素的大小超过父元素，则子元素会从父元素中溢出</li>
+<li>使用overflow属性来设置父元素如何处理溢出的子元素</li>
+<li>可选值<ul>
+<li>visible，默认值，溢出的部分在父元素外部显示</li>
+<li>hidden 溢出的部分被裁减，不显示</li>
+<li>scroll 生成滚动条，通过滚动条来查看完整内容</li>
+<li>auto 根据需要生成滚动条</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>元素在父元素中水平布局必须满足该等式</p>
+<blockquote>
+<p>margin-left+border-left+padding-left+width+padding-right+border-right+margin-right=其父元素内容区域的宽度</p>
+</blockquote>
+<ul>
+<li>调整过程<ul>
+<li>若七个值中没有auto，浏览器自动调整margin-right使得等式成立</li>
+<li>有auto则自动调整auto使得等式成立</li>
+<li>若将一个宽度和一个外边距设置为auto，则宽度会调整到最大，设置为auto的外边距会自动为0</li>
+<li>若将三个之都设置为auto，则外边距都是0，宽度最大</li>
+<li>若将两个外边距设置为auto，宽度固定，则会将外边距设置为相同的值，利用其让子元素在父元素中居中<ul>
+<li><code>width:100px    margin:0 auto</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li></li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/01/27/h5/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-java面试6" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/20/java%E9%9D%A2%E8%AF%956/">java 面试（6）</a>
+    </h1>
+  
+
+        <!--显示阅读次数-->
+        
+        <!--显示阅读次数完毕-->
+        
+        <a href="/2020/05/20/java%E9%9D%A2%E8%AF%956/" class="archive-article-date">
+  	<time datetime="2020-05-19T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-20</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="length属性与length（）方法的区别"><a href="#length属性与length（）方法的区别" class="headerlink" title="length属性与length（）方法的区别"></a>length属性与length（）方法的区别</h2><h2 id="finally块中的代码什么时候会执行"><a href="#finally块中的代码什么时候会执行" class="headerlink" title="finally块中的代码什么时候会执行"></a>finally块中的代码什么时候会执行</h2><h2 id="异常处理的原理是什么"><a href="#异常处理的原理是什么" class="headerlink" title="异常处理的原理是什么"></a>异常处理的原理是什么</h2><h2 id="运行时异常与普通异常有什么区别"><a href="#运行时异常与普通异常有什么区别" class="headerlink" title="运行时异常与普通异常有什么区别"></a>运行时异常与普通异常有什么区别</h2><h2 id="JavaIO流的实现机制是什么"><a href="#JavaIO流的实现机制是什么" class="headerlink" title="JavaIO流的实现机制是什么"></a>JavaIO流的实现机制是什么</h2><h2 id="管理文件和目录的类是什么"><a href="#管理文件和目录的类是什么" class="headerlink" title="管理文件和目录的类是什么"></a>管理文件和目录的类是什么</h2><h2 id="Java-socket是什么"><a href="#Java-socket是什么" class="headerlink" title="Java socket是什么"></a>Java socket是什么</h2><h2 id="Java-NIO是什么"><a href="#Java-NIO是什么" class="headerlink" title="Java NIO是什么"></a>Java NIO是什么</h2><h2 id="什么是Java序列化"><a href="#什么是Java序列化" class="headerlink" title="什么是Java序列化"></a>什么是Java序列化</h2><h2 id="System-out-printLn-方法使用需要注意的问题"><a href="#System-out-printLn-方法使用需要注意的问题" class="headerlink" title="System.out.printLn()方法使用需要注意的问题"></a>System.out.printLn()方法使用需要注意的问题</h2><h2 id="为什么说Java是平台独立性语言"><a href="#为什么说Java是平台独立性语言" class="headerlink" title="为什么说Java是平台独立性语言"></a>为什么说Java是平台独立性语言</h2><h2 id="Java平台与其他语言平台的区别"><a href="#Java平台与其他语言平台的区别" class="headerlink" title="Java平台与其他语言平台的区别"></a>Java平台与其他语言平台的区别</h2><h2 id="JVM-加载class文件的原理机制是什么"><a href="#JVM-加载class文件的原理机制是什么" class="headerlink" title="JVM 加载class文件的原理机制是什么"></a>JVM 加载class文件的原理机制是什么</h2>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">自学</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java面试</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/java//" class="article-tag-list-link color5">java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/java/后端//" class="article-tag-list-link color3">后端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/05/20/java%E9%9D%A2%E8%AF%956/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-Java面试4" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -258,6 +724,122 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2020/05/16/Java%E9%9D%A2%E8%AF%954/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Java面试5" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/16/Java%E9%9D%A2%E8%AF%955/">java 面试（5）</a>
+    </h1>
+  
+
+        <!--显示阅读次数-->
+        
+        <!--显示阅读次数完毕-->
+        
+        <a href="/2020/05/16/Java%E9%9D%A2%E8%AF%955/" class="archive-article-date">
+  	<time datetime="2020-05-15T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="什么是不可变类"><a href="#什么是不可变类" class="headerlink" title="什么是不可变类"></a>什么是不可变类</h2><h2 id="值传递与引用传递有哪些区别"><a href="#值传递与引用传递有哪些区别" class="headerlink" title="值传递与引用传递有哪些区别"></a>值传递与引用传递有哪些区别</h2><h2 id="不同数据类型转换的规则"><a href="#不同数据类型转换的规则" class="headerlink" title="不同数据类型转换的规则"></a>不同数据类型转换的规则</h2><h2 id="强制类型转换的注意事项"><a href="#强制类型转换的注意事项" class="headerlink" title="强制类型转换的注意事项"></a>强制类型转换的注意事项</h2><h2 id="Math类中round，ceil和floor-方法的功能各是什么"><a href="#Math类中round，ceil和floor-方法的功能各是什么" class="headerlink" title="Math类中round，ceil和floor 方法的功能各是什么"></a>Math类中round，ceil和floor 方法的功能各是什么</h2><h2 id="如何实现无符号数的右移操作"><a href="#如何实现无符号数的右移操作" class="headerlink" title="如何实现无符号数的右移操作"></a>如何实现无符号数的右移操作</h2><h2 id="char变量中是否可以存储一个中文汉字"><a href="#char变量中是否可以存储一个中文汉字" class="headerlink" title="char变量中是否可以存储一个中文汉字"></a>char变量中是否可以存储一个中文汉字</h2><h2 id="字符串创建与存储的机制是什么"><a href="#字符串创建与存储的机制是什么" class="headerlink" title="字符串创建与存储的机制是什么"></a>字符串创建与存储的机制是什么</h2><h2 id="“-”-，equals，和hashCode有什么区别"><a href="#“-”-，equals，和hashCode有什么区别" class="headerlink" title="“==” ，equals，和hashCode有什么区别"></a>“==” ，equals，和hashCode有什么区别</h2><h2 id="String-StringBuffer-StringBuilder和StringTokenizer有什么区别"><a href="#String-StringBuffer-StringBuilder和StringTokenizer有什么区别" class="headerlink" title="String ,StringBuffer,StringBuilder和StringTokenizer有什么区别"></a>String ,StringBuffer,StringBuilder和StringTokenizer有什么区别</h2><ul>
+<li>String 是不可变类，被创建后值不能被改变</li>
+<li>StringBuffer 解决字符串经常被修改的问题</li>
+<li>StringBuilder</li>
+<li>StringTokenizer 是用来分割字符串的工具<h2 id="java中数组是不是对象"><a href="#java中数组是不是对象" class="headerlink" title="java中数组是不是对象"></a>java中数组是不是对象</h2></li>
+<li>数组是有相同类型的数据的集合，一般长度固定，内存连续</li>
+<li>数组在Java中是对象，有属性（length）和方法（clone）<h2 id="数组初始化方式有哪几种"><a href="#数组初始化方式有哪几种" class="headerlink" title="数组初始化方式有哪几种"></a>数组初始化方式有哪几种</h2></li>
+</ul>
+<ol>
+<li>一维数组： <ul>
+<li>int[]  a = new int[5];</li>
+<li>int[]  a = {1,2,3,4,5};</li>
+</ul>
+</li>
+<li>二维数组声明与初始化<ul>
+<li>type arrayName[][];</li>
+<li>type[][] arrayName;</li>
+<li>type[] arrayName[];</li>
+</ul>
+</li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">自学</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java面试</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/java//" class="article-tag-list-link color5">java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/java/后端//" class="article-tag-list-link color3">后端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/05/16/Java%E9%9D%A2%E8%AF%955/">展开全文 >></a>
         </p>
       
 
@@ -871,101 +1453,6 @@
 
 
   
-    <article id="post-Java面试5" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/04/Java%E9%9D%A2%E8%AF%955/">java 面试（5）</a>
-    </h1>
-  
-
-        <!--显示阅读次数-->
-        
-        <!--显示阅读次数完毕-->
-        
-        <a href="/2020/04/04/Java%E9%9D%A2%E8%AF%955/" class="archive-article-date">
-  	<time datetime="2020-04-03T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="strictfp有什么作用"><a href="#strictfp有什么作用" class="headerlink" title="strictfp有什么作用"></a>strictfp有什么作用</h2>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">自学</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java面试</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/java//" class="article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/java/后端//" class="article-tag-list-link color3">后端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/04/Java%E9%9D%A2%E8%AF%955/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-java面试3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1164,286 +1651,6 @@ blic class MyFrame extends Frame{// 外部类
 
 
   
-    <article id="post-java面试2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/01/java%E9%9D%A2%E8%AF%952/">java 面试（2）</a>
-    </h1>
-  
-
-        <!--显示阅读次数-->
-        
-        <!--显示阅读次数完毕-->
-        
-        <a href="/2020/04/01/java%E9%9D%A2%E8%AF%952/" class="archive-article-date">
-  	<time datetime="2020-03-31T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="java中的clone方法的作用是什么"><a href="#java中的clone方法的作用是什么" class="headerlink" title="java中的clone方法的作用是什么"></a>java中的clone方法的作用是什么</h2><ul>
-<li>指针使用不方便，会造成程序不稳定，Java上实质上是每个new语句返回的都是一个指针的引用，不需要关心操作他</li>
-<li>clone()使用的步骤—&gt; <ul>
-<li>实现clone的类首先需要继承Cloneable接口，Cloneable接口实质上是一个标识接口，没有任何接口方法</li>
-<li>在类中重写Object类中的clone（）方法。</li>
-<li>在clone方法中调用super.clone()。无论clone类的继承结构是什么，super.clone()都会直接或间接调用Java.lang.Object类的clone()方法</li>
-<li>把浅复制的引用指向原型对象新的克隆体</li>
-</ul>
-</li>
-<li>相应的理解看书—-&gt; 深复制/浅复制<h2 id="什么是反射机制"><a href="#什么是反射机制" class="headerlink" title="什么是反射机制"></a>什么是反射机制</h2></li>
-<li>它允许程序在运行中进行自我检查，同时允许其内部的成员进行操作。</li>
-<li>反射机制能实现在运行时候对类进行装载，因而可以增强程序的灵活性，但是不恰当的使用会严重影响系统的性能</li>
-<li>作用：可以在运行时动态的创建对象</li>
-<li>主要功能：  <ul>
-<li>得到一个对象所属的类；</li>
-<li>获取一个类的所有成员变量和方法；</li>
-<li>在运行时创建对象；</li>
-<li>在运行时调用对象的方法  </li>
-</ul>
-</li>
-</ul>
-<p>———-其他的理解书内知识—————–</p>
-<h2 id="package有什么作用"><a href="#package有什么作用" class="headerlink" title="package有什么作用"></a>package有什么作用</h2><ol>
-<li>提供多层命名空间，解决命名冲突，可使处于不同的package中的类有相同的名字</li>
-<li>对于类按功能分类，可使项目的组织更加清晰<br>package用法—&gt;</li>
-</ol>
-<ul>
-<li>每个源文件的开头加package packagename，然后源文件所在目录下创建一个新的目录，名称为packagename</li>
-<li>用javac指令编译每一个sourcename.java源文件,将生成sourcename.classname文件复制到packagename目录</li>
-<li>用Java指令运行程序:java packagename.sourcename<h2 id="如何实现类似于C语言中函数指针的功能"><a href="#如何实现类似于C语言中函数指针的功能" class="headerlink" title="如何实现类似于C语言中函数指针的功能"></a>如何实现类似于C语言中函数指针的功能</h2></li>
-<li>（利用接口与类来实现）先定义一个接口，然后在接口中声明调用的方法</li>
-<li>接着实现接口</li>
-<li>最后把这个实现类的一个对象作为参数传递给调用程序，调用程序通过这个参数来调用指定的函数，从而实现回调函数的功能<h2 id="面向对象与面向过程的区别"><a href="#面向对象与面向过程的区别" class="headerlink" title="面向对象与面向过程的区别"></a>面向对象与面向过程的区别</h2></li>
-</ul>
-<ol>
-<li>出发点不同。面向对象方法是利用符合常规思维的方式来处理客观世界的问题，强调问题域的要领直接映射到对象及对象之间的接口上。面向过程方法是过程的抽象化与模块化，他是以过程为中心构造或处理客观世界问题</li>
-<li>层次逻辑关系不同。面向对象是以对象的集合类作为处理问题的基本单位，是用类的层次结构来体现类之间的继承和发展（计算机逻辑来模拟客观世界中的实物），面向过程是能清晰准确的表达过程的模块，用模块之间的层次结构包括模块和模块之间的关系和功能，把客观世界问题抽象成计算机课处理的过程</li>
-<li>数据的处理方式与控制程序的方式不同。面向对象方法将数据与对应的代码封装成一个整体，原则上其他对象不能直接修改其数据。面向过程方法直接通过程序来处理数据，处理完成后即可显示结果，模块之间存在着控制与被控制，调用与被调用的关系。</li>
-<li>分析设计与编码转换方式不同。面向对象的方法贯穿软件生命的分析设计及编码中，是一种平滑过程，实现无缝连接。面向过程方法强调分析设计及编码之间按规则进行转换，是有缝连接。<h2 id="面向对象的特征"><a href="#面向对象的特征" class="headerlink" title="面向对象的特征"></a>面向对象的特征</h2></li>
-<li>抽象：过程抽象和数据抽象</li>
-<li>继承：新类可从现有类中派生，派生类可以修改增加新方法来适合需要</li>
-<li>封装：自己的数据和方法对不可信的类进行信息隐藏</li>
-<li>多态：允许不同类的对象对同一消息做出响应。解决程序函数同名问题<h2 id="面向对象开发方式的优点"><a href="#面向对象开发方式的优点" class="headerlink" title="面向对象开发方式的优点"></a>面向对象开发方式的优点</h2></li>
-<li>较高的开发效率</li>
-<li>保证代码的鲁棒性</li>
-<li>保证代码较高的可维护性<h2 id="什么是继承"><a href="#什么是继承" class="headerlink" title="什么是继承"></a>什么是继承</h2></li>
-<li>Java不支持多重继承，一个子类只能有一个父类</li>
-<li>子类只能继承父类的非私有成员变量与方法</li>
-<li>当子类中的方法和父类中的方法相同的函数签名时，子类会覆盖父类的方法而不会继承</li>
-<li>当子类中定义了成员变量和父类中定义的成员变量同名时，子类中的成员变量会覆盖父类的成员变量而不会继承</li>
-</ol>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">自学</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java面试</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/java//" class="article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/java/后端//" class="article-tag-list-link color3">后端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/01/java%E9%9D%A2%E8%AF%952/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-java面试" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/31/java%E9%9D%A2%E8%AF%95/">java 面试（1）</a>
-    </h1>
-  
-
-        <!--显示阅读次数-->
-        
-        <!--显示阅读次数完毕-->
-        
-        <a href="/2020/03/31/java%E9%9D%A2%E8%AF%95/" class="archive-article-date">
-  	<time datetime="2020-03-30T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-31</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Java程序的初始化顺序"><a href="#Java程序的初始化顺序" class="headerlink" title="Java程序的初始化顺序"></a>Java程序的初始化顺序</h2><ol>
-<li>静态对象（变量），只会初始化一次</li>
-<li>父类先于子类初始化</li>
-<li>按照成员变量的定义顺序进行初始化，（即使变量散布于方法中，依然在任何方法包括构造函数被调用之前先进行初始化）</li>
-</ol>
-<h3 id="不同的代码块中的顺序（静态代码块，构造函数）"><a href="#不同的代码块中的顺序（静态代码块，构造函数）" class="headerlink" title="不同的代码块中的顺序（静态代码块，构造函数）"></a>不同的代码块中的顺序（静态代码块，构造函数）</h3><ol>
-<li>父类静态变量，父类静态代码块，子类静态变量，子类静态代码块</li>
-<li>父类非静态变量，父类非静态代码块，父类构造函数，子类非静态变量，子类非静态代码块，子类构造函数。</li>
-</ol>
-<h2 id="Java作用域问题（public-private-protected-default）"><a href="#Java作用域问题（public-private-protected-default）" class="headerlink" title="Java作用域问题（public private protected default）"></a>Java作用域问题（public private protected default）</h2><h2 id="一个Java文件是否可以定义多个类"><a href="#一个Java文件是否可以定义多个类" class="headerlink" title="一个Java文件是否可以定义多个类"></a>一个Java文件是否可以定义多个类</h2><ul>
-<li>可以，但最多只能有一个类被public修饰并且这个类名必须与文件名相同</li>
-<li>若文件中没有public类，则文件名随便是一个类名，在用javac时，会产生一个同名的.class文件</li>
-</ul>
-<h2 id="什么是构造函数"><a href="#什么是构造函数" class="headerlink" title="什么是构造函数"></a>什么是构造函数</h2><ol>
-<li>构造函数必须与类名相同，并且不能有返回值（返回值也不能是void）</li>
-<li>每个类可以有多个构造函数。</li>
-<li>构造函数可以有0，1，或1个以上的参数</li>
-<li>构造函数总是伴随着new 操作一起调用，且必须要由系统调用，不能人为调用</li>
-<li>构造函数的主要作用是完成对象的初始化工作</li>
-<li>构造函数不能被继承，因此不能被覆盖，但是构造函数能被重载</li>
-<li>子类可以通过super来显示的调用父类的构造函数</li>
-<li>当父类和子类都没有定义构造函数时，编译器会为父类生成一个默认的无参数的构造函数，给子类也生成给一个默认的无参数的构造函数</li>
-</ol>
-<h2 id="为什么Java中有一些接口没有任何方法"><a href="#为什么Java中有一些接口没有任何方法" class="headerlink" title="为什么Java中有一些接口没有任何方法"></a>为什么Java中有一些接口没有任何方法</h2><ol>
-<li><p>Java是单继承，一个类只能有一个父类。一个类可以实现多个接口，以简介达成多重继承的目的。</p>
-</li>
-<li><p>有些接口内部没有声明任何方法，（标记接口），仅仅充当标识的作用，表明它实现的类属于特定的类型，eg：Cloneable Serializable。使用时用instanceof来判断<br>实例对象的类型是否实现了一个给定的标识接口。</p>
-</li>
-</ol>
-<h2 id="如何实现在main-方法执行前输出“hello-！”"><a href="#如何实现在main-方法执行前输出“hello-！”" class="headerlink" title="如何实现在main() 方法执行前输出“hello ！”"></a>如何实现在main() 方法执行前输出“hello ！”</h2><ul>
-<li>静态块在类被加载时就被调用，可以在static内设置来实现。</li>
-</ul>
-<h2 id="为什么要public-static-void-main-String-args-这个方法"><a href="#为什么要public-static-void-main-String-args-这个方法" class="headerlink" title="为什么要public static void main(String[] args) 这个方法"></a>为什么要public static void main(String[] args) 这个方法</h2><ul>
-<li>static表明main（）是静态方法，是存储在静态存储区的。只要类被加载后，就可以使用方法而不需要实例化对象来访问。</li>
-<li>public与static没有先后顺序关系</li>
-<li>也可把main（）方法定义为final–&gt;public static final void main(String[] args)</li>
-<li>也可用synchronized来修饰main（）放法–&gt;static public synchronized void main(String[] args)</li>
-<li>必须保证main（）方法的返回值为void，并有static与public关键字修饰，不能用abstract关键字修饰。</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">自学</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java面试</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/java//" class="article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/java/后端//" class="article-tag-list-link color3">后端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/03/31/java%E9%9D%A2%E8%AF%95/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
@@ -1458,7 +1665,7 @@ blic class MyFrame extends Frame{// 外部类
 	<div class="outer">
 	  <div id="footer-info">
 		  <div class="footer-left">
-			  &copy; 2020 CodesLong
+			  &copy; 2021 CodesLong
 			  <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
 			  <script>
 				  var now = new Date(); 
@@ -1593,11 +1800,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" class="js-tag color3">自学</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">自学</a>
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">

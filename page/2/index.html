@@ -50,7 +50,7 @@
 		</hgroup>
 		
 		<!-- 显示文章总数 -->
-		总文章数 35
+		总文章数 37
 		<nav class="header-menu">
 			<ul>
 			
@@ -149,6 +149,286 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-java面试2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/01/java%E9%9D%A2%E8%AF%952/">java 面试（2）</a>
+    </h1>
+  
+
+        <!--显示阅读次数-->
+        
+        <!--显示阅读次数完毕-->
+        
+        <a href="/2020/04/01/java%E9%9D%A2%E8%AF%952/" class="archive-article-date">
+  	<time datetime="2020-03-31T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="java中的clone方法的作用是什么"><a href="#java中的clone方法的作用是什么" class="headerlink" title="java中的clone方法的作用是什么"></a>java中的clone方法的作用是什么</h2><ul>
+<li>指针使用不方便，会造成程序不稳定，Java上实质上是每个new语句返回的都是一个指针的引用，不需要关心操作他</li>
+<li>clone()使用的步骤—&gt; <ul>
+<li>实现clone的类首先需要继承Cloneable接口，Cloneable接口实质上是一个标识接口，没有任何接口方法</li>
+<li>在类中重写Object类中的clone（）方法。</li>
+<li>在clone方法中调用super.clone()。无论clone类的继承结构是什么，super.clone()都会直接或间接调用Java.lang.Object类的clone()方法</li>
+<li>把浅复制的引用指向原型对象新的克隆体</li>
+</ul>
+</li>
+<li>相应的理解看书—-&gt; 深复制/浅复制<h2 id="什么是反射机制"><a href="#什么是反射机制" class="headerlink" title="什么是反射机制"></a>什么是反射机制</h2></li>
+<li>它允许程序在运行中进行自我检查，同时允许其内部的成员进行操作。</li>
+<li>反射机制能实现在运行时候对类进行装载，因而可以增强程序的灵活性，但是不恰当的使用会严重影响系统的性能</li>
+<li>作用：可以在运行时动态的创建对象</li>
+<li>主要功能：  <ul>
+<li>得到一个对象所属的类；</li>
+<li>获取一个类的所有成员变量和方法；</li>
+<li>在运行时创建对象；</li>
+<li>在运行时调用对象的方法  </li>
+</ul>
+</li>
+</ul>
+<p>———-其他的理解书内知识—————–</p>
+<h2 id="package有什么作用"><a href="#package有什么作用" class="headerlink" title="package有什么作用"></a>package有什么作用</h2><ol>
+<li>提供多层命名空间，解决命名冲突，可使处于不同的package中的类有相同的名字</li>
+<li>对于类按功能分类，可使项目的组织更加清晰<br>package用法—&gt;</li>
+</ol>
+<ul>
+<li>每个源文件的开头加package packagename，然后源文件所在目录下创建一个新的目录，名称为packagename</li>
+<li>用javac指令编译每一个sourcename.java源文件,将生成sourcename.classname文件复制到packagename目录</li>
+<li>用Java指令运行程序:java packagename.sourcename<h2 id="如何实现类似于C语言中函数指针的功能"><a href="#如何实现类似于C语言中函数指针的功能" class="headerlink" title="如何实现类似于C语言中函数指针的功能"></a>如何实现类似于C语言中函数指针的功能</h2></li>
+<li>（利用接口与类来实现）先定义一个接口，然后在接口中声明调用的方法</li>
+<li>接着实现接口</li>
+<li>最后把这个实现类的一个对象作为参数传递给调用程序，调用程序通过这个参数来调用指定的函数，从而实现回调函数的功能<h2 id="面向对象与面向过程的区别"><a href="#面向对象与面向过程的区别" class="headerlink" title="面向对象与面向过程的区别"></a>面向对象与面向过程的区别</h2></li>
+</ul>
+<ol>
+<li>出发点不同。面向对象方法是利用符合常规思维的方式来处理客观世界的问题，强调问题域的要领直接映射到对象及对象之间的接口上。面向过程方法是过程的抽象化与模块化，他是以过程为中心构造或处理客观世界问题</li>
+<li>层次逻辑关系不同。面向对象是以对象的集合类作为处理问题的基本单位，是用类的层次结构来体现类之间的继承和发展（计算机逻辑来模拟客观世界中的实物），面向过程是能清晰准确的表达过程的模块，用模块之间的层次结构包括模块和模块之间的关系和功能，把客观世界问题抽象成计算机课处理的过程</li>
+<li>数据的处理方式与控制程序的方式不同。面向对象方法将数据与对应的代码封装成一个整体，原则上其他对象不能直接修改其数据。面向过程方法直接通过程序来处理数据，处理完成后即可显示结果，模块之间存在着控制与被控制，调用与被调用的关系。</li>
+<li>分析设计与编码转换方式不同。面向对象的方法贯穿软件生命的分析设计及编码中，是一种平滑过程，实现无缝连接。面向过程方法强调分析设计及编码之间按规则进行转换，是有缝连接。<h2 id="面向对象的特征"><a href="#面向对象的特征" class="headerlink" title="面向对象的特征"></a>面向对象的特征</h2></li>
+<li>抽象：过程抽象和数据抽象</li>
+<li>继承：新类可从现有类中派生，派生类可以修改增加新方法来适合需要</li>
+<li>封装：自己的数据和方法对不可信的类进行信息隐藏</li>
+<li>多态：允许不同类的对象对同一消息做出响应。解决程序函数同名问题<h2 id="面向对象开发方式的优点"><a href="#面向对象开发方式的优点" class="headerlink" title="面向对象开发方式的优点"></a>面向对象开发方式的优点</h2></li>
+<li>较高的开发效率</li>
+<li>保证代码的鲁棒性</li>
+<li>保证代码较高的可维护性<h2 id="什么是继承"><a href="#什么是继承" class="headerlink" title="什么是继承"></a>什么是继承</h2></li>
+<li>Java不支持多重继承，一个子类只能有一个父类</li>
+<li>子类只能继承父类的非私有成员变量与方法</li>
+<li>当子类中的方法和父类中的方法相同的函数签名时，子类会覆盖父类的方法而不会继承</li>
+<li>当子类中定义了成员变量和父类中定义的成员变量同名时，子类中的成员变量会覆盖父类的成员变量而不会继承</li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">自学</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java面试</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/java//" class="article-tag-list-link color5">java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/java/后端//" class="article-tag-list-link color3">后端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/04/01/java%E9%9D%A2%E8%AF%952/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-java面试" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/31/java%E9%9D%A2%E8%AF%95/">java 面试（1）</a>
+    </h1>
+  
+
+        <!--显示阅读次数-->
+        
+        <!--显示阅读次数完毕-->
+        
+        <a href="/2020/03/31/java%E9%9D%A2%E8%AF%95/" class="archive-article-date">
+  	<time datetime="2020-03-30T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-31</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Java程序的初始化顺序"><a href="#Java程序的初始化顺序" class="headerlink" title="Java程序的初始化顺序"></a>Java程序的初始化顺序</h2><ol>
+<li>静态对象（变量），只会初始化一次</li>
+<li>父类先于子类初始化</li>
+<li>按照成员变量的定义顺序进行初始化，（即使变量散布于方法中，依然在任何方法包括构造函数被调用之前先进行初始化）</li>
+</ol>
+<h3 id="不同的代码块中的顺序（静态代码块，构造函数）"><a href="#不同的代码块中的顺序（静态代码块，构造函数）" class="headerlink" title="不同的代码块中的顺序（静态代码块，构造函数）"></a>不同的代码块中的顺序（静态代码块，构造函数）</h3><ol>
+<li>父类静态变量，父类静态代码块，子类静态变量，子类静态代码块</li>
+<li>父类非静态变量，父类非静态代码块，父类构造函数，子类非静态变量，子类非静态代码块，子类构造函数。</li>
+</ol>
+<h2 id="Java作用域问题（public-private-protected-default）"><a href="#Java作用域问题（public-private-protected-default）" class="headerlink" title="Java作用域问题（public private protected default）"></a>Java作用域问题（public private protected default）</h2><h2 id="一个Java文件是否可以定义多个类"><a href="#一个Java文件是否可以定义多个类" class="headerlink" title="一个Java文件是否可以定义多个类"></a>一个Java文件是否可以定义多个类</h2><ul>
+<li>可以，但最多只能有一个类被public修饰并且这个类名必须与文件名相同</li>
+<li>若文件中没有public类，则文件名随便是一个类名，在用javac时，会产生一个同名的.class文件</li>
+</ul>
+<h2 id="什么是构造函数"><a href="#什么是构造函数" class="headerlink" title="什么是构造函数"></a>什么是构造函数</h2><ol>
+<li>构造函数必须与类名相同，并且不能有返回值（返回值也不能是void）</li>
+<li>每个类可以有多个构造函数。</li>
+<li>构造函数可以有0，1，或1个以上的参数</li>
+<li>构造函数总是伴随着new 操作一起调用，且必须要由系统调用，不能人为调用</li>
+<li>构造函数的主要作用是完成对象的初始化工作</li>
+<li>构造函数不能被继承，因此不能被覆盖，但是构造函数能被重载</li>
+<li>子类可以通过super来显示的调用父类的构造函数</li>
+<li>当父类和子类都没有定义构造函数时，编译器会为父类生成一个默认的无参数的构造函数，给子类也生成给一个默认的无参数的构造函数</li>
+</ol>
+<h2 id="为什么Java中有一些接口没有任何方法"><a href="#为什么Java中有一些接口没有任何方法" class="headerlink" title="为什么Java中有一些接口没有任何方法"></a>为什么Java中有一些接口没有任何方法</h2><ol>
+<li><p>Java是单继承，一个类只能有一个父类。一个类可以实现多个接口，以简介达成多重继承的目的。</p>
+</li>
+<li><p>有些接口内部没有声明任何方法，（标记接口），仅仅充当标识的作用，表明它实现的类属于特定的类型，eg：Cloneable Serializable。使用时用instanceof来判断<br>实例对象的类型是否实现了一个给定的标识接口。</p>
+</li>
+</ol>
+<h2 id="如何实现在main-方法执行前输出“hello-！”"><a href="#如何实现在main-方法执行前输出“hello-！”" class="headerlink" title="如何实现在main() 方法执行前输出“hello ！”"></a>如何实现在main() 方法执行前输出“hello ！”</h2><ul>
+<li>静态块在类被加载时就被调用，可以在static内设置来实现。</li>
+</ul>
+<h2 id="为什么要public-static-void-main-String-args-这个方法"><a href="#为什么要public-static-void-main-String-args-这个方法" class="headerlink" title="为什么要public static void main(String[] args) 这个方法"></a>为什么要public static void main(String[] args) 这个方法</h2><ul>
+<li>static表明main（）是静态方法，是存储在静态存储区的。只要类被加载后，就可以使用方法而不需要实例化对象来访问。</li>
+<li>public与static没有先后顺序关系</li>
+<li>也可把main（）方法定义为final–&gt;public static final void main(String[] args)</li>
+<li>也可用synchronized来修饰main（）放法–&gt;static public synchronized void main(String[] args)</li>
+<li>必须保证main（）方法的返回值为void，并有static与public关键字修饰，不能用abstract关键字修饰。</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">自学</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java面试</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/java//" class="article-tag-list-link color5">java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/java/后端//" class="article-tag-list-link color3">后端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/03/31/java%E9%9D%A2%E8%AF%95/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-css滑动门" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -949,15 +1229,17 @@ cursor: not-allowed;</code></pre><hr>
 </ul>
 <p>外边距塌陷：（上下方向）     transparent 透明<br>        1. 上下两个相邻的块元素，假如上面的元素有margin-bottom,下面元素有margin-top,会发生合并，一较大的值为准<br>        2. 父子嵌套的元素，子元素的上边距会和父亲的外边距合并，一较大的值为准</p>
 <ul>
-<li>浮动的元素不能撑开父亲<br>  浮动往往会对后面的元素布局造成影响，所以需要清除浮动造成的影响<br>  清除浮动方法<br>  1 隔墙法（给父亲加border）-给浮动的元素增加一个高度 缺点 儿子的高度有时候<br>  不确定 所以高度设置固定 不灵活<br>  2 额外标签法 （给父亲加padding）<br>  clear:left; clear:right;<br>  clear:both<br>  在浮动元素末尾加一个空标签(一般是块级元素) 给这个标签设置clear: bot<br>  缺点 会影响页面的结构<br>  3 给浮动元素的父亲增加overflow: hidden<br>  overflow:hidden overflow:auto overflow:scroll<br>  4 使用after伪元素清除浮动<pre><code>.clearfix:after {
-content: &apos;&apos;;
-display: block;
-height: 0;
-visibility: hidden;
-clear: both;
-}</code></pre>  5 双伪元素清除浮动  </li>
+<li><p>浮动的元素不能撑开父亲<br>  浮动往往会对后面的元素布局造成影响，所以需要清除浮动造成的影响<br>  清除浮动方法<br>  1 隔墙法（给父亲加border）-给浮动的元素增加一个高度 缺点 儿子的高度有时候<br>  不确定 所以高度设置固定 不灵活<br>  2 额外标签法 （给父亲加padding）<br>  clear:left; clear:right;<br>  clear:both<br>  在浮动元素末尾加一个空标签(一般是块级元素) 给这个标签设置clear: bot<br>  缺点 会影响页面的结构<br>  3 给浮动元素的父亲增加overflow: hidden<br>  overflow:hidden overflow:auto overflow:scroll   </p>
+<p>  4 使用after伪元素清除浮动</p>
+</li>
 </ul>
-<p>*zoom: 1—&gt;专门ie6/7清除浮动</p>
+<pre><code>&gt; .clearfix:after {
+    content: &apos;&apos;;
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+    }  </code></pre><p>5 双伪元素清除浮动<br>*zoom: 1—&gt;专门ie6/7清除浮动</p>
 
       
 
@@ -1019,233 +1301,6 @@ clear: both;
 
 
   
-    <article id="post-类和对象" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/10/%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1/">类和对象2</a>
-    </h1>
-  
-
-        <!--显示阅读次数-->
-        
-        <!--显示阅读次数完毕-->
-        
-        <a href="/2020/03/10/%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1/" class="archive-article-date">
-  	<time datetime="2020-03-10T03:32:15.323Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ol>
-<li>方法的语法：<br>(1)    修饰符 返回值类型 方法名(形参列表){方法体}<br>(2)    形参列表：形参是指，所要传递给方法的参数的类型<br>(3)    实参：调用的时候，具体传递值，叫实参。<br>(4)    参数传递：  </li>
-</ol>
-<p>①    形参和实参的个数要对应<br>②    类型位置要一一对应<br>③    形参属于局部变量  </p>
-<p>(5)    不定长参数  </p>
-<pre><code>①    形参的定义方式：类型 ... 变量名  
-②    实参的传递：类型统一，个数随意（0-n）  
-③    不定长参数的处理方式：当成一个数组处理  
-④    一个参数列表中，不定长参数只能有一个，并且只能在参数列表最后  
-⑤    一般来说，不定长参数用的不多  </code></pre><p>(6)    地址传参  </p>
-<pre><code>①    什么是地址：  
-        1)    只要是new了，那就是一个新的东西  
-        2)    如果是对象之间的赋值，那么赋值的是堆内存的地址  
-        3)    在使用引用数据类型之前，请务必做好空值判断  
-②    引用传参：引用类型传递的都是同一个内存地址  
-③    基本数据类型传参：传的是值  </code></pre><p>(7)    构造方法：<br>        ①    什么是构造方法：描述一个对象从无到有的过程<br>        ②    语法：修饰符 构造方法名(形参列表){方法体}</p>
-<pre><code>1)    构造方法名：必须和类名一致  
-2)    每调用一次构造，就相当于创建了一个新的对象  
-3)    虚拟机在一个对象的创建过程中，如果该类没有显式声明构造方法，那么虚拟机会为该类添加一个默认的空参构造  
-4)    如果你已经显式的创建了构造（包括不限于空参构造），则虚拟机将不再添加默认空参  
-5)    构造方法可以调用普通方法，普通方法不可以调用构造方法  </code></pre><p>③    重载：无论是方法，还是构造方法，都可以重载  </p>
-<pre><code>1)    方法名一致  
-2)    参数列表不同：个数，类型，位置  
-3)    和修饰符和返回值类型没有关系  </code></pre><p>④    调用重载的方法，是根据传递的实参不同，调用对应形参的方法<br>⑤    在方法当值，直接调用变量名，优先取局部变量<br>⑥    区分局部变量和全局变量<br>(8)    This关键字：  </p>
-<pre><code>①    This：代表对象本身，相当于“我”  
-②    调用属性，调用方法，调用构造  
-③    This调用构造：  
-        1)    只能写在第一行  
-        2)    每个构造，只能调用一次构造  </code></pre><p>(9)    作用域：  </p>
-<pre><code>①    代码块：写在一对{}中间的，叫代码块  
-②    JAVA的作用域，叫块级作用域
-③    成员变量：直接写在类当中的叫成员变量，也叫全局变量，处于全局作用域当中，即该类当中任何地方都可以引用
-④    局部变量：写在方法（包括构造方法，静态代码块等等……）当中的，都属于局部变量
-⑤    里面可以调用外面的，外面不可以调用里面的，平级之间相互不干扰
-⑥    成员变量会有初值：参考数组的初值（整形0，浮点型0.0，布尔类型false,char类型是空格，引用类型是null）
-⑦    局部变量没有初值
-⑧    局部变量不可以有访问修饰符
-⑨    局部变量的优先级是高于全局变量的</code></pre><p>上节课遗留问题：</p>
-<ol>
-<li>方法内的基本数据类型（局部变量）：在栈当中</li>
-<li>方法外的基本数据类型（成员变量）：在堆当中</li>
-</ol>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">后端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/03/10/%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-盒子模型" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/08/%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/">css属性</a>
-    </h1>
-  
-
-        <!--显示阅读次数-->
-        
-        <!--显示阅读次数完毕-->
-        
-        <a href="/2020/03/08/%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/" class="archive-article-date">
-  	<time datetime="2020-03-08T09:27:25.608Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="任何标签都可看作盒子"><a href="#任何标签都可看作盒子" class="headerlink" title="任何标签都可看作盒子"></a>任何标签都可看作盒子</h2><p><img src="https://www.runoob.com/images/box-model.gif" alt="盒子模型图片"><br>        width,height 内容宽高<br>        border 边框 (dashed 虚线 solid 实线 dotted 点线)<br>        margin 外边距<br>        padding 内边距<br>        宽，高，样式 都得有才会显示<br>        综合属性 （宽 高 颜色）相互位置无所谓<br>        可以简写为( border: 4px solid red;)<br>        border从方向展开相当于 border-left border-right border-top border-top<br>        border-top 从三要素展开相当于 border-width border-style border-color</p>
-<pre><code>合并相邻的单元格，制作细线表格  border-collapse: collapse;  
-    table,
-td {
-    border: 1px solid #ccc;
-    /* 合并相邻的单元格，制作细线表格 */
-    border-collapse: collapse;
-}</code></pre><hr>
- 盒子的实际宽度为width+padding+左右border    
-设置padding:如何保证盒子总宽不变，调整width，(宽度剩余) 
-
-<p>复合写法  上  右  下  左 从上顺时针设置 : padding: 6px 10px 8px 10px;</p>
-<pre><code>四个方向都是6px  
-按照单个方向：上下左右
-综合写法：上 右 下 左
-上 （右，左） 下 --顺时针看   </code></pre><hr>
-<p>可以让文本 行内元素 行内块元素在盒子里面水平居中   text-align: center;<br>margin: 0 auto; 可以让有宽度的块级元素水平居中<br>margin 对行内元素 设置上下外边距无效 左右可以设置</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">html</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/03/08/%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/">Next &amp;raquo;</a>
@@ -1260,7 +1315,7 @@ td {
 	<div class="outer">
 	  <div id="footer-info">
 		  <div class="footer-left">
-			  &copy; 2020 CodesLong
+			  &copy; 2021 CodesLong
 			  <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
 			  <script>
 				  var now = new Date(); 
@@ -1395,11 +1450,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" class="js-tag color3">自学</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">自学</a>
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">

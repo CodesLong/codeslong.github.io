@@ -6,21 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>学习XML | Hexo</title>
+  <title>java 面试（6） | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="XML：可扩展标记语言，首先是一种语言作用：(1)    数据交互 (2)    配置应用 (3)    AJAX的基石XML的元素(1)    &lt;元素名 属性名&#x3D;“属性值”&gt;元素内容&lt;&#x2F;元素名&gt; (2)    正常情况下，有元素内容，那么元素除了开始，还要有闭合 (3)    但是，如果没有元素内容的情况下，可以写为自闭合标签形式&lt;元素名 属性&#x3D;’属性值’&#x2F;&gt;">
+  <meta name="description" content="length属性与length（）方法的区别finally块中的代码什么时候会执行异常处理的原理是什么运行时异常与普通异常有什么区别JavaIO流的实现机制是什么管理文件和目录的类是什么Java socket是什么Java NIO是什么什么是Java序列化System.out.printLn()方法使用需要注意的问题为什么说Java是平台独立性语言Java平台与其他语言平台的区别JVM 加载cla">
 <meta property="og:type" content="article">
-<meta property="og:title" content="学习XML">
-<meta property="og:url" content="http://yoursite.com/2020/04/22/%E5%AD%A6%E4%B9%A0%EF%BC%88xml%EF%BC%89/index.html">
+<meta property="og:title" content="java 面试（6）">
+<meta property="og:url" content="http://yoursite.com/2020/05/20/java%E9%9D%A2%E8%AF%956/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="XML：可扩展标记语言，首先是一种语言作用：(1)    数据交互 (2)    配置应用 (3)    AJAX的基石XML的元素(1)    &lt;元素名 属性名&#x3D;“属性值”&gt;元素内容&lt;&#x2F;元素名&gt; (2)    正常情况下，有元素内容，那么元素除了开始，还要有闭合 (3)    但是，如果没有元素内容的情况下，可以写为自闭合标签形式&lt;元素名 属性&#x3D;’属性值’&#x2F;&gt;">
+<meta property="og:description" content="length属性与length（）方法的区别finally块中的代码什么时候会执行异常处理的原理是什么运行时异常与普通异常有什么区别JavaIO流的实现机制是什么管理文件和目录的类是什么Java socket是什么Java NIO是什么什么是Java序列化System.out.printLn()方法使用需要注意的问题为什么说Java是平台独立性语言Java平台与其他语言平台的区别JVM 加载cla">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-04-22T13:52:43.797Z">
-<meta property="article:modified_time" content="2020-05-18T12:00:18.074Z">
+<meta property="article:published_time" content="2020-05-19T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-05-20T10:55:32.754Z">
 <meta property="article:author" content="CodesLong">
-<meta property="article:tag" content="笔记">
-<meta property="article:tag" content="后端">
-<meta property="article:tag" content="Java">
+<meta property="article:tag" content="自学">
+<meta property="article:tag" content="java面试">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -155,14 +154,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-学习（xml）" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-java面试6" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      学习XML
+      java 面试（6）
     </h1>
   
 
@@ -178,49 +177,15 @@
         
         <!--显示阅读次数完毕-->
         
-        <a href="/2020/04/22/%E5%AD%A6%E4%B9%A0%EF%BC%88xml%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2020-04-22T13:52:43.797Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-22</time>
+        <a href="/2020/05/20/java%E9%9D%A2%E8%AF%956/" class="archive-article-date">
+  	<time datetime="2020-05-19T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-20</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="XML：可扩展标记语言，首先是一种语言"><a href="#XML：可扩展标记语言，首先是一种语言" class="headerlink" title="XML：可扩展标记语言，首先是一种语言"></a>XML：可扩展标记语言，首先是一种语言</h3><h3 id="作用："><a href="#作用：" class="headerlink" title="作用："></a>作用：</h3><pre><code>(1)    数据交互
-(2)    配置应用
-(3)    AJAX的基石</code></pre><h3 id="XML的元素"><a href="#XML的元素" class="headerlink" title="XML的元素"></a>XML的元素</h3><pre><code>(1)    &lt;元素名 属性名=“属性值”&gt;元素内容&lt;/元素名&gt;
-(2)    正常情况下，有元素内容，那么元素除了开始，还要有闭合
-(3)    但是，如果没有元素内容的情况下，可以写为自闭合标签形式&lt;元素名 属性=’属性值’/&gt;
-(4)    所有XML元素都必须有结束标签
-(5)    XML标签对大小写敏感
-(6)    XML必须正确的嵌套
-(7)    同级标签以缩进对齐
-(8)    元素名称可以包含字母、数字或其他的字符
-(9)    元素名称不能以数字或者标点符号开始
-(10)    元素名称中不能含空格
-(11)    &lt;![CDATA[]]&gt;：只能用于文本
-(12)    在编辑XML的时候，完全可以遵循面向对象的基本思路</code></pre><h3 id="XML的基本结构"><a href="#XML的基本结构" class="headerlink" title="XML的基本结构"></a>XML的基本结构</h3><pre><code>(1)    节点：在XML当中，所有的内容，都是节点
-(2)    文档节点：
-    ①    就是XML文件本身，就是文档节点
-    ②    名称：Document
-    ③    类型：9
-    ④    值：无
-(3)    元素节点：
-    ①    就是标签
-    ②    名称：Element
-    ③    类型：1
-    ④    值：无
-(4)    属性节点：
-    ①    属性定义在[标签/元素]当中
-    ②    名称：Attribute
-    ③    类型：2
-    ④    值：有值
-(5)    文本节点：
-    ①    在元素当中
-    ②    名称：
-    ③    类型：
-    ④    值：
-(6)    注释节点：</code></pre>
+        <h2 id="length属性与length（）方法的区别"><a href="#length属性与length（）方法的区别" class="headerlink" title="length属性与length（）方法的区别"></a>length属性与length（）方法的区别</h2><h2 id="finally块中的代码什么时候会执行"><a href="#finally块中的代码什么时候会执行" class="headerlink" title="finally块中的代码什么时候会执行"></a>finally块中的代码什么时候会执行</h2><h2 id="异常处理的原理是什么"><a href="#异常处理的原理是什么" class="headerlink" title="异常处理的原理是什么"></a>异常处理的原理是什么</h2><h2 id="运行时异常与普通异常有什么区别"><a href="#运行时异常与普通异常有什么区别" class="headerlink" title="运行时异常与普通异常有什么区别"></a>运行时异常与普通异常有什么区别</h2><h2 id="JavaIO流的实现机制是什么"><a href="#JavaIO流的实现机制是什么" class="headerlink" title="JavaIO流的实现机制是什么"></a>JavaIO流的实现机制是什么</h2><h2 id="管理文件和目录的类是什么"><a href="#管理文件和目录的类是什么" class="headerlink" title="管理文件和目录的类是什么"></a>管理文件和目录的类是什么</h2><h2 id="Java-socket是什么"><a href="#Java-socket是什么" class="headerlink" title="Java socket是什么"></a>Java socket是什么</h2><h2 id="Java-NIO是什么"><a href="#Java-NIO是什么" class="headerlink" title="Java NIO是什么"></a>Java NIO是什么</h2><h2 id="什么是Java序列化"><a href="#什么是Java序列化" class="headerlink" title="什么是Java序列化"></a>什么是Java序列化</h2><h2 id="System-out-printLn-方法使用需要注意的问题"><a href="#System-out-printLn-方法使用需要注意的问题" class="headerlink" title="System.out.printLn()方法使用需要注意的问题"></a>System.out.printLn()方法使用需要注意的问题</h2><h2 id="为什么说Java是平台独立性语言"><a href="#为什么说Java是平台独立性语言" class="headerlink" title="为什么说Java是平台独立性语言"></a>为什么说Java是平台独立性语言</h2><h2 id="Java平台与其他语言平台的区别"><a href="#Java平台与其他语言平台的区别" class="headerlink" title="Java平台与其他语言平台的区别"></a>Java平台与其他语言平台的区别</h2><h2 id="JVM-加载class文件的原理机制是什么"><a href="#JVM-加载class文件的原理机制是什么" class="headerlink" title="JVM 加载class文件的原理机制是什么"></a>JVM 加载class文件的原理机制是什么</h2>
       
 
       
@@ -264,21 +229,32 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">自学</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">后端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java面试</a>
         		</li>
       		
 		</ul>
 	</div>
 
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/java//" class="article-tag-list-link color5">java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/java/后端//" class="article-tag-list-link color3">后端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -328,7 +304,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/22/%E5%AD%A6%E4%B9%A0%EF%BC%88xml%EF%BC%89/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/05/20/java%E9%9D%A2%E8%AF%956/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -342,18 +318,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/05/16/Java%E9%9D%A2%E8%AF%955/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2021/01/27/h5/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          java 面试（5）
+          html-css
         
       </div>
     </a>
   
   
-    <a href="/2020/04/22/IO%E6%B5%81/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">I/O流</div>
+    <a href="/2020/05/16/Java%E9%9D%A2%E8%AF%954/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">java 面试（4）</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -380,7 +356,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#XML：可扩展标记语言，首先是一种语言"><span class="toc-number">1.</span> <span class="toc-text">XML：可扩展标记语言，首先是一种语言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#作用："><span class="toc-number">2.</span> <span class="toc-text">作用：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#XML的元素"><span class="toc-number">3.</span> <span class="toc-text">XML的元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#XML的基本结构"><span class="toc-number">4.</span> <span class="toc-text">XML的基本结构</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#length属性与length（）方法的区别"><span class="toc-number">1.</span> <span class="toc-text">length属性与length（）方法的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#finally块中的代码什么时候会执行"><span class="toc-number">2.</span> <span class="toc-text">finally块中的代码什么时候会执行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#异常处理的原理是什么"><span class="toc-number">3.</span> <span class="toc-text">异常处理的原理是什么</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#运行时异常与普通异常有什么区别"><span class="toc-number">4.</span> <span class="toc-text">运行时异常与普通异常有什么区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JavaIO流的实现机制是什么"><span class="toc-number">5.</span> <span class="toc-text">JavaIO流的实现机制是什么</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#管理文件和目录的类是什么"><span class="toc-number">6.</span> <span class="toc-text">管理文件和目录的类是什么</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java-socket是什么"><span class="toc-number">7.</span> <span class="toc-text">Java socket是什么</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java-NIO是什么"><span class="toc-number">8.</span> <span class="toc-text">Java NIO是什么</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是Java序列化"><span class="toc-number">9.</span> <span class="toc-text">什么是Java序列化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#System-out-printLn-方法使用需要注意的问题"><span class="toc-number">10.</span> <span class="toc-text">System.out.printLn()方法使用需要注意的问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#为什么说Java是平台独立性语言"><span class="toc-number">11.</span> <span class="toc-text">为什么说Java是平台独立性语言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java平台与其他语言平台的区别"><span class="toc-number">12.</span> <span class="toc-text">Java平台与其他语言平台的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JVM-加载class文件的原理机制是什么"><span class="toc-number">13.</span> <span class="toc-text">JVM 加载class文件的原理机制是什么</span></a></li></ol>
                     </div>
                 </span>
             </div>
