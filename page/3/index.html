@@ -50,7 +50,7 @@
 		</hgroup>
 		
 		<!-- 显示文章总数 -->
-		总文章数 37
+		总文章数 38
 		<nav class="header-menu">
 			<ul>
 			
@@ -149,6 +149,110 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-浮动" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/11/%E6%B5%AE%E5%8A%A8/">css属性-浮动</a>
+    </h1>
+  
+
+        <!--显示阅读次数-->
+        
+        <!--显示阅读次数完毕-->
+        
+        <a href="/2020/03/11/%E6%B5%AE%E5%8A%A8/" class="archive-article-date">
+  	<time datetime="2020-03-11T03:29:20.973Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-11</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>display: inline-block;虽然可以让div并排 但是会出现空白  </li>
+<li>浮动可以帮我们进行元素并排 并且没有空白现象–&gt; float: left;  </li>
+<li>标准流 默认状态–&gt; css元素的划分(块级元素、行内元素。。。)和特征都是在标准流前提下成立  </li>
+<li>浮动元素 1 脱标 2 相互贴靠 3 浮动元素可以设置宽高，不设置宽高，默认靠内容撑开 4 文字环绕(了解)</li>
+<li>浮动元素影响的是自己和后面的元素</li>
+</ul>
+<p>外边距塌陷：（上下方向）     transparent 透明<br>        1. 上下两个相邻的块元素，假如上面的元素有margin-bottom,下面元素有margin-top,会发生合并，一较大的值为准<br>        2. 父子嵌套的元素，子元素的上边距会和父亲的外边距合并，一较大的值为准</p>
+<ul>
+<li><p>浮动的元素不能撑开父亲<br>  浮动往往会对后面的元素布局造成影响，所以需要清除浮动造成的影响<br>  清除浮动方法<br>  1 隔墙法（给父亲加border）-给浮动的元素增加一个高度 缺点 儿子的高度有时候<br>  不确定 所以高度设置固定 不灵活<br>  2 额外标签法 （给父亲加padding）<br>  clear:left; clear:right;<br>  clear:both<br>  在浮动元素末尾加一个空标签(一般是块级元素) 给这个标签设置clear: bot<br>  缺点 会影响页面的结构<br>  3 给浮动元素的父亲增加overflow: hidden<br>  overflow:hidden overflow:auto overflow:scroll   </p>
+<p>  4 使用after伪元素清除浮动</p>
+</li>
+</ul>
+<pre><code>&gt; .clearfix:after {
+    content: &apos;&apos;;
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+    }  </code></pre><p>5 双伪元素清除浮动<br>*zoom: 1—&gt;专门ie6/7清除浮动</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">html</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/03/11/%E6%B5%AE%E5%8A%A8/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-类和对象" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -1160,109 +1264,6 @@ id选择器               0,1,0,0
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2020/02/20/2.20java/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2.19" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/19/2.19/">I/O流（源码阅读）</a>
-    </h1>
-  
-
-        <!--显示阅读次数-->
-        
-        <!--显示阅读次数完毕-->
-        
-        <a href="/2020/02/19/2.19/" class="archive-article-date">
-  	<time datetime="2020-02-18T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ol>
-<li>FileInputStream 是通过本地调用来获取字节</li>
-<li>DataInputStream/BufferedInputStream 是由FilterInputStream 的read() 来获取字节</li>
-<li>FilterInputStream 可以处理的字节，自由发挥，只要给一个byte数组就行</li>
-<li>流的核心是数组，字节流的核心是byte[]</li>
-<li>Reader的核心是一个char类型的数组，最直观的表现形式是String</li>
-<li>InputStreamReader的主要作用是解码，不处理缓冲</li>
-<li>BufferedReader 处理缓冲<ol>
-<li>处理缓冲，是将字节流读进来，放到数组里，一次性返回</li>
-<li>作用：读行</li>
-</ol>
-</li>
-<li>优化缓冲，就是优化数组的读行<ol>
-<li>减少内存的反复开辟</li>
-<li>合理复用</li>
-</ol>
-</li>
-<li>输出流：字节流就是字节数组</li>
-<li>字节流的本质上是不处理缓冲区的
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">后端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/02/19/2.19/">展开全文 >></a>
         </p>
       
 

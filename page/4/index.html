@@ -50,7 +50,7 @@
 		</hgroup>
 		
 		<!-- 显示文章总数 -->
-		总文章数 37
+		总文章数 38
 		<nav class="header-menu">
 			<ul>
 			
@@ -149,6 +149,109 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-2.19" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/19/2.19/">I/O流（源码阅读）</a>
+    </h1>
+  
+
+        <!--显示阅读次数-->
+        
+        <!--显示阅读次数完毕-->
+        
+        <a href="/2020/02/19/2.19/" class="archive-article-date">
+  	<time datetime="2020-02-18T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-19</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ol>
+<li>FileInputStream 是通过本地调用来获取字节</li>
+<li>DataInputStream/BufferedInputStream 是由FilterInputStream 的read() 来获取字节</li>
+<li>FilterInputStream 可以处理的字节，自由发挥，只要给一个byte数组就行</li>
+<li>流的核心是数组，字节流的核心是byte[]</li>
+<li>Reader的核心是一个char类型的数组，最直观的表现形式是String</li>
+<li>InputStreamReader的主要作用是解码，不处理缓冲</li>
+<li>BufferedReader 处理缓冲<ol>
+<li>处理缓冲，是将字节流读进来，放到数组里，一次性返回</li>
+<li>作用：读行</li>
+</ol>
+</li>
+<li>优化缓冲，就是优化数组的读行<ol>
+<li>减少内存的反复开辟</li>
+<li>合理复用</li>
+</ol>
+</li>
+<li>输出流：字节流就是字节数组</li>
+<li>字节流的本质上是不处理缓冲区的
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">后端</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/02/19/2.19/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-2.19java" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
