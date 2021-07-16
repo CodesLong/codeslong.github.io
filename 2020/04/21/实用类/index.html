@@ -8,12 +8,12 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>实用类 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="都是重点包装类：(1)    在JAVA当中，JDK为基本数据类型设计了相应的包装类，把基本数据类型变为了一个引用数据类型，那么他就是包装类型(2)    学习包装类型的过程当中，要观察其规律①    命名规律：首字母由基本数据类型的小写变为大写，除了Integer和Character之外②    对于数值，包装类型的构造和方法当中，如果用了不属于数值的书写方式，会报  NumberFormatE">
+  <meta name="description" content="都是重点包装类：(1)    在JAVA当中，JDK为基本数据类型设计了相应的包装类，把基本数据类型变为了一个引用数据类型，那么他就是包装类型">
 <meta property="og:type" content="article">
 <meta property="og:title" content="实用类">
 <meta property="og:url" content="http://yoursite.com/2020/04/21/%E5%AE%9E%E7%94%A8%E7%B1%BB/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="都是重点包装类：(1)    在JAVA当中，JDK为基本数据类型设计了相应的包装类，把基本数据类型变为了一个引用数据类型，那么他就是包装类型(2)    学习包装类型的过程当中，要观察其规律①    命名规律：首字母由基本数据类型的小写变为大写，除了Integer和Character之外②    对于数值，包装类型的构造和方法当中，如果用了不属于数值的书写方式，会报  NumberFormatE">
+<meta property="og:description" content="都是重点包装类：(1)    在JAVA当中，JDK为基本数据类型设计了相应的包装类，把基本数据类型变为了一个引用数据类型，那么他就是包装类型">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://yoursite.com/img/shiyonglei_1.png">
 <meta property="og:image" content="http://yoursite.com/img/duiyingfangf.png">
@@ -25,11 +25,11 @@
 <meta property="og:image" content="http://yoursite.com/img/get.png">
 <meta property="og:image" content="http://yoursite.com/img/shiyonglei_6.png">
 <meta property="article:published_time" content="2020-04-21T04:57:13.245Z">
-<meta property="article:modified_time" content="2020-05-18T11:59:56.592Z">
+<meta property="article:modified_time" content="2021-07-16T14:37:08.689Z">
 <meta property="article:author" content="CodesLong">
+<meta property="article:tag" content="笔记">
 <meta property="article:tag" content="Java">
 <meta property="article:tag" content="后端">
-<meta property="article:tag" content="笔记">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/img/shiyonglei_1.png">
   
@@ -202,7 +202,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="都是重点"><a href="#都是重点" class="headerlink" title="都是重点"></a>都是重点</h1><h3 id="包装类："><a href="#包装类：" class="headerlink" title="包装类："></a>包装类：</h3><p>(1)    在JAVA当中，JDK为基本数据类型设计了相应的包装类，把基本数据类型变为了一个引用数据类型，那么他就是包装类型<br><img src="/img/shiyonglei_1.png" alt="alt 包装类"><br>(2)    学习包装类型的过程当中，要观察其规律<br>①    命名规律：首字母由基本数据类型的小写变为大写，除了Integer和Character之外<br>②    对于数值，包装类型的构造和方法当中，如果用了不属于数值的书写方式，会报  NumberFormatException异常<br>③    包装类型的字符串参数构造，不可以把数值类型，例如L,D,F加入字符串<br>④    字符的包装类型，只有其本身类型参数的构造，没有字符串类型参数的构造<br>⑤    布尔类型的包装类，只有一种情况下才会返回true，就是不区分大小写的true字符串；否则，输入任意其他类型，或null类型，那么结果都为false;<br>⑥    包装类型的方法：</p>
+        <h1 id="都是重点"><a href="#都是重点" class="headerlink" title="都是重点"></a>都是重点</h1><h3 id="包装类："><a href="#包装类：" class="headerlink" title="包装类："></a>包装类：</h3><p>(1)    在JAVA当中，JDK为基本数据类型设计了相应的包装类，把基本数据类型变为了一个引用数据类型，那么他就是包装类型<br><img src="/img/shiyonglei_1.png" alt="alt 包装类"></p>
+<a id="more"></a>
+<p>(2)    学习包装类型的过程当中，要观察其规律<br>①    命名规律：首字母由基本数据类型的小写变为大写，除了Integer和Character之外<br>②    对于数值，包装类型的构造和方法当中，如果用了不属于数值的书写方式，会报  NumberFormatException异常<br>③    包装类型的字符串参数构造，不可以把数值类型，例如L,D,F加入字符串<br>④    字符的包装类型，只有其本身类型参数的构造，没有字符串类型参数的构造<br>⑤    布尔类型的包装类，只有一种情况下才会返回true，就是不区分大小写的true字符串；否则，输入任意其他类型，或null类型，那么结果都为false;<br>⑥    包装类型的方法：</p>
 <pre><code>1)    XxxValue：包装类变为基本数据类型，这是一个普通的方法，即该方法必须通过包装类型的对象来进行调用，每一种包装类型，都有自己各自对应的方法</code></pre><p><img src="/img/duiyingfangf.png" alt="alt 对应方法">  </p>
 <pre><code>2)    转字符串的三种方式
 3)    字符串变为基本数据类型，调用包装类的静态方法：例如parseInt(Str)、parseLong(Str)……
@@ -248,7 +250,7 @@
             <span class="tooltip-content">
               <span class="tooltip-text">
                 <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你查看<i class="icon icon-quo-right"></i></p>
                   <div class="reward-box">
                     
                     
@@ -269,15 +271,15 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">后端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
         		</li>
       		
 		</ul>
@@ -529,6 +531,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
@@ -542,18 +556,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">

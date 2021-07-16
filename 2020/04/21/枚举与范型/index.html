@@ -8,20 +8,20 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>枚举与范型 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在集合当中使用泛型：(1)    为什么要用泛型：为了统一集合当中的数据类型，为了更加方便的操作数据(2)    泛型是一个参数化的类型(3)    是用于规定要操作的数据的类型 泛型类：(1)    泛型标识：标识可以随便写，通常是一个大写字母，需要具备一定的可读性(2)    比如：T(type),I(item),K(key),V(value)(3)    如果在泛型类当中没有指定泛型，那么该">
+  <meta name="description" content="在集合当中使用泛型：(1)    为什么要用泛型：为了统一集合当中的数据类型，为了更加方便的操作数据(2)    泛型是一个参数化的类型(3)    是用于规定要操作的数据的类型">
 <meta property="og:type" content="article">
 <meta property="og:title" content="枚举与范型">
 <meta property="og:url" content="http://yoursite.com/2020/04/21/%E6%9E%9A%E4%B8%BE%E4%B8%8E%E8%8C%83%E5%9E%8B/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="在集合当中使用泛型：(1)    为什么要用泛型：为了统一集合当中的数据类型，为了更加方便的操作数据(2)    泛型是一个参数化的类型(3)    是用于规定要操作的数据的类型 泛型类：(1)    泛型标识：标识可以随便写，通常是一个大写字母，需要具备一定的可读性(2)    比如：T(type),I(item),K(key),V(value)(3)    如果在泛型类当中没有指定泛型，那么该">
+<meta property="og:description" content="在集合当中使用泛型：(1)    为什么要用泛型：为了统一集合当中的数据类型，为了更加方便的操作数据(2)    泛型是一个参数化的类型(3)    是用于规定要操作的数据的类型">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://yoursite.com/img/fanxinglei.png">
 <meta property="article:published_time" content="2020-04-21T03:23:37.413Z">
-<meta property="article:modified_time" content="2020-05-18T11:59:18.260Z">
+<meta property="article:modified_time" content="2021-07-16T14:36:36.552Z">
 <meta property="article:author" content="CodesLong">
+<meta property="article:tag" content="笔记">
 <meta property="article:tag" content="Java">
 <meta property="article:tag" content="后端">
-<meta property="article:tag" content="笔记">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/img/fanxinglei.png">
   
@@ -195,6 +195,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="在集合当中使用泛型："><a href="#在集合当中使用泛型：" class="headerlink" title="在集合当中使用泛型："></a>在集合当中使用泛型：</h3><p>(1)    为什么要用泛型：为了统一集合当中的数据类型，为了更加方便的操作数据<br>(2)    泛型是一个参数化的类型<br>(3)    是用于规定要操作的数据的类型</p>
+<a id="more"></a>
 <h3 id="泛型类："><a href="#泛型类：" class="headerlink" title="泛型类："></a>泛型类：</h3><p>(1)    泛型标识：标识可以随便写，通常是一个大写字母，需要具备一定的可读性<br>(2)    比如：T(type),I(item),K(key),V(value)<br>(3)    如果在泛型类当中没有指定泛型，那么该类型，默认为Object<br>(4)    Public void test(T t){}：这种不是泛型方法！！！！！！<br>(5)    通常来说，我们不会对已泛型方式传入的数据做什么操作，因为使用泛型的前提是，我不知道用户会提供什么类型给我，所以，不会去操作他<br>(6)    <T> ：泛型形参<br>(7)    <String>：泛型实参<br><img src="/img/fanxinglei.png" alt="alt 泛型类定义"></p>
 <h3 id="泛型接口"><a href="#泛型接口" class="headerlink" title="泛型接口"></a>泛型接口</h3><p>(1)    泛型接口是定义在接口上<br>(2)    泛型类和泛型接口的泛型，在实现或者继承的情况下，重写或者实现的方法，泛型的参数和返回值需要保持一致<br>(3)    泛型接口的泛型实参必须指定，而实现类，可以不必指定，如果不指定，则沿用其接口的泛型类型<br>![alt 泛型接口][/img/fanxingjiekou.png]</p>
 <h3 id="泛型通配符"><a href="#泛型通配符" class="headerlink" title="泛型通配符"></a>泛型通配符</h3><p>(1)    ?：代表任意泛型<br>(2)    ？：是泛型实参，不是泛型形参<br>(3)    可以指定边界，规定某一批类型可以作为泛型，既可以规定泛型形参，也可以规定泛型实参<br>![alt 泛型边界][/img/bianjie.png]</p>
@@ -220,7 +221,7 @@
             <span class="tooltip-content">
               <span class="tooltip-text">
                 <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你查看<i class="icon icon-quo-right"></i></p>
                   <div class="reward-box">
                     
                     
@@ -241,15 +242,15 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">后端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
         		</li>
       		
 		</ul>
@@ -501,6 +502,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
@@ -514,18 +527,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">

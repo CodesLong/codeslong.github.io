@@ -180,36 +180,9 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="JAVASE高级应用"><a href="#JAVASE高级应用" class="headerlink" title="JAVASE高级应用"></a>JAVASE高级应用</h3><p>(1)集合泛型枚举<br>(2)实用类<br>(3)流<br>(4)XML<br>(5)反射<br>(6)线程<br>(7)网络编程  </p>
-<h3 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h3><p>(1)List：有序不唯一的集合（插入顺序）    </p>
-<pre><code>①所在包：java.util.*  
-②ArrayList：  
-    1)本质是一个数组  
-    2)不适合频繁增减元素：比如一个数组如果有1000W个元素，我如果需要增加一个元素，那么就意味着你需要先创建1000W零1个元素先创建出来，然后复制，这个才算是拓展成功  
-    3)擅长随机访问  </code></pre><p><img src="/img/ArrayList.png" alt="alt ArrayList常用方法"><br>    ③LinkedList  </p>
-<pre><code>1)是一个双向链表  
-2)适合于增减元素操作  
-3)不擅长随机访问  
-4)使用LinkedList，因为该实现类，实现了很多List接口中没有的方法，所以通常使用该类本身来声明   </code></pre><p><img src="/img/LinkedList.png" alt="alt LinkedList"><br>(2)Set：无序，唯一  </p>
-<pre><code>    ①唯一是指equals相同  
-    ②遍历set  
-        1)获取迭代器  
-        2)增强for循环遍历  
-③HashSet使用的是HashMap的Key  </code></pre><p>(3)Map键值对  </p>
-<pre><code>①Key具有唯一性，且无序  
-    1)如果再次放入某个key相同的值，那么value覆盖原来的值  
-    2)key可以是null:但是null值也是一个唯一存在的key  
-②Value：可以重复，可以是任意值  
-③获取所有key和所有map  </code></pre><p><img src="/img/Map.png" alt="alt Map常用方法"><br>(4)Hash，set和map(理解):  </p>
-<pre><code>①hashMap
-    1)Entry：是一个单向链表
-    2)TreeEntry：包含了hash的双向链
-    3)红黑树
-②Hash:
-    1)hash可以重写
-    2)native默认情况下，hash是由本地调用提供的，比如调用本地C
-    3)集合中的hashcode是被重写过的</code></pre><p>(5)泛型  </p>
-<pre><code>①目的：统一集合当中的元素
-②对于基本数据类型：泛型只能使用包装类来定义基本数据类型</code></pre>
+        
+          <a class="article-more-a" href="/2020/04/21/%E9%9B%86%E5%90%88/#more">查看全文 >></a>
+        
       
 
       
@@ -222,15 +195,15 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">后端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
         		</li>
       		
 		</ul>
@@ -306,97 +279,9 @@
 <blockquote>
 <p>class Verhicle{<br>}<br>class Car extends Verhicle{<br>}<br>class Tire{<br>}<br>class Car extends Verhicle{<br>}</p>
 </blockquote>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="多态的实现机制是什么"><a href="#多态的实现机制是什么" class="headerlink" title="多态的实现机制是什么"></a>多态的实现机制是什么</h2><p>多态的表现方式：  </p>
-<ol>
-<li><p>方法的重载：重载指同一个类中有多个同名的方法，但这些方法有着不同的参数。重载可被看成一个类中的方法多态性  </p>
-</li>
-<li><p>方法的覆盖：子类可以覆盖父类的方法，相同的方法可以在父子类中有不同的表现形式。通过动态绑定的方法实现了多态。（理解书）</p>
-</li>
-</ol>
-<h2 id="重载-overload-和覆盖-override-有什么区别"><a href="#重载-overload-和覆盖-override-有什么区别" class="headerlink" title="重载(overload)和覆盖(override)有什么区别"></a>重载(overload)和覆盖(override)有什么区别</h2><p>重载：</p>
-<ol>
-<li><p>重载通过不同的方法参数来区分，（参数个数，参数类型，参数顺序</p>
-</li>
-<li><p>不能通过方法的访问权限。返回值类型和抛出异常类型进行重载</p>
-</li>
-<li><p>对继承来说，若基类方法的权限为private，则不能在派生类对其进行重载；若派生类也定义了一个同名函数，这是一个新函数，不会达到重载的效果。  </p>
-</li>
-</ol>
-<p>覆盖：</p>
-<ul>
-<li>派生类中的覆盖方法必须要和积累中的被覆盖方法有相同的函数名和参数</li>
-<li>派生类中的覆盖方法的返回值必须和基类中的被覆盖方法的返回值相同</li>
-<li>派生类中的覆盖方法所抛出的异常必须和基类（或其子类）中被覆盖方法所抛出异常一致</li>
-<li>基类中被覆盖的方法不能为private，否则其子类只是定义了一个方法，并没有对其覆盖</li>
-</ul>
-<p>重载和覆盖的区别：</p>
-<ol>
-<li>覆盖是子类和父类之间的关系，是垂直关系；重载是同一个类中方法之间的关系，是水平关系</li>
-<li>覆盖只能由一个方法或只能由一对方法产生关系；重载是多个方法之间的关系</li>
-<li>覆盖要求参数列表相同；重载要求参数列表不同</li>
-<li>覆盖关系中，调用方法体是根据对象的类型（对象对应存储空间类型）来决定；而重载关系是根据调用时的实参列表与形参列表的选择方法提的。</li>
-</ol>
-<h2 id="抽象类（abstract-class）和接口（interface）有什么异同"><a href="#抽象类（abstract-class）和接口（interface）有什么异同" class="headerlink" title="抽象类（abstract class）和接口（interface）有什么异同"></a>抽象类（abstract class）和接口（interface）有什么异同</h2><h4 id="相同点："><a href="#相同点：" class="headerlink" title="相同点："></a>相同点：</h4><ol>
-<li>都不能实列化</li>
-<li>接口的实现类或者抽象类的子类都有实现了接口或抽象类中的方法后才能被实例化</li>
-</ol>
-<h4 id="不同点"><a href="#不同点" class="headerlink" title="不同点"></a>不同点</h4><ol>
-<li>Java8之前，接口只有定义，其方法不能在接口中实现，只有实现接口的类才能实现接口中的方法，而抽象类可以有定义与实现（其方法可以在抽象类中实现）</li>
-<li>接口需要实现（用implements）。但抽象类只能被继承，（用extends）。一个类可以实现多个接口，但一个类只能继承一个抽象类。</li>
-<li>接口强调特定功能的实现，（has-a关系），而抽象类强调所属关系，（is-a关系）</li>
-<li>接口定义的成员变量默认为public static final，只能有静态的不能够被修改的数据成员，而且必须能给其赋初值，其所有成员方法都是public、abstract。</li>
-<li>接口被用于实现经常用的功能，便于后期维护；抽象类用于充当公共类的角色，不适用后期对代码进行修改。</li>
-</ol>
-<h2 id="内部类有那些"><a href="#内部类有那些" class="headerlink" title="内部类有那些"></a>内部类有那些</h2><ul>
-<li><p>静态内部类(static inner class)</p>
-</li>
-<li><p>成员内部类(member inner class)</p>
-</li>
-<li><p>局部内部类(local inner class)</p>
-</li>
-<li><p>匿名内部类(annoymous inner class)</p>
-<pre><code>class outerClass{
-  static class innerClass{} //静态内部类
-}
-ass outerClass{
-   class innerClass{} //成员内部类
-}
-ass outerClass{
-  public void memberFunction(){
-      class innerClass{} //局部内部类
-  }
-}
-blic class MyFrame extends Frame{// 外部类
-  public MyFrame() {
-      addWindowListener(new WindowAdapter() {// 匿名内部类
-          public void windowClosing(WindowEvent e) {
-              dispose();
-              System.exit(0);
-          }
-      });
-  }
-}</code></pre></li>
-</ul>
-<h4 id="内部类的使用原则："><a href="#内部类的使用原则：" class="headerlink" title="内部类的使用原则："></a>内部类的使用原则：</h4><ul>
-<li>匿名内部类不能有构造函数</li>
-<li>匿名内部类不能定义静态成员，方法和类</li>
-<li>匿名内部类不能是public，protected。private，static</li>
-<li>只能创建匿名内部类的一个实例</li>
-<li>一个匿名内部类一定是在new的后面，这个匿名类碧玺继承一个父类或者实现一个接口</li>
-<li>因为匿名内部类为局部内部类，所以局部内部类的所有限制都对其生效。<h2 id="如何获取父类的类名"><a href="#如何获取父类的类名" class="headerlink" title="如何获取父类的类名"></a>如何获取父类的类名</h2></li>
-<li>利用 getClass().getName(),来获取类名</li>
-<li>会存在子类不能覆盖object类中的final ,native方法，可以利用反射来解决, 如： getClass().getSuperclass().getName()<h2 id="this-和super有什么区别"><a href="#this-和super有什么区别" class="headerlink" title="this 和super有什么区别"></a>this 和super有什么区别</h2></li>
-<li>this用来指向当前实例对象，列如构造函数中的相关操作</li>
-<li>super 用来访问父类的方法或成员变量<h2 id="break，continue以及return有什么区别"><a href="#break，continue以及return有什么区别" class="headerlink" title="break，continue以及return有什么区别"></a>break，continue以及return有什么区别</h2></li>
-<li>break : 强行跳出当前循环，可以在多重循环外设置一个（标志：），用break+标志来推出多重循环</li>
-<li>continue ： 停止当前循环</li>
-<li>return : 一个跳转语句，可使程序控制返回到调用该原来方法的地方</li>
-</ul>
-
+        
+          <a class="article-more-a" href="/2020/04/02/java%E9%9D%A2%E8%AF%953/#more">查看全文 >></a>
+        
       
 
       
@@ -508,41 +393,10 @@ blic class MyFrame extends Frame{// 外部类
 <li>得到一个对象所属的类；</li>
 <li>获取一个类的所有成员变量和方法；</li>
 <li>在运行时创建对象；</li>
-<li>在运行时调用对象的方法  </li>
-</ul>
-</li>
-</ul>
-<p>———-其他的理解书内知识—————–</p>
-<h2 id="package有什么作用"><a href="#package有什么作用" class="headerlink" title="package有什么作用"></a>package有什么作用</h2><ol>
-<li>提供多层命名空间，解决命名冲突，可使处于不同的package中的类有相同的名字</li>
-<li>对于类按功能分类，可使项目的组织更加清晰<br>package用法—&gt;</li>
-</ol>
-<ul>
-<li>每个源文件的开头加package packagename，然后源文件所在目录下创建一个新的目录，名称为packagename</li>
-<li>用javac指令编译每一个sourcename.java源文件,将生成sourcename.classname文件复制到packagename目录</li>
-<li>用Java指令运行程序:java packagename.sourcename<h2 id="如何实现类似于C语言中函数指针的功能"><a href="#如何实现类似于C语言中函数指针的功能" class="headerlink" title="如何实现类似于C语言中函数指针的功能"></a>如何实现类似于C语言中函数指针的功能</h2></li>
-<li>（利用接口与类来实现）先定义一个接口，然后在接口中声明调用的方法</li>
-<li>接着实现接口</li>
-<li>最后把这个实现类的一个对象作为参数传递给调用程序，调用程序通过这个参数来调用指定的函数，从而实现回调函数的功能<h2 id="面向对象与面向过程的区别"><a href="#面向对象与面向过程的区别" class="headerlink" title="面向对象与面向过程的区别"></a>面向对象与面向过程的区别</h2></li>
-</ul>
-<ol>
-<li>出发点不同。面向对象方法是利用符合常规思维的方式来处理客观世界的问题，强调问题域的要领直接映射到对象及对象之间的接口上。面向过程方法是过程的抽象化与模块化，他是以过程为中心构造或处理客观世界问题</li>
-<li>层次逻辑关系不同。面向对象是以对象的集合类作为处理问题的基本单位，是用类的层次结构来体现类之间的继承和发展（计算机逻辑来模拟客观世界中的实物），面向过程是能清晰准确的表达过程的模块，用模块之间的层次结构包括模块和模块之间的关系和功能，把客观世界问题抽象成计算机课处理的过程</li>
-<li>数据的处理方式与控制程序的方式不同。面向对象方法将数据与对应的代码封装成一个整体，原则上其他对象不能直接修改其数据。面向过程方法直接通过程序来处理数据，处理完成后即可显示结果，模块之间存在着控制与被控制，调用与被调用的关系。</li>
-<li>分析设计与编码转换方式不同。面向对象的方法贯穿软件生命的分析设计及编码中，是一种平滑过程，实现无缝连接。面向过程方法强调分析设计及编码之间按规则进行转换，是有缝连接。<h2 id="面向对象的特征"><a href="#面向对象的特征" class="headerlink" title="面向对象的特征"></a>面向对象的特征</h2></li>
-<li>抽象：过程抽象和数据抽象</li>
-<li>继承：新类可从现有类中派生，派生类可以修改增加新方法来适合需要</li>
-<li>封装：自己的数据和方法对不可信的类进行信息隐藏</li>
-<li>多态：允许不同类的对象对同一消息做出响应。解决程序函数同名问题<h2 id="面向对象开发方式的优点"><a href="#面向对象开发方式的优点" class="headerlink" title="面向对象开发方式的优点"></a>面向对象开发方式的优点</h2></li>
-<li>较高的开发效率</li>
-<li>保证代码的鲁棒性</li>
-<li>保证代码较高的可维护性<h2 id="什么是继承"><a href="#什么是继承" class="headerlink" title="什么是继承"></a>什么是继承</h2></li>
-<li>Java不支持多重继承，一个子类只能有一个父类</li>
-<li>子类只能继承父类的非私有成员变量与方法</li>
-<li>当子类中的方法和父类中的方法相同的函数签名时，子类会覆盖父类的方法而不会继承</li>
-<li>当子类中定义了成员变量和父类中定义的成员变量同名时，子类中的成员变量会覆盖父类的成员变量而不会继承</li>
-</ol>
-
+<li>在运行时调用对象的方法
+        
+          <a class="article-more-a" href="/2020/04/01/java%E9%9D%A2%E8%AF%952/#more">查看全文 >></a>
+        
       
 
       
@@ -646,37 +500,10 @@ blic class MyFrame extends Frame{// 外部类
 <li>父类静态变量，父类静态代码块，子类静态变量，子类静态代码块</li>
 <li>父类非静态变量，父类非静态代码块，父类构造函数，子类非静态变量，子类非静态代码块，子类构造函数。</li>
 </ol>
-<h2 id="Java作用域问题（public-private-protected-default）"><a href="#Java作用域问题（public-private-protected-default）" class="headerlink" title="Java作用域问题（public private protected default）"></a>Java作用域问题（public private protected default）</h2><h2 id="一个Java文件是否可以定义多个类"><a href="#一个Java文件是否可以定义多个类" class="headerlink" title="一个Java文件是否可以定义多个类"></a>一个Java文件是否可以定义多个类</h2><ul>
-<li>可以，但最多只能有一个类被public修饰并且这个类名必须与文件名相同</li>
-<li>若文件中没有public类，则文件名随便是一个类名，在用javac时，会产生一个同名的.class文件</li>
-</ul>
-<h2 id="什么是构造函数"><a href="#什么是构造函数" class="headerlink" title="什么是构造函数"></a>什么是构造函数</h2><ol>
-<li>构造函数必须与类名相同，并且不能有返回值（返回值也不能是void）</li>
-<li>每个类可以有多个构造函数。</li>
-<li>构造函数可以有0，1，或1个以上的参数</li>
-<li>构造函数总是伴随着new 操作一起调用，且必须要由系统调用，不能人为调用</li>
-<li>构造函数的主要作用是完成对象的初始化工作</li>
-<li>构造函数不能被继承，因此不能被覆盖，但是构造函数能被重载</li>
-<li>子类可以通过super来显示的调用父类的构造函数</li>
-<li>当父类和子类都没有定义构造函数时，编译器会为父类生成一个默认的无参数的构造函数，给子类也生成给一个默认的无参数的构造函数</li>
-</ol>
-<h2 id="为什么Java中有一些接口没有任何方法"><a href="#为什么Java中有一些接口没有任何方法" class="headerlink" title="为什么Java中有一些接口没有任何方法"></a>为什么Java中有一些接口没有任何方法</h2><ol>
-<li><p>Java是单继承，一个类只能有一个父类。一个类可以实现多个接口，以简介达成多重继承的目的。</p>
-</li>
-<li><p>有些接口内部没有声明任何方法，（标记接口），仅仅充当标识的作用，表明它实现的类属于特定的类型，eg：Cloneable Serializable。使用时用instanceof来判断<br>实例对象的类型是否实现了一个给定的标识接口。</p>
-</li>
-</ol>
-<h2 id="如何实现在main-方法执行前输出“hello-！”"><a href="#如何实现在main-方法执行前输出“hello-！”" class="headerlink" title="如何实现在main() 方法执行前输出“hello ！”"></a>如何实现在main() 方法执行前输出“hello ！”</h2><ul>
-<li>静态块在类被加载时就被调用，可以在static内设置来实现。</li>
-</ul>
-<h2 id="为什么要public-static-void-main-String-args-这个方法"><a href="#为什么要public-static-void-main-String-args-这个方法" class="headerlink" title="为什么要public static void main(String[] args) 这个方法"></a>为什么要public static void main(String[] args) 这个方法</h2><ul>
-<li>static表明main（）是静态方法，是存储在静态存储区的。只要类被加载后，就可以使用方法而不需要实例化对象来访问。</li>
-<li>public与static没有先后顺序关系</li>
-<li>也可把main（）方法定义为final–&gt;public static final void main(String[] args)</li>
-<li>也可用synchronized来修饰main（）放法–&gt;static public synchronized void main(String[] args)</li>
-<li>必须保证main（）方法的返回值为void，并有static与public关键字修饰，不能用abstract关键字修饰。</li>
-</ul>
-
+<h2 id="Java作用域问题（public-private-protected-default）"><a href="#Java作用域问题（public-private-protected-default）" class="headerlink" title="Java作用域问题（public private protected default）"></a>Java作用域问题（public private protected default）</h2>
+        
+          <a class="article-more-a" href="/2020/03/31/java%E9%9D%A2%E8%AF%95/#more">查看全文 >></a>
+        
       
 
       
@@ -782,7 +609,8 @@ blic class MyFrame extends Frame{// 外部类
        color: #fff;
        text-decoration: none;
        padding-left: 10px;
-   }</code></pre><h2 id="margin-apply"><a href="#margin-apply" class="headerlink" title="margin-apply"></a>margin-apply</h2><p>画三角形    </p>
+   }
+   &lt;!-- more --&gt;</code></pre><h2 id="margin-apply"><a href="#margin-apply" class="headerlink" title="margin-apply"></a>margin-apply</h2><p>画三角形    </p>
 <pre><code>.box {
         width: 0;
         height: 0;
@@ -803,11 +631,11 @@ blic class MyFrame extends Frame{// 外部类
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">html</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">html</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
@@ -888,23 +716,9 @@ top: 60px;
 left: 50px; 
 /*失效 因为绝对定位的元素脱标*/
 /* margin: 0 auto;</code></pre><hr>
-<pre><code>  position: static    
-  position: relative  
-  position: absolute 1 脱标 2 子绝父相  
-  position: fixed 1 脱标 2 相对于浏览器   
-注意 元素设置浮动 固定定位和绝对定位 可以解决margin合并</code></pre><hr>
-<p>z-index 只对定位的元素有效,取值是一个整数可以是0或者负数 默认值是0 数字越大 代表盒子越靠上<br>overflow: scroll; 总是会出现滚动条<br>overflow: auto;  根据内容是否超出 超出的话 显示滚动条 不超出不显示<br>white-space: nowrap; 强制一行显示  </p>
-<hr>
-<p>元素隐藏 不保留位置–&gt;display: none;  </p>
-<pre><code>(鼠标状态的设置) 
-cursor: pointer;
-cursor: text;
-cursor: move;
-cursor: default;
-/* 禁止*/
-cursor: not-allowed;</code></pre><hr>
-<p>vertical-align对行内元素或行内块元素有效</p>
-
+        
+          <a class="article-more-a" href="/2020/03/17/%E5%AE%9A%E4%BD%8D/#more">查看全文 >></a>
+        
       
 
       
@@ -917,11 +731,11 @@ cursor: not-allowed;</code></pre><hr>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">html</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">html</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
@@ -988,29 +802,10 @@ cursor: not-allowed;</code></pre><hr>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>1.多态：同一个引用类型，因为实例不同，表现的形式也不同<br>2.抽象类：在某些情况下，引用类型是一个抽象的概念，那么这样的类型，我们可以把他定义为抽象类<br>(1)    语法：在class前加关键字abstract，用于表示当前类为抽象类<br>(2)    注意：<br>    ①    在抽象类当中，可以有普通方法，也可以有抽象方法；但是，抽象方法只能在抽象类当中声明；<br>    ②    抽象类除了多了抽象方法和不能被实例化之外，和普通类一致<br>    ③    抽象方法的语法，在修饰符和返回值之间，添加关键字abstract，抽象方法没有方法体，即不需要立即实现<br>    ④    没有抽象的属性<br>    ⑤    抽象类，不可被实例化<br>    ⑥    抽象方法必须在子类当中被实现，除非子类也是抽象类，也就是说，在抽象的类的子类当中，只要有一个子类实现了抽象方法，其后代将不必一定实现该抽象方法<br>    ⑦    对于一个子类来说，其父类当中所有的抽象方法，如果没有被实现过，那么将都需要去实现这些抽象方法<br>(3)    向上转型：父类声明指向子类对象<br>    ①    向上转型，父类声明，只能调用子类重写的方法，或者本身实现没有被子类重写的方法<br>    ②    多个子类实现同一个重写的方法，优先调用距离实现类最近的那个<br>    ③    向上转型，子类特有的方法，无法被调用<br>    ④    向上转型属于自动类型转换<br>(4)    向下转型：强制将父类型变为子类型  </p>
-<pre><code>①    首先要向上转型过了，才能向下转型
-②    向下转型之前，一定要判断实例的类型，要强转为那个引用，就判断是否是这个引用
-③    向下转型属于强制类型转换</code></pre><p>3.接口：<br>(1)    语法：使用interface来声明<br>(2)    方法：所有的方法都是抽象方法，不存在普通方法<br>(3)    抽象方法，只能使用共有的和默认的两种修饰符；因为，如果是私有的，那么除了本类以外不可见，如果是受保护的，要继承可见，那么问题就是是否可见。<br>(4)    接口当中，所有的属性都是静态常量<br>(5)    接口可以多实现，用逗号隔开，但是继承只能单根继承<br>(6)    接口同样不可以被实例化<br>(7)    接口和接口之间是多继承<br>(8)    所有接口当中的抽象方法，都必须被实现类实现<br>(9)    instanceof判断是否是某个类型，看实现类，而不是看声明的类型<br>(10)    接口没有构造，抽象类有构造<br>4.工厂模式：帮助生产具体接口或者抽象类的实现类<br> <img src="codeslong.github.io/img/leitu.png" alt="类图"><br>类图  </p>
-<pre><code>1. 类名：
-(1)    接口在类名之上有&lt;interface&gt;&lt;接口&gt;  
-(2)    抽象类斜体  
-(3)    普通类是正楷  
-2. 属性  
-(1)    前面+号：共有  
-(2)    前面-号：私有  
-(3)    属性名:属性类型  
-3. 方法  
-(1)    斜体是抽象方法  
-(2)    正楷是普通方法  
-(3)    参数：方法名（in/out 参数名:参数类型）：返回值  
-(4)    前面+号：共有
-(5)    前面-号：私有
-4. 实线：继承
-5. 虚线：实现
-注意：工作所谓的接口，有2种含义
-1. Interface
-2. 通讯接口</code></pre>
+        <p>1.多态：同一个引用类型，因为实例不同，表现的形式也不同<br>2.抽象类：在某些情况下，引用类型是一个抽象的概念，那么这样的类型，我们可以把他定义为抽象类</p>
+        
+          <a class="article-more-a" href="/2020/03/17/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B9%8B%E5%A4%9A%E6%80%81/#more">查看全文 >></a>
+        
       
 
       
@@ -1023,15 +818,15 @@ cursor: not-allowed;</code></pre><hr>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">后端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
         		</li>
       		
 		</ul>
@@ -1095,55 +890,9 @@ cursor: not-allowed;</code></pre><hr>
     <div class="article-entry" itemprop="articleBody">
       
         <p>1.继承：子类对父类的继承<br>2.父类：可以是一个普通的类<br>3.子类：使用关键字extends继承父类（除了私有和父类构造以外的所有成员；如果不在同一个包里，默认的成员则无法继承，但是可以继承受保护的成员；如果在同一个包里，则除了私有以外，都可以继承。）<br>4.Java是单根继承：只能有一个爸爸，爸爸的爸爸是爷爷；即：每个类，只能有一个直接的父类<br>5.This和Super:  </p>
-<pre><code>(1)    This代表对象本身，Super代表父类（爸爸，爷爷，太爷爷，……）对象  
-(2)    Super可以调用父类的构造，属性和方法</code></pre><p>6.一些需要注意的地方：<br>(1)    默认情况下，子类构造将默认调用父类的空参构造；如果父类没有空参构造，则子类需显式调用某个父类的构造；如果子类显式的调用父类的某个构造，则不会再调用默认空参构造<br>(2)    使用this和super可以用来区分，父类和子类当中的成员，如果该成员是继承来的，那么也可以使用this来调用<br>(3)    为了防止父类和子类属性间的相互污染<br>(4)    方法重写：如果说，在子类当中不满足父类的某个方法，需要对该方法进行修改或者补充，那么可以通过方法重写来实现。 </p>
-<pre><code>①    当子类重写了父类的某个方法后，子类调用重写后的方法，父类调用原本的方法  
-②    当父类当中有某个成员方法被多次重写，那么子类优先调用最近的那个  
-③    构造方法不能被重写  
-④    重写可以理解为“覆盖”：  </code></pre><hr>
-<table>
-<thead>
-<tr>
-<th align="center">比较项</th>
-<th align="center">位置</th>
-<th align="center">方法名</th>
-<th align="center">参数表</th>
-<th align="center">返回值</th>
-<th align="center">访问修饰符</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">方法重写</td>
-<td align="center">子类</td>
-<td align="center">相同</td>
-<td align="center">相同</td>
-<td align="center">相同或是其子类</td>
-<td align="center">不能比父类更严格</td>
-</tr>
-<tr>
-<td align="center">方法重载</td>
-<td align="center">同类</td>
-<td align="center">相同</td>
-<td align="center">不相同</td>
-<td align="center">无关</td>
-<td align="center">无关</td>
-</tr>
-</tbody></table>
-<hr>
-<pre><code>1)    防止笔试当中有：重写和重载的区别这样的题目
-2)    访问权限不能严与父类
-3)    子类的返回值和父类相同，或者是父类返回值的子类
-4)    参数不能变，必须一样
-5)    方法名一样
-6)    实际应用当中：重写就是子类重写一个父类相同的方法（写个一模一样的）</code></pre><hr>
-<p>7.Object类：是java当中用于描述对象的一个类，是所有类的父类，当某个类，没有显式继承具体的类的时候，则会默认继承Object类。所有类都会直接或者间接的继承Object类。  </p>
-<pre><code>(1)    Object的equals方法：用于指定判断两个对象是否相等的规则   
-(2)    Object的toString方法：如果不重写toString方法，默认打印的就是内存地址  
-(3)    判断对象是否是指定类型，使用关键字instanceof：  
-    ①如果是指定类型，返回true    
-    ②如果是指定类型的子类，返回true</code></pre><p>8.最终类和最终方法<br>(1)    最终类，不可被继承<br>(2)    最终方法，不可被重写  </p>
-<p>四种修饰符<br>Public ： 所有地方可见<br>Protected：同包和子类可见<br>不写（默认的）：同包可见<br>Private：同类可见  </p>
-
+        
+          <a class="article-more-a" href="/2020/03/17/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B9%8B%E7%BB%A7%E6%89%BF/#more">查看全文 >></a>
+        
       
 
       
@@ -1156,15 +905,15 @@ cursor: not-allowed;</code></pre><hr>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">后端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
         		</li>
       		
 		</ul>
@@ -1227,59 +976,10 @@ cursor: not-allowed;</code></pre><hr>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="1-为什么要封装（最简单也是最难的一个部分）：setter-getter只是封装的一种形式而已"><a href="#1-为什么要封装（最简单也是最难的一个部分）：setter-getter只是封装的一种形式而已" class="headerlink" title="1.    为什么要封装（最简单也是最难的一个部分）：setter/getter只是封装的一种形式而已"></a>1.    为什么要封装（最简单也是最难的一个部分）：setter/getter只是封装的一种形式而已</h2><p>(1)    是为了保护数据，把更多的东西隐藏起来，提供更加简洁的功能<br>(2)    Getter/setter更多的是为了保护实体类的数据安全，是java中的非常重要的一种命名格式，命名格式严格定义，绝对不要随意更改<br>(3)    Get:必须没有参数，必须有返回值<br>(4)    Set：必须有参数（参数个数1个，类型和对应属性一致，不能多也不能少），返回值不论<br>(5)    数据不安全是指：当前数据，有可能会对我们后期利用数据时产生安全隐患<br>(6)    不管是什么情况下，一个类当中的属性，如果不是静态或者常量，通常来说都需要改为private修饰<br>(7)    验证数据合法性，通常是在写的时候验证，如果验证不同过，可以根据业务自己设计拒绝方案<br>(8)    补充一种编程风格：链式调用  </p>
-<h2 id="2-实体类：是用于描述实际事物的一种类"><a href="#2-实体类：是用于描述实际事物的一种类" class="headerlink" title="2.    实体类：是用于描述实际事物的一种类"></a>2.    实体类：是用于描述实际事物的一种类</h2><h2 id="3-工具类：例如Arrays，这是java中为了编程而设计的有特定功能和目的的一种类"><a href="#3-工具类：例如Arrays，这是java中为了编程而设计的有特定功能和目的的一种类" class="headerlink" title="3.    工具类：例如Arrays，这是java中为了编程而设计的有特定功能和目的的一种类"></a>3.    工具类：例如Arrays，这是java中为了编程而设计的有特定功能和目的的一种类</h2><h2 id="4-包："><a href="#4-包：" class="headerlink" title="4.    包："></a>4.    包：</h2><p>(1)    包的本质，就是文件夹，路径<br>(2)    一个文件夹当中，是否可以放两个同名，同类型文件？<br>(3)    文件管理的时候，有条理；在以后的实际项目开发中，包的定义和管理是有着严格要求<br>(4)    package在一个类的最上面，通常是有效第一行，且只能有一行<br>(5)    包命名中，点用于目录分级，点不能在最前面和最后面<br>(6)    命名，字母和数字，最好不要加特殊符号，要求字母小写。<br>(7)    命名，规则一般是网络域名倒置，加上模块名<br>(8)    在引用类的时候，通常是优先引用同一个包下的对应类；如果要引用的类，不在当前包下，需要引入后才能使用<br>(9)    引入包   </p>
-<pre><code>①    引入对应包下的类：import 包名+类名
-②    使用通配符*引入某个包下所有的类，不包含该包下子包中的类
-③    不可以在一个类当中引入一个以上的同名类，不管这些类如何分布
-④    如果要同时使用不同包下的同名类，可以用全局限定名（全名类）来进行类的操作
-⑤    默认情况下，优先使用同包下的类，如果引入了指定类，则优先使用指定类</code></pre><h2 id="5-访问权限："><a href="#5-访问权限：" class="headerlink" title="5.    访问权限："></a>5.    访问权限：</h2><p>(1)    什么是访问权限：一个类，或者类当中的成员，可以在什么情况下可见<br>(2)    四种访问权限：<br>①    Public：公用，任何地方（同类，不同类，同包，不同包，子类……）都可见<br>②    默认（不写）：同类，不同类但是同包情况下可见<br>③    Protected：同类，不同类但是同包情况下可见；子类中可见，哪怕这个子类和他不是一个包<br>④    Private：同类可见    </p>
-<hr>
-<table>
-<thead>
-<tr>
-<th align="center">修饰符/作用域</th>
-<th align="center">同一个类中</th>
-<th align="center">同一个包中</th>
-<th align="center">子类中</th>
-<th align="center">任何地方</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">private</td>
-<td align="center">可以</td>
-<td align="center">不可以</td>
-<td align="center">不可以</td>
-<td align="center">不可以</td>
-</tr>
-<tr>
-<td align="center">默认修饰符</td>
-<td align="center">可以</td>
-<td align="center">可以</td>
-<td align="center">不可以</td>
-<td align="center">不可以</td>
-</tr>
-<tr>
-<td align="center">protected</td>
-<td align="center">可以</td>
-<td align="center">可以</td>
-<td align="center">可以</td>
-<td align="center">不可以</td>
-</tr>
-<tr>
-<td align="center">public</td>
-<td align="center">可以</td>
-<td align="center">可以</td>
-<td align="center">可以</td>
-<td align="center">可以</td>
-</tr>
-</tbody></table>
-<hr>
-<h2 id="6-静态：不应为个体的改变而变化的这些特质，是属于类的特质"><a href="#6-静态：不应为个体的改变而变化的这些特质，是属于类的特质" class="headerlink" title="6.    静态：不应为个体的改变而变化的这些特质，是属于类的特质"></a>6.    静态：不应为个体的改变而变化的这些特质，是属于类的特质</h2><p>(1)    静态成员可以直接使用类名调用：静态属性和静态方法<br>(2)    在内存当中，静态的成员处于常量池当中<br>(3)    普通属性和普通方法，是属于对象的一个部分，而静态的不属于某个对象；即：即便是对象不存在，静态的也是存在的<br>(4)    静态具有唯一性：即内存中唯一<br>(5)    静态使用的规则：  </p>
-<pre><code>①    在静态方法中，不可以使用this或者super
-②    静态的只能访问静态的，不可以访问非静态的；非静态的，可以访问非静态和静态的所有属性和方法
-③    静态方法必须被实现（抽象类和接口）</code></pre><p>(6)    静态属性<br>(7)    静态方法<br>(8)    静态代码块<br>    ①    某个类当中固有的代码块<br>    ②    一个类当中可以有多个静态代码块，按编写顺序执行<br>    ③    静态代码块，只会在类被加载的情况下执行一次（声明例外）<br>    ④    类加载机制：只要执行了和这个类有关的调用，那么该类必然已经被加载<br>(9)    所有对象和类，公用的属性和方法，可以设计为静态（没有安全风险的）</p>
-
+        <h2 id="1-为什么要封装（最简单也是最难的一个部分）：setter-getter只是封装的一种形式而已"><a href="#1-为什么要封装（最简单也是最难的一个部分）：setter-getter只是封装的一种形式而已" class="headerlink" title="1.    为什么要封装（最简单也是最难的一个部分）：setter/getter只是封装的一种形式而已"></a>1.    为什么要封装（最简单也是最难的一个部分）：setter/getter只是封装的一种形式而已</h2><p>(1)    是为了保护数据，把更多的东西隐藏起来，提供更加简洁的功能<br>(2)    Getter/setter更多的是为了保护实体类的数据安全，是java中的非常重要的一种命名格式，命名格式严格定义，绝对不要随意更改<br>(3)    Get:必须没有参数，必须有返回值<br>(4)    Set：必须有参数（参数个数1个，类型和对应属性一致，不能多也不能少），返回值不论<br>(5)    数据不安全是指：当前数据，有可能会对我们后期利用数据时产生安全隐患<br>(6)    不管是什么情况下，一个类当中的属性，如果不是静态或者常量，通常来说都需要改为private修饰<br>(7)    验证数据合法性，通常是在写的时候验证，如果验证不同过，可以根据业务自己设计拒绝方案<br>(8)    补充一种编程风格：链式调用<br>
+        
+          <a class="article-more-a" href="/2020/03/17/%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1%E4%B9%8B%E5%B0%81%E8%A3%85/#more">查看全文 >></a>
+        
       
 
       
@@ -1292,15 +992,15 @@ cursor: not-allowed;</code></pre><hr>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">后端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
         		</li>
       		
 		</ul>
@@ -1363,8 +1063,10 @@ cursor: not-allowed;</code></pre><hr>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="笔试中不能错的题："><a href="#笔试中不能错的题：" class="headerlink" title="笔试中不能错的题："></a>笔试中不能错的题：</h2><p>1.凡是和面向对象有关的题，不能错<br>2.凡是和SQL有关的题，不能错<br>3.凡是和基本算法有关的题，不能错<br>4.凡是和J2EE中servlet有关的题，不能错<br>5.凡是和J2EE中JDBC事务控制有关系的题，不能错<br>6.凡是和SSM中基本开发应用流程有关的题，不能错<br>人事面试<br>稳定，上进，积极，乐观，一切以公司为核心<br>技术面试</p>
-
+        <h2 id="笔试中不能错的题："><a href="#笔试中不能错的题：" class="headerlink" title="笔试中不能错的题："></a>笔试中不能错的题：</h2><p>1.凡是和面向对象有关的题，不能错</p>
+        
+          <a class="article-more-a" href="/2020/03/17/%E9%9D%A2%E8%AF%95%E6%B3%A8%E6%84%8F/#more">查看全文 >></a>
+        
       
 
       
@@ -1550,6 +1252,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
@@ -1563,18 +1277,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
