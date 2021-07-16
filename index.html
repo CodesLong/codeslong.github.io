@@ -163,7 +163,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/07/16/pdf/">pdf</a>
+      <a class="article-title" href="/2021/07/16/pdf/">pdf-test</a>
     </h1>
   
 
@@ -179,10 +179,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h2 id="pdf嵌入的地方"><a href="#pdf嵌入的地方" class="headerlink" title="pdf嵌入的地方"></a>pdf嵌入的地方</h2>
 
 	<div class="row">
-    <embed src="01Ajax课件.pdf" width="100%" height="550" type="application/pdf">
+    <embed src="https://cdn.jsdelivr.net/gh/CodesLong/Document/01Ajax课件.pdf" width="100%" height="550" type="application/pdf">
 	</div>
 
 
@@ -194,6 +194,21 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">资料</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -1605,6 +1620,122 @@ shareFriends://com.culiu.JiuKuaiJiu###分享标题###分享地址             </
 
 
   
+    <article id="post-Java面试5" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/16/Java%E9%9D%A2%E8%AF%955/">java 面试（5）</a>
+    </h1>
+  
+
+        <!--显示阅读次数-->
+        
+        <!--显示阅读次数完毕-->
+        
+        <a href="/2020/05/16/Java%E9%9D%A2%E8%AF%955/" class="archive-article-date">
+  	<time datetime="2020-05-15T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="什么是不可变类"><a href="#什么是不可变类" class="headerlink" title="什么是不可变类"></a>什么是不可变类</h2><h2 id="值传递与引用传递有哪些区别"><a href="#值传递与引用传递有哪些区别" class="headerlink" title="值传递与引用传递有哪些区别"></a>值传递与引用传递有哪些区别</h2><h2 id="不同数据类型转换的规则"><a href="#不同数据类型转换的规则" class="headerlink" title="不同数据类型转换的规则"></a>不同数据类型转换的规则</h2><h2 id="强制类型转换的注意事项"><a href="#强制类型转换的注意事项" class="headerlink" title="强制类型转换的注意事项"></a>强制类型转换的注意事项</h2><h2 id="Math类中round，ceil和floor-方法的功能各是什么"><a href="#Math类中round，ceil和floor-方法的功能各是什么" class="headerlink" title="Math类中round，ceil和floor 方法的功能各是什么"></a>Math类中round，ceil和floor 方法的功能各是什么</h2><h2 id="如何实现无符号数的右移操作"><a href="#如何实现无符号数的右移操作" class="headerlink" title="如何实现无符号数的右移操作"></a>如何实现无符号数的右移操作</h2><h2 id="char变量中是否可以存储一个中文汉字"><a href="#char变量中是否可以存储一个中文汉字" class="headerlink" title="char变量中是否可以存储一个中文汉字"></a>char变量中是否可以存储一个中文汉字</h2><h2 id="字符串创建与存储的机制是什么"><a href="#字符串创建与存储的机制是什么" class="headerlink" title="字符串创建与存储的机制是什么"></a>字符串创建与存储的机制是什么</h2><h2 id="“-”-，equals，和hashCode有什么区别"><a href="#“-”-，equals，和hashCode有什么区别" class="headerlink" title="“==” ，equals，和hashCode有什么区别"></a>“==” ，equals，和hashCode有什么区别</h2><h2 id="String-StringBuffer-StringBuilder和StringTokenizer有什么区别"><a href="#String-StringBuffer-StringBuilder和StringTokenizer有什么区别" class="headerlink" title="String ,StringBuffer,StringBuilder和StringTokenizer有什么区别"></a>String ,StringBuffer,StringBuilder和StringTokenizer有什么区别</h2><ul>
+<li>String 是不可变类，被创建后值不能被改变</li>
+<li>StringBuffer 解决字符串经常被修改的问题</li>
+<li>StringBuilder</li>
+<li>StringTokenizer 是用来分割字符串的工具<h2 id="java中数组是不是对象"><a href="#java中数组是不是对象" class="headerlink" title="java中数组是不是对象"></a>java中数组是不是对象</h2></li>
+<li>数组是有相同类型的数据的集合，一般长度固定，内存连续</li>
+<li>数组在Java中是对象，有属性（length）和方法（clone）<h2 id="数组初始化方式有哪几种"><a href="#数组初始化方式有哪几种" class="headerlink" title="数组初始化方式有哪几种"></a>数组初始化方式有哪几种</h2></li>
+</ul>
+<ol>
+<li>一维数组： <ul>
+<li>int[]  a = new int[5];</li>
+<li>int[]  a = {1,2,3,4,5};</li>
+</ul>
+</li>
+<li>二维数组声明与初始化<ul>
+<li>type arrayName[][];</li>
+<li>type[][] arrayName;</li>
+<li>type[] arrayName[];</li>
+</ul>
+</li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">自学</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java面试</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/java//" class="article-tag-list-link color5">java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/java/后端//" class="article-tag-list-link color3">后端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/05/16/Java%E9%9D%A2%E8%AF%955/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Java面试4" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1742,122 +1873,6 @@ shareFriends://com.culiu.JiuKuaiJiu###分享标题###分享地址             </
 
 
   
-    <article id="post-Java面试5" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/16/Java%E9%9D%A2%E8%AF%955/">java 面试（5）</a>
-    </h1>
-  
-
-        <!--显示阅读次数-->
-        
-        <!--显示阅读次数完毕-->
-        
-        <a href="/2020/05/16/Java%E9%9D%A2%E8%AF%955/" class="archive-article-date">
-  	<time datetime="2020-05-15T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="什么是不可变类"><a href="#什么是不可变类" class="headerlink" title="什么是不可变类"></a>什么是不可变类</h2><h2 id="值传递与引用传递有哪些区别"><a href="#值传递与引用传递有哪些区别" class="headerlink" title="值传递与引用传递有哪些区别"></a>值传递与引用传递有哪些区别</h2><h2 id="不同数据类型转换的规则"><a href="#不同数据类型转换的规则" class="headerlink" title="不同数据类型转换的规则"></a>不同数据类型转换的规则</h2><h2 id="强制类型转换的注意事项"><a href="#强制类型转换的注意事项" class="headerlink" title="强制类型转换的注意事项"></a>强制类型转换的注意事项</h2><h2 id="Math类中round，ceil和floor-方法的功能各是什么"><a href="#Math类中round，ceil和floor-方法的功能各是什么" class="headerlink" title="Math类中round，ceil和floor 方法的功能各是什么"></a>Math类中round，ceil和floor 方法的功能各是什么</h2><h2 id="如何实现无符号数的右移操作"><a href="#如何实现无符号数的右移操作" class="headerlink" title="如何实现无符号数的右移操作"></a>如何实现无符号数的右移操作</h2><h2 id="char变量中是否可以存储一个中文汉字"><a href="#char变量中是否可以存储一个中文汉字" class="headerlink" title="char变量中是否可以存储一个中文汉字"></a>char变量中是否可以存储一个中文汉字</h2><h2 id="字符串创建与存储的机制是什么"><a href="#字符串创建与存储的机制是什么" class="headerlink" title="字符串创建与存储的机制是什么"></a>字符串创建与存储的机制是什么</h2><h2 id="“-”-，equals，和hashCode有什么区别"><a href="#“-”-，equals，和hashCode有什么区别" class="headerlink" title="“==” ，equals，和hashCode有什么区别"></a>“==” ，equals，和hashCode有什么区别</h2><h2 id="String-StringBuffer-StringBuilder和StringTokenizer有什么区别"><a href="#String-StringBuffer-StringBuilder和StringTokenizer有什么区别" class="headerlink" title="String ,StringBuffer,StringBuilder和StringTokenizer有什么区别"></a>String ,StringBuffer,StringBuilder和StringTokenizer有什么区别</h2><ul>
-<li>String 是不可变类，被创建后值不能被改变</li>
-<li>StringBuffer 解决字符串经常被修改的问题</li>
-<li>StringBuilder</li>
-<li>StringTokenizer 是用来分割字符串的工具<h2 id="java中数组是不是对象"><a href="#java中数组是不是对象" class="headerlink" title="java中数组是不是对象"></a>java中数组是不是对象</h2></li>
-<li>数组是有相同类型的数据的集合，一般长度固定，内存连续</li>
-<li>数组在Java中是对象，有属性（length）和方法（clone）<h2 id="数组初始化方式有哪几种"><a href="#数组初始化方式有哪几种" class="headerlink" title="数组初始化方式有哪几种"></a>数组初始化方式有哪几种</h2></li>
-</ul>
-<ol>
-<li>一维数组： <ul>
-<li>int[]  a = new int[5];</li>
-<li>int[]  a = {1,2,3,4,5};</li>
-</ul>
-</li>
-<li>二维数组声明与初始化<ul>
-<li>type arrayName[][];</li>
-<li>type[][] arrayName;</li>
-<li>type[] arrayName[];</li>
-</ul>
-</li>
-</ol>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">自学</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java面试</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/java//" class="article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/java/后端//" class="article-tag-list-link color3">后端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/16/Java%E9%9D%A2%E8%AF%955/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-学习（xml）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1928,15 +1943,15 @@ shareFriends://com.culiu.JiuKuaiJiu###分享标题###分享地址             </
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">后端</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
         		</li>
       		
 		</ul>
@@ -2066,15 +2081,15 @@ shareFriends://com.culiu.JiuKuaiJiu###分享标题###分享地址             </
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">后端</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
         		</li>
       		
 		</ul>
@@ -2183,15 +2198,15 @@ shareFriends://com.culiu.JiuKuaiJiu###分享标题###分享地址             </
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">后端</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
         		</li>
       		
 		</ul>
@@ -2280,15 +2295,15 @@ shareFriends://com.culiu.JiuKuaiJiu###分享标题###分享地址             </
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">后端</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
         		</li>
       		
 		</ul>
@@ -2457,7 +2472,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">java</a>
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2465,11 +2480,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+                <a href="javascript:void(0)" class="js-tag color3">后端</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2477,11 +2496,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">后端</a>
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2494,6 +2509,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">自动生成</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">资料</a>
               </li>
              
               <li class="article-tag-list-item">
